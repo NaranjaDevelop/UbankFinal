@@ -3,6 +3,8 @@ import { UseContextIncomes } from "../../Hooks/Usecontext";
 import { getUserData, updateUserData } from "../../Services/Userdata";
 import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
+import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
+import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
 
 
 
@@ -84,16 +86,15 @@ const [incomeDate, setIncomeDate] = useState<string>("");
             { 
                 incomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="" />
-                )) ) : (
-                <p>No incomes available</p>
+                ))} 
+              
+            
 
-            )}
-            <div className="nose">
-
-            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
-            </div>
+            <MonthlyBudget  budgetAmount={0} expensesAmount={0} minorExpensesAmount={0} />
+            
 
            </div>
+           
     )
 };
 export default Incomes;

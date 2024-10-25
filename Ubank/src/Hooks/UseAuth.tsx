@@ -50,9 +50,11 @@ const useAuth = (): UseAuth => {
       await setDoc(doc(db, "users", result.user.uid), {
         username,
         email,
+        Incomes: [{
+            
+        }],
         Userdata: {
-          Incomes: [{
-          }],
+          
           Expenses: [{
             ExpenseName: "",
             ExpenseAmount: 0,
