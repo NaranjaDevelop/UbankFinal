@@ -5,6 +5,7 @@ import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
 import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
 import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
+import Motivation from "./Components/Advertisement/Motivation";
 
 
 
@@ -92,7 +93,7 @@ const [incomeDate, setIncomeDate] = useState<string>("");
             }
             <div className="nose">
 
-            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+            <Motivation />
             </div>
 
            </div>
