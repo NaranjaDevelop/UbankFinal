@@ -55,6 +55,12 @@ const useAuth = (): UseAuth => {
         }],
         Userdata: {
           
+          Incomes: [{
+            IncomeName: "",
+            IncomeAmount: 0,
+            IncomeDate: "",
+
+          }],
           Expenses: [{
             ExpenseName: "",
             ExpenseAmount: 0,

@@ -86,12 +86,14 @@ const [incomeDate, setIncomeDate] = useState<string>("");
             { 
                 incomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="" />
-                ))} 
-              
-            
+                ))  
+                
 
-            <MonthlyBudget  budgetAmount={0} expensesAmount={0} minorExpensesAmount={0} />
-            
+            }
+            <div className="nose">
+
+            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+            </div>
 
            </div>
            
