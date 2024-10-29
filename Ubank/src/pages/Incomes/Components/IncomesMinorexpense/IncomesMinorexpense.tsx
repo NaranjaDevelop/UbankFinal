@@ -1,19 +1,6 @@
+import './IncomesMinorexpense.css';
 
-import './IncomesMinorexpenses.css';
-
-interface IncomesMinorexpensesProps {
-    incomeAmount?: number;
-    minorExpenseAmount?: number;
-    incomePercentage?: number;
-    minorExpensePercentage?: number;
-}
-
-const IncomesMinorexpenses: React.FC<IncomesMinorexpensesProps> = ({
-    incomeAmount = 0,
-    minorExpenseAmount = 0,
-    incomePercentage = 0,
-    minorExpensePercentage = 0
-}) => (
+const IncomesMinorexpenses: React.FC = () => (
     <div className="incomes-minorexpenses">
         <div className="header">
             <span role="img" aria-label="dollar">💵</span>
@@ -21,13 +8,13 @@ const IncomesMinorexpenses: React.FC<IncomesMinorexpensesProps> = ({
         </div>
 
         <div className="bar income-bar">
-            <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
-            <p>Incomes ${incomeAmount.toLocaleString()}</p>
+            <div className="bar-fill income-fill"></div>
+            <p>Incomes $0</p>
         </div>
 
         <div className="bar minor-expense-bar">
-            <div className="bar-fill minor-expense-fill" style={{ width: `${minorExpensePercentage}%` }}></div>
-            <p>Minor Expenses ${minorExpenseAmount.toLocaleString()}</p>
+            <div className="bar-fill minor-expense-fill"></div>
+            <p>Minor Expenses $0</p>
         </div>
     </div>
 );
