@@ -7,6 +7,8 @@ import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
 import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
 import Motivation from "./Components/Advertisement/Motivation";
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
+import NotificationIcon from "./Components/NotificationIcon/NotificationIcon";
+
 
 
 
@@ -93,7 +95,7 @@ const [incomeDate, setIncomeDate] = useState<string>("");
 
             }
             <div className="nose">
-                <IncomesMinorexpenses incomeAmount={0} minorExpenseAmount={0} incomePercentage={0} minorExpensePercentage={0} />
+                <NotificationIcon hasNotification iconSrc="" />
             </div>
 
            </div>
