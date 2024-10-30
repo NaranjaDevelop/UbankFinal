@@ -1,4 +1,3 @@
-
 import './IncomesExpense.css';
 
 interface IncomesExpensesProps {
@@ -20,15 +19,23 @@ const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
             <h2>Incomes vs Expenses</h2>
         </div>
 
-        <div className="bar income-bar">
-            <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
-            <p>Incomes ${incomeAmount.toLocaleString()}</p>
-        </div>
+        {incomeAmount === 0 ? (
+            <p className="not-found">Incomes not found</p>
+        ) : (
+            <div className="bar income-bar">
+                <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
+                <p>Incomes ${incomeAmount.toLocaleString()}</p>
+            </div>
+        )}
 
-        <div className="bar expense-bar">
-            <div className="bar-fill expense-fill" style={{ width: `${expensePercentage}%` }}></div>
-            <p>Expenses ${expenseAmount.toLocaleString()}</p>
-        </div>
+        {expenseAmount === 0 ? (
+            <p className="not-found">Expenses not found</p>
+        ) : (
+            <div className="bar expense-bar">
+                <div className="bar-fill expense-fill" style={{ width: `${expensePercentage}%` }}></div>
+                <p>Expenses ${expenseAmount.toLocaleString()}</p>
+            </div>
+        )}
     </div>
 );
 

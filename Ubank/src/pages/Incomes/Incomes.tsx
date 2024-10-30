@@ -95,7 +95,7 @@ const [incomeDate, setIncomeDate] = useState<string>("");
 
             }
             <div className="nose">
-                <NotificationIcon hasNotification iconSrc="" />
+                <IncomesExpenses incomeAmount={1000} incomePercentage={0} expenseAmount={0} expensePercentage={0} />
             </div>
 
            </div>

@@ -72,3 +72,10 @@
     border-radius: 50%;
     font-size: 1.5rem;
 }
+.not-found {
+    color: #888; 
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+}
