@@ -1,0 +1,43 @@
+
+.motivation-card {
+    width: 300px; 
+    padding: 20px;
+    background-color: #F5F5F5;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.motivation-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.motivation-card .highlight {
+    color: #7C4DFF; 
+}
+
+.motivation-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; 
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.purple-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #7C4DFF; 
+    border-radius: 50%; 
+}

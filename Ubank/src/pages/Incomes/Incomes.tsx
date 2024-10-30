@@ -3,6 +3,12 @@ import { UseContextIncomes } from "../../Hooks/Usecontext";
 import { getUserData, updateUserData } from "../../Services/Userdata";
 import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
+import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
+import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
+import Motivation from "./Components/Advertisement/Motivation";
+import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
+import NotificationIcon from "./Components/NotificationIcon/NotificationIcon";
+
 
 
 
@@ -89,11 +95,11 @@ const [incomeDate, setIncomeDate] = useState<string>("");
 
             }
             <div className="nose">
-
-            <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype=""/>
+                <NotificationIcon hasNotification iconSrc="" />
             </div>
 
            </div>
+           
     )
 };
 export default Incomes;

@@ -1,0 +1,74 @@
+/* IncomesExpenses.css */
+.incomes-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px; /* Añadir padding para que no esté pegado a los bordes */
+    background-color: #F5F5F5; /* Fondo gris claro */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%; /* Ajustar el ancho de las barras */
+    height: 30px; /* Altura ajustada */
+    margin-bottom: 15px;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.income-bar {
+    background-color: #8844db; /* Color de fondo para Ingresos */
+    border-radius: 15px;
+}
+
+.income-fill {
+    background-color: #8844db; /* Color púrpura para la barra de ingresos */
+    width: 0;
+    
+}
+
+.expense-bar {
+    background-color: #ffe5d2; /* Color de fondo para Gastos */
+    border-radius: 15px;
+}
+
+.expense-fill {
+    background-color: #ffe5d2; /* Color durazno para la barra de gastos */
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.bar p {
+    position: absolute;
+    right: -50px; /* Ajustar el texto hacia la derecha */
+    font-size: 1.1rem;
+    margin: 0;
+    color: #555; /* Color de texto más suave */
+}
+
+.incomes-expenses .header span {
+    background-color: #DCE775; /* Fondo verde claro para el ícono */
+    padding: 12px; /* Tamaño ajustado */
+    border-radius: 50%;
+    font-size: 1.5rem;
+}

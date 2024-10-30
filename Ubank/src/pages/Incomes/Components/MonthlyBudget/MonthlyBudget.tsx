@@ -12,15 +12,24 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
 
     return (
         <div className="monthly-budget">
-            <h2>Monthly Budget</h2>
-            <div className="circular-chart">
-                <div className="circle blue"></div> {/* Placeholder for the chart */}
+
+            <div className="IconImage" style={{ display: "flex", flexDirection: "row"}} >
+            <img src="" alt="Icon" className="Icon1"/> <h2>Monthly Budget</h2>
             </div>
-            <h3>{`$${budgetAmount.toLocaleString()}`}</h3>
+            
+            <div className="circular-chart">
+                <div className="circle blue">
+                <h3>{`$${budgetAmount.toLocaleString()}`}</h3>
+                    </div> {/* Placeholder for the chart */}
+            </div>
+            
+
+        <div className="DataDown" >
             <div className="expenses-summary">
                 <p>Expenses: {`$${expensesAmount.toLocaleString()} • ${percentageExpenses}%`}</p>
                 <p>Minor expenses: {`$${minorExpensesAmount.toLocaleString()} • ${percentageMinorExpenses}%`}</p>
             </div>
+        </div>
         </div>
     );
 }

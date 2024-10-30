@@ -1,5 +1,5 @@
 
-import './IncomesExpenses.css';
+import './IncomesExpense.css';
 
 interface IncomesExpensesProps {
     incomeAmount?: number;
