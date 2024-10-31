@@ -8,30 +8,26 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ onLogout }) => {
   return (
     <div className="sidebar">
-      
       <div className="logo">
         <h1>UBank</h1>
       </div>
 
-      
       <nav className="menu">
         <ul>
-          <MenuItem icon="🟩" text="Dashboard" />
-          <MenuItem icon="💵" text="Income and expenses" />
-          <MenuItem icon="🏦" text="Savings goals" />
+          <MenuItem icon="🟩" text="Dashboard" to="/dashboard" />
+          <MenuItem icon="💵" text="Income and expenses" to="/incomes" />
+          <MenuItem icon="🏦" text="Savings goals" to="/savings-goals" />
         </ul>
       </nav>
 
-      
       <div className="sign-out">
         <span className="icon">🔗</span>
         <button onClick={onLogout} className="sign-out-button">Sign out</button>
       </div>
-
-      
     </div>
   );
 };
 
 export default Sidebar;
+
 
