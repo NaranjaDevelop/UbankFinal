@@ -95,7 +95,7 @@ const [incomeDate, setIncomeDate] = useState<string>("");
 
             }
             <div className="nose">
-                <IncomesExpenses incomeAmount={1000} incomePercentage={0} expenseAmount={0} expensePercentage={0} />
+                <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype="" />
             </div>
 
            </div>
