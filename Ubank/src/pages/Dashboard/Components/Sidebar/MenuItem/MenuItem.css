@@ -1,22 +1,23 @@
-/* MenuItem.css */
 .menu-item {
-    list-style: none;
-    margin: 20px 0;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .menu-item .icon {
-    margin-right: 10px;
-  }
-  
-  .menu-item.active {
-    background-color: #b2ff00;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-  }
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  width: 220px;
+  height: 49px;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #fff;
+}
+
+.menu-item .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.menu-item.active {
+  background: #D7F177;
+  color: #000; 
+}
+
   
