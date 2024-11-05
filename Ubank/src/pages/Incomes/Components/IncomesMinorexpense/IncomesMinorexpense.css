@@ -1,0 +1,53 @@
+.incomes-minorexpenses {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.income-bar, .minor-expense-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.bar-fill {
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    flex: 1; 
+}
+
+.income-fill {
+    background-color: #a855f7; 
+    width: 80%; 
+}
+
+.minor-expense-fill {
+    background-color: #fde68a; 
+    width: 60%; 
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}

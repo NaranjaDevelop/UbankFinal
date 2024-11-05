@@ -1,5 +1,4 @@
-
-import './IncomesMinorexpenses.css';
+import './IncomesMinorexpense.css';
 
 interface IncomesMinorexpensesProps {
     incomeAmount?: number;
@@ -20,15 +19,23 @@ const IncomesMinorexpenses: React.FC<IncomesMinorexpensesProps> = ({
             <h2>Incomes vs Minor Expenses</h2>
         </div>
 
-        <div className="bar income-bar">
-            <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
-            <p>Incomes ${incomeAmount.toLocaleString()}</p>
-        </div>
+        {incomeAmount === 0 ? (
+            <p className="not-found">Incomes not found</p>
+        ) : (
+            <div className="bar income-bar">
+                <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
+                <p>Incomes ${incomeAmount.toLocaleString()}</p>
+            </div>
+        )}
 
-        <div className="bar minor-expense-bar">
-            <div className="bar-fill minor-expense-fill" style={{ width: `${minorExpensePercentage}%` }}></div>
-            <p>Minor Expenses ${minorExpenseAmount.toLocaleString()}</p>
-        </div>
+        {minorExpenseAmount === 0 ? (
+            <p className="not-found">Minor expenses not found</p>
+        ) : (
+            <div className="bar minor-expense-bar">
+                <div className="bar-fill minor-expense-fill" style={{ width: `${minorExpensePercentage}%` }}></div>
+                <p>Minor Expenses ${minorExpenseAmount.toLocaleString()}</p>
+            </div>
+        )}
     </div>
 );
 
