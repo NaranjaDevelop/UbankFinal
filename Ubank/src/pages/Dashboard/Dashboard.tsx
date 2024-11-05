@@ -75,7 +75,7 @@ const Dashboard: React.FC = () => {
       className="welcome-user">
         Welcome, {username} 🌷͙֒🎀
       </h2>
-      <CurrencyConverter />
+      <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
       <Sidebar onLogout={handleLogout} />
     </div>
   );
