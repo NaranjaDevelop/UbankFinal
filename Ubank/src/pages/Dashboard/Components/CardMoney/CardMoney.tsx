@@ -1,4 +1,5 @@
 import React from 'react';
+import './CardMoney.css';
 
 interface BalanceCardProps {
   title: string;

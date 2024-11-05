@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useExchangeRates } from '../../../../Hooks/ApiCurrency';
 import BalanceCard from '../CardMoney/CardMoney';
+import './CurrencyConverter.css';
 
 interface CurrencyConverterProps {
   totalBalance: number;
