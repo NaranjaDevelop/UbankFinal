@@ -1,0 +1,23 @@
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  width: 220px;
+  height: 49px;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #fff;
+}
+
+.menu-item .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.menu-item.active {
+  background: #D7F177;
+  color: #000; 
+}
+
+  
