@@ -110,6 +110,10 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div>
                 <h3>Total: {TotalIncomes}$</h3>
             </div>
+            
+            </div>
+            <div className="incomes-expenses">
+                <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={3000} />
             </div>
             <div className="nose">
                 <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype="" />
