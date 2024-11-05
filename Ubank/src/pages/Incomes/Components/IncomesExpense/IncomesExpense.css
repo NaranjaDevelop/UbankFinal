@@ -57,17 +57,19 @@
 }
 
 #incomes-info{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .rectangle-incomes{
     background-color: #8644DB;
     height: 10px;
-    width: 2px;
+    width: 5px;
+    border-radius: 10px;
 }
 
 .rectangle-expenses{
     background-color: #eFd5D2;
     height: 10px;
-    width: 2px;
+    width: 5px;
+    border-radius: 10px;
 }

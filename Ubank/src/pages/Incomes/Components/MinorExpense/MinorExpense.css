@@ -53,3 +53,7 @@
     font-size: 24.64px; /* Tamaño de fuente para ExpenseAmount */
     text-align: right;
 }
+.Minor-expense-container{
+    display: flex;
+    flex-direction: column;
+}

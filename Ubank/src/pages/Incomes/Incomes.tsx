@@ -96,9 +96,11 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
                 <input type="date" onChange={(e) => setIncomeDate(e.target.value)} />
                 <button onClick={handleupload}>Submit</button>
             </div>
-            <div className="incomescard-container">
-                <h1>Incomes</h1>
-                <h3>Your incomes this month</h3>
+            <div className="incomes-container">
+            <h1>Incomes</h1>
+            <h3>Your incomes this month</h3>
+            <div className="incomescard-container-scroll">
+                
 
             { 
                 incomes.map((income, index) => (
@@ -107,6 +109,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
                 
                 
             }
+                </div>
             <div>
                 <h3>Total: {TotalIncomes}$</h3>
             </div>
@@ -115,8 +118,8 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div className="incomes-expenses">
                 <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={3000} />
             </div>
-            <div className="nose">
-                <MinorExpense ExpenseAmount={0} ExpenseDate="" ExpenseName="" Expensetype="" />
+            <div className="Minor-expense-container">
+                <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />
             </div>
             <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={100} minorExpensesAmount={199}   />
            </div>
