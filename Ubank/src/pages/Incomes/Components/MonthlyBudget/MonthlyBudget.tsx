@@ -1,14 +1,17 @@
 import './MonthlyBudget.css';
 
+import {PieChart, Pie, Cell} from  'recharts'
+
+
 interface MonthlyBudgetProps {
     budgetAmount: number;
     expensesAmount: number;
     minorExpensesAmount: number;
+    
 }
 
 const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: MonthlyBudgetProps) => {
-    const percentageExpenses = ((expensesAmount / budgetAmount) * 100).toFixed(0);
-    const percentageMinorExpenses = ((minorExpensesAmount / budgetAmount) * 100).toFixed(0);
+  
 
     return (
         <div className="monthly-budget">
@@ -18,16 +21,35 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
             </div>
             
             <div className="circular-chart">
-                <div className="circle blue">
-                <h3>{`$${budgetAmount.toLocaleString()}`}</h3>
-                    </div> {/* Placeholder for the chart */}
+            <PieChart width={200} height={200}>
+                        <Pie
+                              data={[{name: 'Budget', value: budgetAmount}, {name: 'Expenses', value: expensesAmount}, {name: 'Minor Expenses', value: minorExpensesAmount} ]} 
+                              outerRadius={100}
+                              innerRadius={80}
+                              paddingAngle={0}
+                              dataKey={"value"}     
+                            
+                        >
+                            <Cell fill="#101010" />
+                            <Cell fill="#B7C7FF" />
+                            <Cell fill="#c58121" />
+                                                   </Pie>
+                        </PieChart>
+                <div className="blue">
+                <h3>{budgetAmount}</h3>
+                    </div> 
+
+                    
+                        
+
+
             </div>
             
 
         <div className="DataDown" >
             <div className="expenses-summary">
-                <p>Expenses: {`$${expensesAmount.toLocaleString()} • ${percentageExpenses}%`}</p>
-                <p>Minor expenses: {`$${minorExpensesAmount.toLocaleString()} • ${percentageMinorExpenses}%`}</p>
+                <p>Expenses: {expensesAmount}</p>
+                <p>Minor expenses: {minorExpensesAmount}</p>
             </div>
         </div>
         </div>

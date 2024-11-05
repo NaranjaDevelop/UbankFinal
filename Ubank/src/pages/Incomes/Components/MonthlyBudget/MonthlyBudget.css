@@ -21,12 +21,7 @@
     background-color: beige;
     padding: 30px;
 }
-.circular-chart {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    margin-bottom: 20px;
-}
+
 
 .circle {
     width: 100%;
