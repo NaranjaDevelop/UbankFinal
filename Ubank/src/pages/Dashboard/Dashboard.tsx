@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import './Dashboard.css'
 import { UseContextIncomes } from "../../Hooks/Usecontext";
+import CurrencyConverter from "./Components/CardMoney/CardMoney";
 
 const Dashboard: React.FC = () => {
 
@@ -76,7 +77,10 @@ const Dashboard: React.FC = () => {
       <button 
       className="log-out-button"
       onClick={handleLogout}>Logout</button>
+      <CurrencyConverter />
     </div>
+
+    
   );
 };
 
