@@ -1,8 +1,20 @@
 h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
     color: #333; /* Texto oscuro */
-    margin-bottom: 1rem;
+    margin-left: 346px;
+    margin-top: 26px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    font-size: 16px;
+    color: #333; /* Texto oscuro */
+    margin-left: 346px;
 }
 .log-out-button {
     background-color: #FF4C4C;

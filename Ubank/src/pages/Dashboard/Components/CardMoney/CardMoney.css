@@ -9,13 +9,13 @@
 }
 
 .amount h1{
-    color: #171A1F;
     font-family: Poppins;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 48px; 
     letter-spacing: -1.1px;
+    margin-top: 30px;
 }
 
 select{
@@ -32,19 +32,21 @@ select{
     line-height: 21px; /* 150% */
     letter-spacing: -0.56px;
     
+    
 }
 
 .dropdown-div{
-    display: flex;
+    display: flex; 
     margin-left: 249px;
-    margin-top: -28px;
+    margin-top: -50px;
     gap: 50px;
 }
 
 .balance-card{
     background: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 28px;
     padding: 20px;
+    height: 136px;
     width: 339px;
     margin-top: 20px;
 }

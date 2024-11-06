@@ -6,13 +6,16 @@ interface BalanceCardProps {
   amount: number;
   currency: string;
   onCurrencyChange: (currency: string) => void;
+  imageSrc: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
-const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCurrencyChange, style }) => {
+const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCurrencyChange, style, imageSrc }) => {
   return (
     <div className="balance-card" style={style}>
       <div className="header">
+        <img src={imageSrc} alt="mini-icon" />
         <h3>{title}</h3>
         <div className="dropdown-div">
           <select value={currency} onChange={(e) => onCurrencyChange(e.target.value)}>

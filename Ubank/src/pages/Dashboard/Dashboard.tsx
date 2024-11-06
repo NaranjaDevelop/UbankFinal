@@ -8,6 +8,7 @@ import './Dashboard.css'
 import { UseContextIncomes } from "../../Hooks/Usecontext";
 import CurrencyConverter from "./Components/CardMoney/CurrencyConverter";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import IncomeExpenseChart from "./Components/IncExpChart/IncomeExpenseChart";
 
 const Dashboard: React.FC = () => {
 
@@ -73,10 +74,12 @@ const Dashboard: React.FC = () => {
     <div>
       <h2
       className="welcome-user">
-        Welcome, {username} 🌷͙֒🎀
+        Welcome!, {username} 
       </h2>
+      <p>Detailed overview of your finantial situation</p>
       <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
       <Sidebar onLogout={handleLogout} />
+      <IncomeExpenseChart />
     </div>
   );
 };
