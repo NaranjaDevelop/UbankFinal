@@ -1,5 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import './Chart.css';
 
 interface IncomeExpenseChartProps {
   title?: string;
@@ -26,18 +27,18 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+      <ResponsiveContainer width="100%" height={250}>
+        <BarChart data={data} margin={{ top: 35, right: 30, left: 20, bottom: 0 }} barSize={16}>
           <XAxis dataKey="month" />
           <YAxis />
           <Tooltip />
           <Legend formatter={(value) => (
-            <span style={{ color: value === 'Incomes' ? '#6A1B9A' : '#FB8C00' }}>
+            <span style={{ color: value === 'Incomes' ? '#8644DB' : '#F4A261'}}>
               {value === 'incomes' ? 'Incomes' : 'Minor expenses'}
             </span>
           )} />
-          <Bar dataKey="incomes" fill="#6A1B9A" name="Incomes" />
-          <Bar dataKey="expenses" fill="#FB8C00" name="Minor expenses" />
+          <Bar dataKey="incomes" fill="#8644DB" name="Incomes" radius={[5, 5, 0, 0]}/>
+          <Bar dataKey="expenses" fill="#F4A261" name="Minor expenses" radius={[5, 5, 0, 0]}/>
         </BarChart>
       </ResponsiveContainer>
     </div>
