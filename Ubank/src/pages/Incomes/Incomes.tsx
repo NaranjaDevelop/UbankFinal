@@ -81,8 +81,8 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             category: string;
           }
           
-          const Expenses = () => {
-            const [expenses, setExpenses] = useState<ExpenseData[]>([]);
+         
+        const [expenses, setExpenses] = useState<ExpenseData[]>([]);
 
          const handleExpenseSubmit = (data: ExpenseData) => {
             setExpenses((prevExpenses) => [...prevExpenses, data]);
@@ -149,5 +149,5 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
            
     )
 };
-}
+
 export default Incomes;
