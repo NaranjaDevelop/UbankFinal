@@ -1,6 +1,6 @@
 import './IncomesMinorexpense.css';
 
-import { BarChart, Bar} from 'recharts';
+import { BarChart, Bar, Tooltip} from 'recharts';
 
 interface IncomesExpensesProps {
     incomeAmount?: number;

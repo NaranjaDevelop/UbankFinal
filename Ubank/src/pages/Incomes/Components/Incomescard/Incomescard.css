@@ -6,7 +6,7 @@
     border-radius: 10px;
     width: fit-content;
     overflow-y: scroll;
-    height: 200px;
+    height: 386px;
 
 }
 
@@ -14,17 +14,22 @@
     background-color: #ffffff;
     border-radius: 10px;
     padding: 10px;
+
     width: fit-content;
+}
+
+#incomescard-amount{
+    font-size: 14px;
 }
 
 #incomescards{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 400px;
+    width: 250px;
     justify-content: space-between;
-    background-color: rgb(214, 255, 217);
-    padding: 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 5px;
     border-radius: 50px;
     height: fit-content;
 }
@@ -34,7 +39,7 @@
     gap: 2px;
 }
 #incomescard-date{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: lighter;
     color: #333;
     align-self: flex-end;
@@ -49,7 +54,7 @@
 }
 
 #incomescard-title{
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     color: #333;
 }

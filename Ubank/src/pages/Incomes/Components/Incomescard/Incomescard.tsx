@@ -16,8 +16,8 @@ const Incomescard = ({IncomeTitle, IncomeAmount, IncomeDate, Incomesimg}:Incomes
         <img src={Incomesimg} alt="" height={39} width={39} />
         <div id='incomescard-details'>
 
-        <h2 id='incomescard-title'>{IncomeTitle}</h2>
-        <h3>{IncomeAmount} $</h3>
+        <p id='incomescard-title'>{IncomeTitle}</p>
+        <h3 id='incomescard-amount'>{IncomeAmount} $</h3>
       </div>
         </div>
         <div id='incomescard-date'>

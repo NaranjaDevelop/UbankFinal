@@ -7,9 +7,7 @@
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  
-    margin: 20px auto;
+
 }
 
 .monthly-budget h2 {
@@ -52,4 +50,14 @@
 .DataDown {
     display: flex;
     flex-direction: row;
+}
+.blue{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -140px;
+    left: 20px;
+
 }

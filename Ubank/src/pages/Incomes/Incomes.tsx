@@ -6,8 +6,9 @@ import MinorExpense from "./Components/MinorExpense/MinorExpense";
 import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
 import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
 import IncomeForm from "./Components/IncomesForm/IncomeForm";
-
+import './Incomespage.css'
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
+import Motivation from "./Components/Advertisement/Motivation";
 
 
 
@@ -81,9 +82,12 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div>
                 <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
             </div>
+            <div className="Firstrow-container">
+
             <div className="incomes-container">
             <h1>Incomes</h1>
             <h3>Your incomes this month</h3>
+            <div className='addbutton'>+</div>
             <div className="incomescard-container-scroll">
                 
 
@@ -95,21 +99,33 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
                 
             }
                 </div>
-            <div>
-                <h3>Total: {TotalIncomes}$</h3>
-            </div>
+           
+                <h3 className="total-incomes">Total: {TotalIncomes}$</h3>
+            
             
             </div>
-            <div className="incomes-expenses">
+            <div className="Bargraph-container">
+
+            <div>
                 <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={3000} />
             </div>
             <div>
                 <IncomesMinorexpenses incomeAmount={TotalIncomes} minorexpense={100} />
             </div>
-            <div className="Minor-expense-container">
-                <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />
             </div>
+            <div>
+                <Motivation />
+            </div>
+            </div>
+            <div className="Secondrow-container">
+
             <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={100} minorExpensesAmount={199}   />
+            <div className="Minor-expense-container">
+                <h1>Minor Expenses</h1>
+                <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />
+            </div> 
+            </div>
+    
            </div>
            
     )
