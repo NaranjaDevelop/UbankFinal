@@ -32,7 +32,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
     const newincome = [formData]
 
     console.log(newincome);
-    updateUserData(newincome)
+    updateUserData({Incomes: newincome})
     setFormData({
       incomeName: "",
       amount: 0,
