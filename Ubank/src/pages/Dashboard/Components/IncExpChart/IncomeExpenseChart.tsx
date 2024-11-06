@@ -1,6 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Chart.css';
+import img1 from "../../../../assets/digramadebarras.webp"
 
 interface IncomeExpenseChartProps {
   title?: string;
@@ -24,10 +25,10 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
   return (
     <div className="chart-container">
       <div className="chart-header">
-        <div className="icon" style={{ backgroundColor: '#D7F177' }}></div>
+        <div className="icon" style={{ backgroundColor: '#D7F177' }}> <img src={img1} alt="bar-chart" width={17}/></div>
         <h2>{title}</h2>
-        <p>{subtitle}</p>
       </div>
+      <p>{subtitle}</p>
       <ResponsiveContainer width="100%" height={260}>
         <BarChart data={data} margin={{ top: 30, right: 30, left: 20, bottom: -12 }} barSize={16}>
           <XAxis dataKey="month" tick={{ fontSize: 12 }} />
