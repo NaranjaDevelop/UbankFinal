@@ -1,6 +1,6 @@
 import './IncomesExpense.css';
 
-import { BarChart, Bar, YAxis, XAxis, Tooltip, Legend, } from 'recharts';
+import { BarChart, Bar} from 'recharts';
 
 interface IncomesExpensesProps {
     incomeAmount?: number;
@@ -34,10 +34,17 @@ const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
         </div>
 
         <div className="incomesexpenses-info">
+            <div className="incomesexpenses-info-container">
+                
             <div className="rectangle-incomes" ></div>
             <p id='incomes-info'>Income: ${incomeAmount}</p>
+            </div>
+
+            <div className="incomesexpenses-info-container">
+
             <div className="rectangle-expenses" ></div>
             <p id='expenses-info'>Expense: ${expenseAmount}</p>
+            </div>
         </div>
 
         

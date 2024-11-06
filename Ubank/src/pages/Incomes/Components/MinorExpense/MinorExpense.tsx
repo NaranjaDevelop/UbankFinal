@@ -20,7 +20,7 @@ const MinorExpense = ({ Expensetype, ExpenseName, ExpenseDate, ExpenseAmount }: 
                 <p>{ExpenseDate|| "24/10/2024"}</p>
             </div>
             <div className="amount">
-                <h3>{ExpenseAmount}</h3>
+                <h3>{ExpenseAmount} $</h3>
             </div>
         </div>
     );

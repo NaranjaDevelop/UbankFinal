@@ -5,9 +5,8 @@ import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
 import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
 import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
-import Motivation from "./Components/Advertisement/Motivation";
+
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
-import NotificationIcon from "./Components/NotificationIcon/NotificationIcon";
 
 
 
@@ -117,6 +116,9 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             </div>
             <div className="incomes-expenses">
                 <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={3000} />
+            </div>
+            <div>
+                <IncomesMinorexpenses incomeAmount={TotalIncomes} minorexpense={100} />
             </div>
             <div className="Minor-expense-container">
                 <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />

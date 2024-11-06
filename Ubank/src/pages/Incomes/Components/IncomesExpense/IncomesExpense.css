@@ -51,25 +51,31 @@
     transform: rotate(90deg);
 }
 .incomesexpenses-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     position: relative;
-    top: -160px;
+    top: -180px;
     left: 250px;
 }
 
-#incomes-info{
-    margin-bottom: 20px;
-}
+
 
 .rectangle-incomes{
     background-color: #8644DB;
-    height: 10px;
+    height: 30px;
     width: 5px;
     border-radius: 10px;
 }
 
 .rectangle-expenses{
     background-color: #eFd5D2;
-    height: 10px;
+    height: 30px;
     width: 5px;
     border-radius: 10px;
+}
+.incomesexpenses-info-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }

@@ -1,53 +1,81 @@
-.incomes-minorexpenses {
+/* IncomesExpenses.css */
+.incomes-expenses {
+    display: flex;
+    gap: 20px;
+    color: #333;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6; 
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
-.header {
+.header-incomesexpenses {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.25rem;
+    width: fit-content;
+}
+
+.header h2 {
+    font-size: 12px;
     font-weight: bold;
-    color: #333;
+    margin: 0;
+    
 }
 
 .bar {
     display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-}
-
-.income-bar, .minor-expense-bar {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
-    width: 100%;
+    position: relative;
+    width: 80%; /* Ajustar el ancho de las barras */
+    height: 30px; /* Altura ajustada */
+    margin-bottom: 15px;
+    border-radius: 15px; /* Bordes redondeados */
 }
 
-.bar-fill {
-    height: 20px;
+.incomes-expenses .header-incomesexpenses span {
+    background-color: #DCE775; /* Fondo verde claro para el ícono */
+    padding: 12px; /* Tamaño ajustado */
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.not-found {
+    color: #888; 
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+}
+.recharts-surface{
+    position: relative;
+    top: -20px;
+    transform: rotate(90deg);
+}
+.incomesexpenses-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: -180px;
+    left: 250px;
+}
+
+
+
+.rectangle-incomes{
+    background-color: #8644DB;
+    height: 30px;
+    width: 5px;
     border-radius: 10px;
-    margin-right: 10px;
-    flex: 1; 
 }
 
-.income-fill {
-    background-color: #a855f7; 
-    width: 80%; 
+.rectangle-expenses{
+    background-color: #eFd5D2;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
 }
-
-.minor-expense-fill {
-    background-color: #fde68a; 
-    width: 60%; 
-}
-
-p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
+.incomesexpenses-info-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
