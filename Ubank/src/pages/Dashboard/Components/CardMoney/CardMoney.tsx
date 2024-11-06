@@ -11,9 +11,9 @@ interface BalanceCardProps {
   className?: string;
 }
 
-const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCurrencyChange, style, imageSrc }) => {
+const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCurrencyChange, style, imageSrc, className }) => {
   return (
-    <div className="balance-card" style={style}>
+    <div className={`balance-card ${className}`} style={style}>
       <div className="header">
         <img src={imageSrc} alt="mini-icon" />
         <h3>{title}</h3>
@@ -24,7 +24,6 @@ const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCu
             <option value="COP">COP</option>
           </select>  
         </div>
-        
       </div>
       <div className="amount">
         <h1>{currency} {amount.toLocaleString()}</h1>
