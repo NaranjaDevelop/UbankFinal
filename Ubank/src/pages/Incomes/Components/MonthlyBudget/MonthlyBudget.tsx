@@ -23,14 +23,13 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
             <div className="circular-chart">
             <PieChart width={200} height={200}>
                         <Pie
-                              data={[{name: 'Budget', value: budgetAmount}, {name: 'Expenses', value: expensesAmount}, {name: 'Minor Expenses', value: minorExpensesAmount} ]} 
+                              data={[{name: 'Expenses', value: expensesAmount}, {name: 'Minor Expenses', value: minorExpensesAmount} ]} 
                               outerRadius={100}
                               innerRadius={80}
                               paddingAngle={0}
                               dataKey={"value"}     
                             
                         >
-                            <Cell fill="#101010" />
                             <Cell fill="#B7C7FF" />
                             <Cell fill="#c58121" />
                                                    </Pie>
