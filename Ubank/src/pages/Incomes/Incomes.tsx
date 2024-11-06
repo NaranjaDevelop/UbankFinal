@@ -30,10 +30,6 @@ const Incomes = () => {
 
 
 const [incomes, setIncomes] = useState<IncomesProps[]>([]);
-const [incomeName, setIncomeName] = useState<string>("");
-const [incomeAmount, setIncomeAmount] = useState<number>(0);
-const [incomeDate, setIncomeDate] = useState<string>("");
-
 const [TotalIncomes, setTotalIncomes] = useState<number>(0);
   
  
@@ -51,13 +47,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
 
 
    
- const handleinputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-     const value = e.target.value;
-     console.log(value);
-     setIncomeName(value);
-     return value;
- }
- 
+
  useEffect(() => {
      console.log(incomes);
      
@@ -71,14 +61,25 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
     }, [incomes]);
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
-        console.log("Datos del formulario:", data); 
-      };
+        
+            console.log("upload");
+        
+            const newIncomes = [...incomes, {
+                IncomeName: data.incomeName,
+                IncomeAmount: data.amount,
+                IncomeDate: data.date,
+            }]
+            setIncomes(newIncomes);
+            updateUserData({ Incomes: newIncomes });
+            console.log("Datos del formulario:", data); 
+         }
+     
 
     return (
         <div>
             <h1>Incomes</h1>
             <div>
-                <IncomeForm onSubmit={handleIncomeSubmit} IncomesData={incomes}></IncomeForm>
+                <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
             </div>
             <div className="incomes-container">
             <h1>Incomes</h1>
