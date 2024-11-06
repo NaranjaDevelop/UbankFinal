@@ -9,7 +9,7 @@ import IncomeForm from "./Components/IncomesForm/IncomeForm";
 import './Incomespage.css'
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
 import Motivation from "./Components/Advertisement/Motivation";
-
+import ExpenseForm from "./Components/ExpensesForm/ExpensesForm";
 
 
 
@@ -73,7 +73,21 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             updateUserData({ Incomes: newIncomes });
             console.log("Datos del formulario:", data); 
          }
-     
+
+         interface ExpenseData {
+            expenseName: string;
+            amount: number;
+            date: string;
+            category: string;
+          }
+          
+          const Expenses = () => {
+            const [expenses, setExpenses] = useState<ExpenseData[]>([]);
+
+         const handleExpenseSubmit = (data: ExpenseData) => {
+            setExpenses((prevExpenses) => [...prevExpenses, data]);
+            console.log("Nuevo gasto agregado:", data);
+          };
 
     return (
         <div>
@@ -81,6 +95,11 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div>
                 <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
             </div>
+
+            <div>
+                <ExpenseForm onSubmit={handleExpenseSubmit}></ExpenseForm>
+            </div>
+            
             <div className="Firstrow-container">
 
             <div className="incomes-container">
@@ -130,4 +149,5 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
            
     )
 };
+}
 export default Incomes;
