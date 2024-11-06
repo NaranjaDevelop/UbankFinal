@@ -5,6 +5,7 @@ import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
 import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
 import IncomesExpenses from "./Components/IncomesExpense/IncomesExpense";
+import IncomeForm from "./Components/IncomesForm/IncomeForm";
 
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
 
@@ -84,11 +85,16 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
      
     }, [incomes]);
 
-  
+    const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
+        console.log("Datos del formulario:", data); 
+      };
 
     return (
         <div>
             <h1>Incomes</h1>
+            <div>
+                <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
+            </div>
             <div className="incomes-container">
             <h1>Incomes</h1>
             <h3>Your incomes this month</h3>
