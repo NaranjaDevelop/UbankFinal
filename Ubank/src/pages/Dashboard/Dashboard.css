@@ -1,14 +1,21 @@
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+.dash-div h2 {
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
     letter-spacing: -.0625rem;
     font-size: 30px;
     color: #333; /* Texto oscuro */
     margin-left: 346px;
-    margin-top: 26px;
+    margin-top: 28px;
 }
 
-p{
+@font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+.dash-div p{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     letter-spacing: -0.05rem;

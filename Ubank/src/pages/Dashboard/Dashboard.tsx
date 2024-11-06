@@ -71,7 +71,7 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="dash-div">
       <h2
       className="welcome-user">
         Welcome!, {username} 
