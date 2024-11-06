@@ -89,12 +89,6 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
     return (
         <div>
             <h1>Incomes</h1>
-            <div>
-                <input type="text" onChange={handleinputChange} />
-                <input type="number" onChange={(e) => setIncomeAmount(Number(e.target.value))} />
-                <input type="date" onChange={(e) => setIncomeDate(e.target.value)} />
-                <button onClick={handleupload}>Submit</button>
-            </div>
             <div className="incomes-container">
             <h1>Incomes</h1>
             <h3>Your incomes this month</h3>
