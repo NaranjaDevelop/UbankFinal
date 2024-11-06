@@ -24,6 +24,7 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
   return (
     <div className="chart-container">
       <div className="chart-header">
+        <div className="icon" style={{ backgroundColor: '#D7F177' }}></div>
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>

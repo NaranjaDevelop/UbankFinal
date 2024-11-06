@@ -13,10 +13,20 @@
 }
 .chart-header{
     display: flex;
-    flex-direction: column;
+    
     justify-content: space-between;
-    margin-left: 35px;
+    margin-left: 3px;
     margin-top: 4px;
+}
+
+.chart-header .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
 }
 .chart-header h2{
     color: #000;

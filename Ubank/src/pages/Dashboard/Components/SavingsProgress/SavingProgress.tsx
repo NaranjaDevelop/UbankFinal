@@ -22,7 +22,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
     <div className="progress-card">
       <div className="header">
         <div className="icon-title">
-          <div className="icon" style={{ backgroundColor: '#D0FFCE' }}></div>
+          <div className="icon" style={{ backgroundColor: '#D7F177' }}></div>
           <h3>{title}</h3>
         </div>
         <h3 className="percentage">{Math.round(progressPercentage)}%</h3>
