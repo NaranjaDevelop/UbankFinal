@@ -9,6 +9,7 @@ import { UseContextIncomes } from "../../Hooks/Usecontext";
 import CurrencyConverter from "./Components/CardMoney/CurrencyConverter";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import IncomeExpenseChart from "./Components/IncExpChart/IncomeExpenseChart";
+import ProgressCard from "./Components/SavingsProgress/SavingProgress";
 
 const Dashboard: React.FC = () => {
 
@@ -80,6 +81,13 @@ const Dashboard: React.FC = () => {
       <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
       <Sidebar onLogout={handleLogout} />
       <IncomeExpenseChart />
+      <ProgressCard 
+          title="Your saving goal" 
+          description="New pair of shoes 👠👠" 
+          currentAmount={100000} 
+          goalAmount={200000} 
+        />
+
     </div>
   );
 };
