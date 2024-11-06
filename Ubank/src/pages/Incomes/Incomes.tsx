@@ -17,7 +17,6 @@ interface IncomesProps {
     IncomeName: string;
     IncomeAmount: number;
     IncomeDate: string;
-
 }
 
 interface IncomesData {
@@ -58,20 +57,6 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
      setIncomeName(value);
      return value;
  }
-
- const handleupload = () => {
-    console.log("upload");
-    
-    const newIncomes = [...incomes, {
-        IncomeName: incomeName,
-        IncomeAmount: incomeAmount,
-        IncomeDate: incomeDate,
-    }]
-    setIncomes(newIncomes);
-    updateUserData({ Incomes: newIncomes });
-    
-    
- }
  
  useEffect(() => {
      console.log(incomes);
@@ -93,7 +78,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
         <div>
             <h1>Incomes</h1>
             <div>
-                <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
+                <IncomeForm onSubmit={handleIncomeSubmit} IncomesData={incomes}></IncomeForm>
             </div>
             <div className="incomes-container">
             <h1>Incomes</h1>

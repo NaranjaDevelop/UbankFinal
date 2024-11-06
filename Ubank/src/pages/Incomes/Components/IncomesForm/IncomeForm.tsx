@@ -3,6 +3,7 @@ import { updateUserData } from "../../../../Services/Userdata";
 
 interface IncomeFormProps {
   onSubmit: (data: IncomeFormData) => void;
+  IncomesData: any
 }
 
 interface IncomeFormData {
@@ -11,12 +12,15 @@ interface IncomeFormData {
   date: string;
 }
 
-const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
+const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit, IncomesData }) => {
   const [formData, setFormData] = useState<IncomeFormData>({
     incomeName: "",
     amount: 0,
     date: "",
   });
+  
+  const data = IncomesData
+  console.log(data)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -29,7 +33,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmit(formData);
-    const newincome = [formData]
+    const newincome = [...IncomesData, formData]
 
     console.log(newincome);
     updateUserData({Incomes: newincome})
