@@ -10,3 +10,8 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
 
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit({ expenseName, amount, date, category });
+  };
