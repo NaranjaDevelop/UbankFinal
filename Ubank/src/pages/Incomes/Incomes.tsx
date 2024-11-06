@@ -38,10 +38,9 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
     
  useEffect(() => {
     console.log(incomesdata);
-    const ignorefirst = incomesdata.slice(1);
     
     setIncomes(incomesdata)
-    setIncomes(ignorefirst);
+
 
     
 }, [incomesdata]);
@@ -91,7 +90,8 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div className="incomescard-container-scroll">
                 
 
-            { 
+            {incomes.length < 0 ? <h3>No incomes added yet</h3> :
+
                 incomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
                 ))  
