@@ -14,11 +14,14 @@ const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCu
     <div className="balance-card" style={style}>
       <div className="header">
         <h3>{title}</h3>
-        <select value={currency} onChange={(e) => onCurrencyChange(e.target.value)}>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="COP">COP</option>
-        </select>
+        <div className="dropdown-div">
+          <select value={currency} onChange={(e) => onCurrencyChange(e.target.value)}>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="COP">COP</option>
+          </select>  
+        </div>
+        
       </div>
       <div className="amount">
         <h1>{currency} {amount.toLocaleString()}</h1>
