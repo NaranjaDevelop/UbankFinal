@@ -1,20 +1,13 @@
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    color: #333; /* Texto oscuro */
-    margin-bottom: 1rem;
-}
-.log-out-button {
-    background-color: #FF4C4C;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 40px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-.log-out-button:hover {
-    background-color: #E43C3C; /* Color más oscuro al pasar el mouse */
-}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Opcional: para centrar los elementos horizontalmente */
+    gap: 16px; /* Opcional: para dar un espacio entre los elementos */
+  }
+  
+  .welcome-user {
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    color: #333; /* Cambia el color del texto si lo deseas */
+    text-align: center; /* Centra el texto */
+  }
+  

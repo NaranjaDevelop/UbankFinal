@@ -69,14 +69,13 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <div>
-      <h2
-      className="welcome-user">
-        Welcome, {username} 🌷͙֒🎀
-      </h2>
-      
-      <Sidebar onLogout={handleLogout} />
-    </div>
+    <div className="container">
+    <Sidebar onLogout={handleLogout} />
+
+    <h2 className="welcome-user">
+      Welcome, {username} 🌷͙֒🎀
+    </h2>
+  </div>
   );
 };
 
