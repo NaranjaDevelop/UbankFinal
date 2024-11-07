@@ -14,15 +14,15 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
 
 
     return (
-        <div className="monthly-budget">
+        <div className="monthly-budget1">
 
-            <div className="IconImage" style={{ display: "flex", flexDirection: "row", marginLeft:"-80px"}} >
+            <div className="IconImage" style={{ display: "flex", flexDirection: "row", marginLeft:"-50px", marginTop: "10px"}} >
                 <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498" alt="Icon" className="Icon1" height={29} /> 
                 <h2>Budget and M. Expenses</h2> 
                 
             </div>
-                <p>Your minor expenses this month</p>
-            <div className="circular-chart">
+                <p className='description-montly'>Your minor expenses this month</p>
+            <div className="circular-chart1">
                 <PieChart width={200} height={200}>
                     <Pie
                         data={[{ name: 'Expenses', value: expensesAmount }, { name: 'Minor Expenses', value: minorExpensesAmount }]}

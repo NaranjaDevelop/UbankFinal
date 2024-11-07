@@ -302,6 +302,7 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                             </div> 
             </div>
             <div className="Thirdrow-container">
+                
             <div className="expensescards-container">
 
             <div className="categories-container">

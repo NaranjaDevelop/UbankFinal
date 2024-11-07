@@ -1,4 +1,4 @@
-.monthly-budget {
+.monthly-budget1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,11 +15,10 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
-    margin-left: 20px;
     margin-top: 7px;
 }
 
-.monthly-budget h2 {
+.monthly-budget1 h2 {
     color: #000000;
     margin-bottom: 10px;
     justify-content: left;
@@ -29,6 +28,16 @@
     font-weight: 500;
     line-height: 21.731px;
     letter-spacing: -0.72px;
+}
+
+.description-montly{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.56px;
+    margin-top: -5px;
 }
 
 
@@ -43,7 +52,7 @@
     justify-content: center;
 }
 
-.monthly-budget h3 {
+.monthly-budget1 h3 {
     font-size: 1.25rem;
     color: #333;
 }
@@ -74,4 +83,13 @@
     position: relative;
     top: -123px;
 
+}
+
+.circular-chart1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20px;
 }

@@ -93,7 +93,8 @@ Sidebar{
     flex-direction: column;
     background-color: #ffffff;
     gap: 30px;
-    width: fit-content;
+    width: 993px;
+    margin-left: 334px;
 
 }
 .categories-container{
@@ -102,7 +103,10 @@ Sidebar{
     gap: 20px;
     padding: 20px;
     justify-content: space-between;
-    width: fit-content;
+    width: 999px;
+    background-color: #ffffff;
+    border-radius: 28px;
+    margin-left: 10px;
 }
 .categories-scroll-container{
     overflow-y: scroll;
