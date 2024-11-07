@@ -10,6 +10,7 @@ import './Incomespage.css'
 import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinorexpense";
 import Motivation from "./Components/Advertisement/Motivation";
 import ExpenseForm from "./Components/ExpensesForm/ExpensesForm";
+import Expensescard from "./Components/Expenses/Expenses";
 
 
 
@@ -32,7 +33,7 @@ const Incomes = () => {
 
 const [incomes, setIncomes] = useState<IncomesProps[]>([]);
 const [TotalIncomes, setTotalIncomes] = useState<number>(0);
-  
+const [expenses, setExpenses] = useState<ExpenseData[]>([]);
  
  
     
@@ -50,6 +51,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
 
  useEffect(() => {
      console.log(incomes);
+     console.log(expenses);
      
      
      
@@ -58,7 +60,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
      setTotalIncomes(getincomesamount);
      
      
-    }, [incomes]);
+    }, [incomes,expenses]);
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
         
@@ -82,10 +84,12 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
           }
           
          
-        const [expenses, setExpenses] = useState<ExpenseData[]>([]);
+      
 
          const handleExpenseSubmit = (data: ExpenseData) => {
+            
             setExpenses((prevExpenses) => [...prevExpenses, data]);
+            
             console.log("Nuevo gasto agregado:", data);
           };
 
@@ -109,7 +113,7 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
             <div className="incomescard-container-scroll">
                 
 
-            {incomes.length < 0 ? <h3>No incomes added yet</h3> :
+            {incomes.length === 0 ? <h3>No incomes added yet</h3> :
 
                 incomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
@@ -144,7 +148,16 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
                 <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />
             </div> 
             </div>
-    
+            <div className="Thirdrow-container">
+
+                {
+                   expenses.length === 0 ? <h3>No expenses added yet</h3> :
+
+                    expenses.map((expense, index) => (
+                        <Expensescard key={index} ExpensesTitle={expense.expenseName} ExpensesAmount={expense.amount} ExpensesDate={expense.date} ExpensesType={expense.category} Expensesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
+                    ))  
+                }
+            </div>
            </div>
            
     )
