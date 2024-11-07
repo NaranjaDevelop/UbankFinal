@@ -10,13 +10,14 @@ const Dashboard: React.FC = () => {
   const { username, handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void> };
   return (
     <div className="dash-div">
+      <Sidebar onLogout={handleLogout} />
       <h2
-      className="welcome-user">
+        className="welcome-user">
         Welcome!, {username} 
       </h2>
       <p>Detailed overview of your finantial situation</p>
       <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
-      <Sidebar onLogout={handleLogout} />
+
       <IncomeExpenseChart />
       <ProgressCard 
           title="Your saving goal" 
