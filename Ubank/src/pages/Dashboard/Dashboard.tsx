@@ -9,22 +9,25 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 const Dashboard: React.FC = () => {
   const { username, handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void> };
   return (
-    <div className="dash-div">
+    <div className="dashboard-content">
       <Sidebar onLogout={handleLogout} />
-      <h2
-        className="welcome-user">
-        Welcome!, {username} 
-      </h2>
-      <p>Detailed overview of your finantial situation</p>
-      <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
-
-      <IncomeExpenseChart />
-      <ProgressCard 
-          title="Your saving goal" 
-          description="New pair of shoes 👠👠" 
-          currentAmount={100000} 
-          goalAmount={200000} 
-        />
+      <div className=''>
+        <section className='text-content'>
+        <h2>Welcome!, {username}</h2>
+        <p>Detailed overview of your finantial situation</p>
+        </section>
+        <div className='body-content'>
+          <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
+          <IncomeExpenseChart />
+          <ProgressCard 
+              title="Your saving goal" 
+              description="New pair of shoes 👠👠" 
+              currentAmount={100000} 
+              goalAmount={200000} 
+            />
+          </div>
+        </div>
+      
 
     </div>
   );
