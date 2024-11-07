@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Questions/Question.css';
 import img from '../../../../assets/ilustracionesform6.png';
-import img1 from'../../../../Assets/indicator1.png';
+import img1 from'../../../../assets/indicator1.png';
 
 interface QuestionProps {
   currentNumber: any;  // Ejemplo: "1 of 6"
