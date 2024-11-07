@@ -14,7 +14,7 @@
 .modal-content {
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     width: 90%;
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,10 +28,42 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
     background: #8644DB;
     border: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #555;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
     cursor: pointer;
+}
+
+.income-form input[type="text"],
+.income-form input[type="number"],
+.income-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.income-form label{
+    font-weight: 600;
+}
+
+.submit-button{
+    margin-top: 20px;
+    background-color: #8644DB;
+    border-color: transparent;
+    height: 35px;
+    border-radius: 100px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
