@@ -39,14 +39,16 @@
     color: #000000;
     margin-left: 5px;
     margin-top: 10px; 
+    font-size: 15px;
     
   }
   
   .progress-card .amounts {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px;
   }
   
   .amounts .goal {

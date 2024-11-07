@@ -29,15 +29,15 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
         <h2>{title}</h2>
       </div>
       <p>{subtitle}</p>
-      <ResponsiveContainer width="100%" height={260}>
-        <BarChart data={data} margin={{ top: 30, right: 30, left: 20, bottom: -12 }} barSize={16}>
+      <ResponsiveContainer width="100%" height={240}>
+        <BarChart data={data} margin={{ top: 30, right: 30, left: 20, bottom: -18 }} barSize={16}>
           <XAxis dataKey="month" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }}/>
           <Tooltip />
           <Legend 
           iconType="circle"
           formatter={(value) => (
-            <span style={{ color: 'black', fontSize: '13px', fontWeight: "400" }}>
+            <span style={{ color: 'black', fontSize: '13px', fontWeight: "400", marginRight: "10px"}}>
             {value === 'Incomes' ? 'Incomes' : 'Minor expenses'}
             </span>
           )} />
