@@ -1,12 +1,12 @@
 import React from 'react';
 import './Components/OnBoarding.css';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../Assets/competitor-analysis--business-competitor-analysis.webp';
-import img2 from '../../Assets/coin.webp';
-import img3 from '../../Assets/obnimg.webp';
-import img4 from '../../Assets/pig.webp';
-import img5 from '../../Assets/question.webp';
-import img6 from '../../Assets/wallet.webp';
+import img1 from '../../assets/competitor-analysis--business-competitor-analysis.webp';
+import img2 from '../../assets/coin.webp';
+import img3 from '../../assets/obnimg.webp';
+import img4 from '../../assets/pig.webp';
+import img5 from '../../assets/question.webp';
+import img6 from '../../assets/wallet.webp';
 const OnBoarding: React.FC = () => {
   const navigate = useNavigate();
 
