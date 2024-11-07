@@ -27,15 +27,19 @@ interface IncomesData {
         Incomes: IncomesProps[]
     
 }
+
+
 const Incomes = () => {
     
-    const {incomesdata} = UseContextIncomes();
+    const {incomesdata,ExpenseData} = UseContextIncomes();
 
 
 const [incomes, setIncomes] = useState<IncomesProps[]>([]);
 const [TotalIncomes, setTotalIncomes] = useState<number>(0);
 const [TotalExpenses, setTotalExpenses] = useState<number>(0);
+const [TotalMinorExpenses, setTotalMinorExpenses] = useState<number>(0);
 const [expenses, setExpenses] = useState<ExpenseData[]>([]);
+const [minorExpenses, setMinorExpenses] = useState<any>([]);
 const [isModalOpen, setIsModalOpen] = useState(false);
  
  
@@ -44,7 +48,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     console.log(incomesdata);
     
     setIncomes(incomesdata)
-    setExpenses(incomesdata)
+    setExpenses(ExpenseData)
+
 
     
 }, [incomesdata]);
@@ -60,22 +65,28 @@ const [isModalOpen, setIsModalOpen] = useState(false);
      
      const getincomesamount = remainingIncomes.map((income) => income.IncomeAmount).reduce((acc, curr) => acc + curr, 0);
      const getexpensesamount = remainingExpenses.map((expense) => expense.ExpensesAmount).reduce((acc, curr) => acc + curr, 0);
-
+    const getminorexpensesamount = minorExpenses.map((expense: ExpenseData) => expense.ExpensesAmount).reduce((acc: number, curr: number) => acc + curr, 0);
      console.log(getincomesamount);
      setTotalExpenses(getexpensesamount);
      setTotalIncomes(getincomesamount);
-     MinorExpensesselector(expenses);
+     setTotalMinorExpenses(getminorexpensesamount);
+     MinorExpensesselector(expenses); 
      
-    }, [incomes,expenses]);
+    }, [incomes,expenses,minorExpenses]);
+
+
 
 
 
     const MinorExpensesselector = (expenses: ExpenseData[]) => {
-        const filterminorexpenses = expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
-        console.log("minnor expnese",filterminorexpenses);
-        
-        return filterminorexpenses;
 
+        
+        const filterbyfood= expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
+        const filterbytransport= expenses.filter((expense) => expense.ExpensesCategory === "Transportation" && expense.ExpensesAmount > 10000);
+        
+        const Minorexpenses = [...filterbyfood,...filterbytransport]
+        setMinorExpenses(Minorexpenses);
+        console.log(Minorexpenses);
     }
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
@@ -121,6 +132,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
           const [, ...remainingIncomes] = incomes;
           const [, ...remainingExpenses] = expenses;
+      
     return (
         <div>
             <h1>Incomes</h1>
@@ -147,7 +159,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             <div className="incomescard-container-scroll">
                 
             
-            {incomes.length === 0 ? <h3>No incomes added yet</h3> :
+            {remainingIncomes.length === 0 ?  <h3>No incomes added yet</h3> :
 
                     remainingIncomes.map((income, index) => (
                     <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
@@ -167,7 +179,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                 <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={TotalExpenses} />
             </div>
             <div>
-                <IncomesMinorexpenses incomeAmount={TotalIncomes} minorexpense={100} />
+                <IncomesMinorexpenses incomeAmount={TotalIncomes} minorexpense={TotalMinorExpenses} />
             </div>
             </div>
             <div>
@@ -176,15 +188,22 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             </div>
             <div className="Secondrow-container">
 
-            <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={199}   />
+            <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={TotalMinorExpenses}   />
             <div className="Minor-expense-container">
                 <h1>Minor Expenses</h1>
-                <MinorExpense ExpenseAmount={100} ExpenseDate="20-12-2023" ExpenseName="comida" Expensetype="Food" />
-            </div> 
+                {   
+                    minorExpenses.length === 0 ? <h3>No minor expenses detected yet</h3> :
+                    minorExpenses.map((expense: ExpenseData, index:any) => (
+                        <MinorExpense key={index} ExpenseAmount={expense.ExpensesAmount} ExpenseDate={expense.ExpensesDate} ExpenseName={expense.ExpensesName} Expensetype={expense.ExpensesCategory} />
+                        ))
+                 
+
+                }
+                            </div> 
             </div>
             <div className="Thirdrow-container">
             <div className="expensescards-container">
-                <TypeExpensesWheel  budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={199}   />
+                <TypeExpensesWheel  budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={TotalMinorExpenses}   />
                 <h1>Expenses</h1>
                 <h3>Your expenses this month</h3>
                 <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FFilter%20Icon.png?alt=media&token=14ff20e3-a9a0-4b8a-9158-7c65918bc496" alt="" height={20} width={20} />
@@ -193,7 +212,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                 <div className="expensescard-container-scroll">
 
                 {
-                    expenses.length === 0 ? <h3>No expenses added yet</h3> :
+                    remainingExpenses.length === 0 ? <h3>No expenses added yet</h3> :
                     
                     remainingExpenses.map((expense, index) => (
                         <Expensescard key={index} ExpensesTitle={expense.ExpensesName} ExpensesAmount={expense.ExpensesAmount} ExpensesDate={expense.ExpensesDate} ExpensesType={expense.ExpensesCategory} Expensesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
