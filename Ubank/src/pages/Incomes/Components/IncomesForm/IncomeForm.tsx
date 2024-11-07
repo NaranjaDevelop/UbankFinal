@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./IncomesForm.css";
 
 interface IncomeFormProps {
   onSubmit: (data: IncomeFormData) => void;
@@ -22,7 +22,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: name === "amount" ? parseFloat(value) : value, // Convertimos 'amount' a número
+      [name]: name === "amount" ? parseFloat(value) : value,
     });
   };
 
@@ -32,9 +32,9 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="incomeName">Nombre del Ingreso:</label>
+    <form className="income-form" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="incomeName">Income Name:</label>
         <input
           type="text"
           id="incomeName"
@@ -45,8 +45,8 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div>
-        <label htmlFor="amount">Cantidad:</label>
+      <div className="form-group">
+        <label htmlFor="amount">Amount:</label>
         <input
           type="number"
           id="amount"
@@ -57,8 +57,8 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div>
-        <label htmlFor="date">Fecha:</label>
+      <div className="form-group">
+        <label htmlFor="date">Date:</label>
         <input
           type="date"
           id="date"
@@ -69,7 +69,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <button type="submit">Registrar</button>
+      <button type="submit" className="submit-button">Submit</button>
     </form>
   );
 };
