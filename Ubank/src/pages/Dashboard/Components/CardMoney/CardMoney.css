@@ -9,9 +9,6 @@
 }
 
 .header .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 32px;
     height: 32px;
     font-size: 18px;
@@ -19,16 +16,16 @@
 }
 .amount h1{
     font-family: Poppins;
-    font-size: 30px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 600;
     line-height: 48px; 
     letter-spacing: -1.1px;
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
 select{
-    background: #F5F5F5;
+    background: none;
     border: 1px solid #363538;
     box-sizing: border-box;
     border-radius: 32px;
@@ -47,7 +44,7 @@ select{
 .dropdown-div{
     display: flex; 
     margin-left: 249px;
-    margin-top: -50px;
+    margin-top: -37px;
     gap: 50px;
 }
 
@@ -58,4 +55,12 @@ select{
     height: 136px;
     width: 339px;
     margin-top: 20px;
+}
+
+.header .title-icon{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 1px;
+    
 }

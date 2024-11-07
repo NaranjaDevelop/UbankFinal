@@ -15,8 +15,10 @@ const BalanceCard: React.FC<BalanceCardProps> = ({ title, amount, currency, onCu
   return (
     <div className={`balance-card ${className}`} style={style}>
       <div className="header">
-        <div className="icon"> <img src={imageSrc} alt="img-api" width={20}/></div>
-        <h3>{title}</h3>
+        <div className='title-icon'>
+          <div className="icon"> <img src={imageSrc} alt="img-api" width={20}/></div>
+          <h3>{title}</h3>
+        </div>
         <div className="dropdown-div">
           <select value={currency} onChange={(e) => onCurrencyChange(e.target.value)}>
             <option value="USD">USD</option>
