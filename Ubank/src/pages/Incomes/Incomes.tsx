@@ -41,7 +41,7 @@ const [expenses, setExpenses] = useState<ExpenseData[]>([]);
     console.log(incomesdata);
     
     setIncomes(incomesdata)
-
+    setExpenses(incomesdata)
 
     
 }, [incomesdata]);
@@ -160,7 +160,7 @@ const [expenses, setExpenses] = useState<ExpenseData[]>([]);
                    expenses.length === 0 ? <h3>No expenses added yet</h3> :
 
                     expenses.map((expense, index) => (
-                        <Expensescard key={index} ExpensesTitle={expense.expenseName} ExpensesAmount={expense.amount} ExpensesDate={expense.date} ExpensesType={expense.category} Expensesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
+                        <Expensescard key={index} ExpensesTitle={expense.ExpensesName} ExpensesAmount={expense.ExpensesAmount} ExpensesDate={expense.ExpensesDate} ExpensesType={expense.ExpensesCategory} Expensesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
                     ))  
                 }
             </div>
