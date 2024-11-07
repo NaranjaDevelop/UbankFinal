@@ -12,7 +12,7 @@ const MinorExpense = ({ Expensetype, ExpenseName, ExpenseDate, ExpenseAmount }: 
         <div className="minor-expense">
             
             <div className="CircleImage" >
-            <img src="" alt="Circularicon" className="CircleImage1"/>
+            <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498" alt="Circularicon" className="CircleImage1"/>
             </div>
             <div className="details">
                 <h2>{Expensetype || "Food"}</h2>
