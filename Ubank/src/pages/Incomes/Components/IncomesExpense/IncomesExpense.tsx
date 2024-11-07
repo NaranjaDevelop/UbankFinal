@@ -41,7 +41,7 @@ const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
             <div className="rectangle-incomes" ></div>
             <div className='leyenda'>
                 <p id='incomes-info'>Income:</p>
-                <p><strong>${incomeAmount} </strong></p>
+                <p><strong>${incomeAmount.toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: 2 })} </strong></p>
             </div>
             </div>
 
@@ -49,7 +49,7 @@ const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
             <div className="rectangle-expenses" ></div>
             <div className='leyenda2'>
                 <p id='expenses-info'>Expense:</p>
-                <p><strong>${expenseAmount} </strong></p>
+                <p><strong>${expenseAmount.toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: 2 })} </strong></p>
             </div>
             
             </div>
