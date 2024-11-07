@@ -72,7 +72,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
      setTotalMinorExpenses(getminorexpensesamount);
      MinorExpensesselector(expenses); 
      
-    }, [incomes,expenses,minorExpenses]);
+    }, [incomes,expenses]);
 
 
 
