@@ -191,6 +191,8 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
             <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={TotalMinorExpenses}   />
             <div className="Minor-expense-container">
                 <h1>Minor Expenses</h1>
+                <div className="minor-expense-scroll-container">
+
                 {   
                     minorExpenses.length === 0 ? <h3>No minor expenses detected yet</h3> :
                     minorExpenses.map((expense: ExpenseData, index:any) => (
@@ -199,6 +201,7 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                  
 
                 }
+                    </div>
                             </div> 
             </div>
             <div className="Thirdrow-container">
