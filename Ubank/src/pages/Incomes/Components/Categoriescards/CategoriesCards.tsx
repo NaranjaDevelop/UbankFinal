@@ -6,14 +6,20 @@ interface CategoriesCardsProps {
     TypeImg: string
 }
 
-const CategoriesCards = () => {
+
+
+const CategoriesCards = ({TypeExpenses, TypeAmount, TypeImg}: CategoriesCardsProps) => {
 
 
     return (
         <div className="categories-cards">
-            <div className="card">
-
+                 <img src={TypeImg} alt="card-img" className='cardType-img' height={40} />
+            <div className="Typeexpensecard">
+                 <h3>{TypeExpenses}</h3>
+                 <p>${TypeAmount}</p>
             </div>
         </div>
     )
 }
+
+export default CategoriesCards  

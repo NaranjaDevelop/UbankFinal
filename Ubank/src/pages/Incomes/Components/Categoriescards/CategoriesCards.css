@@ -1,0 +1,7 @@
+
+
+.categories-cards{
+    display: flex;
+    gap: 10px;
+    width: 300px;
+}
