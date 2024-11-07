@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useExchangeRates } from '../../../../Hooks/ApiCurrency';
 import BalanceCard from '../CardMoney/CardMoney';
 import './CurrencyConverter.css';
+import img1 from "../../../../assets/hormiga-icon.webp"
+import img2 from "../../../../assets/wallet-icon.webp"
+import img3 from "../../../../assets/support-dollar.webp"
 
 interface CurrencyConverterProps {
   totalBalance: number;
@@ -25,7 +28,7 @@ const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ totalBalance, sav
   return (
     <div className="currency-converter">
       <BalanceCard
-        imageSrc=""
+        imageSrc={img2}
         title="Total Balance"
         amount={convertCurrency(totalBalance, currencies.totalBalance)}
         currency={currencies.totalBalance}
@@ -34,7 +37,7 @@ const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ totalBalance, sav
         className='total-balance'
       />
       <BalanceCard
-        imageSrc=""
+        imageSrc={img3}
         title="Savings"
         amount={convertCurrency(savings, currencies.savings)}
         currency={currencies.savings}
@@ -43,7 +46,7 @@ const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ totalBalance, sav
         className='savings'
       />
       <BalanceCard
-        imageSrc=''
+        imageSrc={img1}
         title="Minor Expenses"
         amount={convertCurrency(minorExpenses, currencies.minorExpenses)}
         currency={currencies.minorExpenses}
