@@ -17,7 +17,7 @@ const Incomescard = ({IncomeTitle, IncomeAmount, IncomeDate, Incomesimg}:Incomes
         <div id='incomescard-details'>
 
         <p id='incomescard-title'>{IncomeTitle}</p>
-        <h3 id='incomescard-amount'>{IncomeAmount} $</h3>
+        <h3 id='incomescard-amount'> ${IncomeAmount.toLocaleString('en-CO', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</h3>
       </div>
         </div>
         <div id='incomescard-date'>

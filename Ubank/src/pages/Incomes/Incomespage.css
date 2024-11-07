@@ -54,6 +54,10 @@
 }
 .total-incomes{
     justify-self: flex-end;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: -0.48px;
+    color: #2d2d2d;
 }
 
 .Secondrow-container{
@@ -76,6 +80,64 @@
     gap: 30px;
 }
 
-.incomes-container h1{
-    
+.incomes-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 341px;
+    height: 407px;
+}
+.incomes-container .header2{
+    display: flex;
+    margin-top: -3px;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.incomes-container .header2 h1{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.incomes-container .header2 .add-income{
+  margin-left: 106px;
+}
+
+.incomes-container .header2 .add-income:hover{
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateY(-2px); /* Mueve el elemento hacia arriba 5px */
+}
+
+
+.incomes-container p{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.56px;
+    margin-left: 55px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.incomes-container .header2 .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
 }

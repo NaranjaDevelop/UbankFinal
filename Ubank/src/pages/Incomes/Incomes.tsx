@@ -12,6 +12,8 @@ import Motivation from "./Components/Advertisement/Motivation";
 import ExpenseForm from "./Components/ExpensesForm/ExpensesForm";
 import Expensescard from "./Components/Expenses/Expenses";
 import TypeExpensesWheel from "./Components/TypeExpensesPie/TypeExpensesPie";
+import img1 from "../../assets/icon-income.webp";
+import img2 from "../../assets/incomemoney.webp";
 
 
 import UseDashboard from "../../Hooks/DashboardHooks";
@@ -158,16 +160,20 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
         
                 <div className="Firstrow-container">
                     <div className="incomes-container">
-                        <h1>Incomes</h1>
-                        <h3>Your incomes this month</h3>
-                        <img
+                        <div className="header2">
+                            <div className="icon" style={{ backgroundColor: '#D7F177' }}> <img src={img1} alt="money-income" width={13}/></div>
+                            <h1>Incomes</h1>
+                            <img
                             className="add-income"
                             onClick={() => setIsIncomeModalOpen(true)}
                             src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4"
-                            alt=""
-                            height={30}
-                            width={30}
-                        />
+                            alt="add-income"
+                            height={50}
+                            width={50}
+                            />
+                        </div>
+                        <p>Your incomes this month</p>
+
                         <div className="incomescard-container-scroll">
                             {remainingIncomes.length === 0 ? (
                                 <h3>No incomes added yet</h3>
@@ -178,12 +184,12 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                                         IncomeTitle={income.IncomeName}
                                         IncomeAmount={income.IncomeAmount}
                                         IncomeDate={income.IncomeDate}
-                                        Incomesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1"
+                                        Incomesimg={img2}
                                     />
                                 ))
                             )}
                         </div>
-                        <h3 className="total-incomes">Total: {TotalIncomes}$</h3>
+                        <h3 className="total-incomes">Total: ${TotalIncomes.toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</h3>
                     </div>
         
                     <div className="Bargraph-container">
