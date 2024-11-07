@@ -15,7 +15,8 @@ import TypeExpensesWheel from "./Components/TypeExpensesPie/TypeExpensesPie";
 import UseDashboard from "../../Hooks/DashboardHooks";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import CategoriesCards from "./Components/Categoriescards/CategoriesCards";
-
+import img1 from "../../assets/icon-income.webp"
+import img2 from "../../assets/incomemoney.webp"
 
 interface IncomesProps {
     IncomeName: string;
@@ -166,10 +167,6 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
 
 
 
-
-
-    
-
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
         console.log("upload");
 
@@ -217,9 +214,16 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
           const [, ...remainingExpenses] = expenses;
       
     return (
-        <div>
+        <div className="incomes-main-div">
+            <h1 className="main-title">Incomes and Expenses</h1>
+            <p className="main-subtitle">Here you can enter your income and expenses to have control over them.</p>
+
+
+
+
+
             <Sidebar onLogout={handleLogout} />
-            <h1>Incomes</h1>
+            
             <div>
                 {isIncomeModalOpen && (
                     <div className="modal-overlay">
@@ -242,25 +246,28 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
         )}
 
             <div className="Firstrow-container">
-
             <div className="incomes-container">
-            <h1>Incomes</h1>
-            <h3>Your incomes this month</h3>
-            <img className="add-income"  onClick={() => setIsIncomeModalOpen(true)} src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={30} width={30}/>
+            <div className="header2">
+                <div className="icon" style={{ backgroundColor: '#D7F177' }}> <img src={img1} alt="income-info" width={14}/></div>
+                <h1>Incomes</h1>
+                <img className="add-income"  onClick={() => setIsIncomeModalOpen(true)} src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={45} width={45}/>
+            </div>
+            <p>Your incomes this month</p>
+            
             <div className="incomescard-container-scroll">
                 
             
             {remainingIncomes.length === 0 ?  <h3>No incomes added yet</h3> :
 
                     remainingIncomes.map((income, index) => (
-                    <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
+                    <Incomescard key={index} IncomeTitle={income.IncomeName} IncomeAmount={income.IncomeAmount} IncomeDate={income.IncomeDate} Incomesimg={img2} />
                 ))  
                 
                 
             }
                 </div>
            
-                <h3 className="total-incomes">Total: {TotalIncomes}$</h3>
+                <h3 className="total-incomes">Total: ${TotalIncomes.toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</h3>
             
             
             </div>
@@ -290,8 +297,6 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                     minorExpenses.map((expense: ExpenseData, index:any) => (
                         <MinorExpense key={index} ExpenseAmount={expense.ExpensesAmount} ExpenseDate={expense.ExpensesDate} ExpenseName={expense.ExpensesName} Expensetype={expense.ExpensesCategory} />
                         ))
-                 
-
                 }
                     </div>
                             </div> 
