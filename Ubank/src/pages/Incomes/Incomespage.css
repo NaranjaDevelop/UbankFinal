@@ -95,6 +95,8 @@ Sidebar{
     gap: 30px;
     width: 993px;
     margin-left: 334px;
+    border-radius: 20px;
+    padding: 20px;
 
 }
 .categories-container{
@@ -190,5 +192,19 @@ Sidebar{
 }
 
 .Expensescontainer-all{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Addexpenses-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.containerheader-expenses{
+    display: flex;
+    flex-direction: row;
     
+    gap: 500px;
 }

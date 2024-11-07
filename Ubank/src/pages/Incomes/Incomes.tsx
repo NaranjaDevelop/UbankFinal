@@ -318,12 +318,19 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                 </div>
             </div>
             <div className="Expensescontainer-all">
+                <div className="containerheader-expenses">
+               <div>
 
                 <h1>Expenses</h1>
                 <h3>Your expenses this month</h3>
+               </div>
+               <div className="Addexpenses-container">
+
                 <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FFilter%20Icon.png?alt=media&token=14ff20e3-a9a0-4b8a-9158-7c65918bc496" alt="" height={20} width={20} />
 
-                <img className="add-expenses"  onClick={() => setIsExpenseModalOpen(true)} src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={30} width={30}/>
+                <img className="add-expenses"  onClick={() => setIsExpenseModalOpen(true)} src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={50} width={50}/>
+               </div>
+                </div>
                 <div className="expensescard-container-scroll">
 
                 {
