@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import './Dashboard.css'
 import { UseContextIncomes } from "../../Hooks/Usecontext";
 import CurrencyConverter from "./Components/CardMoney/CurrencyConverter";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import IncomeExpenseChart from "./Components/IncExpChart/IncomeExpenseChart";
 import ProgressCard from "./Components/SavingsProgress/SavingProgress";
 
