@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ExpensesForm.css"; 
 
 interface ExpenseFormProps {
   onSubmit: (data: { ExpensesName: string; ExpensesAmount: number; ExpensesDate: string; ExpensesCategory: string }) => void;
@@ -10,15 +11,14 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
   const [ExpensesDate, setDate] = useState("");
   const [ExpensesCategory, setCategory] = useState("");
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit({ ExpensesName, ExpensesAmount, ExpensesDate, ExpensesCategory });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="expense-form" onSubmit={handleSubmit}>
+      <div className="form-group">
         <label htmlFor="expenseName">Expense Name:</label>
         <input
           type="text"
@@ -29,7 +29,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="amount">Amount:</label>
         <input
           type="number"
@@ -40,7 +40,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="date">Date:</label>
         <input
           type="date"
@@ -51,7 +51,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div>
+      <div className="form-group">
         <label htmlFor="category">Category:</label>
         <select
           id="category"
@@ -74,7 +74,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         </select>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" className="submit-button">Submit</button>
     </form>
   );
 };
