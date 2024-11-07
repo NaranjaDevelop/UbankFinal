@@ -8,6 +8,33 @@
     font-size: 15px;
 
 }
+/* 
+.incomes-main-div h1{
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    color: #000000; 
+    margin-left: 346px;
+    margin-top: 28px;
+} */
+
+@font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+/* .incomes-main-div p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    font-size: 16px;
+    color: #333; 
+    margin-left: 346px;
+} */
+
 .Minor-expense-container{
     background-color: #ffffff;
     padding: 20px;
@@ -27,6 +54,14 @@
 }
 .total-incomes{
     justify-self: flex-end;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: -0.48px;
+    color: #2d2d2d;
+    background-color: #EFF8C0;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
 }
 
 .Secondrow-container{
@@ -70,4 +105,66 @@
     gap: 20px;
     overflow-y: scroll;
     height: 300px;
+
+.incomes-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 341px;
+    height: 407px;
+}
+.incomes-container .header2{
+    display: flex;
+    margin-top: -4px;
+    margin-bottom: 2px;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.incomes-container .header2 h1{
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px; /* 120.729% */
+    letter-spacing: -0.72px;
+    margin-left: 0%;
+    margin-top: -6px;
+}
+
+.incomes-container .header2 .add-income{
+  margin-left: 106px;
+}
+
+.incomes-container .header2 .add-income:hover{
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateY(-2px); /* Mueve el elemento hacia arriba 5px */
+}
+
+
+.incomes-container p{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.56px;
+    margin-left: 55px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+.incomes-container .header2 .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 50%;
 }
