@@ -12,11 +12,13 @@
     align-items: flex-start;
 }
 
-.body-content{
-    
+.dash-progress-charts{
+    display: flex;
+    gap: 23px;
 }
 
 .info-section{
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 }

@@ -10,9 +10,11 @@ const SavingsGoals: React.FC = () => {
   return (
     <div className='savings-goals-container'>
       <Sidebar onLogout={handleLogout} />
-      <section className='text-content'>
+      <section className='info-section'>
+      <div className='text-content'>
         <h2>Savings Goals</h2>
         <p >Manage your savings goals here.</p>
+      </div>
       </section>
     </div>
   );
