@@ -2,6 +2,7 @@
 
 import React from 'react';
 import "./Saving.css";
+import img1 from "../../../../assets/support-dollar.webp"
 
 interface ProgressCardProps {
   title: string;
@@ -22,7 +23,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
     <div className="progress-card">
       <div className="header">
         <div className="icon-title">
-          <div className="icon" style={{ backgroundColor: '#D7F177' }}></div>
+          <div className="icon" style={{ backgroundColor: '#D7F177' }}> <img src={img1} alt="saving-icon" width={19} /></div>
           <h3>{title}</h3>
         </div>
         <h3 className="percentage">{Math.round(progressPercentage)}%</h3>
@@ -37,7 +38,7 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
           className="progress"
           style={{
             width: `${progressPercentage}%`,
-            backgroundColor: '#a65fec',
+            backgroundColor: '#8644DB',
           }}
         />
       </div>
