@@ -1,5 +1,3 @@
-
-import App from "../App";
 import FinantialPlan from "../pages/FinantialPlan/FinantialPlan";
 import { lazy, Suspense } from "react";
 import OnBoarding from "../pages/OnBoarding/OnBoarding";
@@ -7,13 +5,10 @@ const FormPage = lazy(() => import("../pages/Form/Form"));
 import Error from "../components/Error/Error";
 
 export const routerform = ([
-    {
-      path: "/",
-      element: <App />,
-    },
+   
     {
         path: "/onboarding",
-        element: <OnBoarding/>,
+        element:<OnBoarding/>,
     },
     {
       path: "/form",

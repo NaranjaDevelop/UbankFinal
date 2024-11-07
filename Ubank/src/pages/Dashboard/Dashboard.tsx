@@ -1,18 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db, auth } from "../../Clients/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import './Dashboard.css'
+import { UseContextIncomes } from "../../Hooks/Usecontext";
+import CurrencyConverter from "./Components/CardMoney/CurrencyConverter";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import IncomeExpenseChart from "./Components/IncExpChart/IncomeExpenseChart";
+import ProgressCard from "./Components/SavingsProgress/SavingProgress";
 
 const Dashboard: React.FC = () => {
+
+  const {incomesdata} = UseContextIncomes();
+
   const [username, setUsername] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [isLoggingOut, setIsLoggingOut] = useState<boolean>(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(incomesdata);
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setLoading(true); 
       if (user) {
@@ -21,7 +31,6 @@ const Dashboard: React.FC = () => {
           const userDoc = await getDoc(doc(db, "users", user.uid));
           if (userDoc.exists()) {
             setUsername(userDoc.data()?.username || "");
-            console.log("User data: ", userDoc.data()?.Userdata);
             
           }
         } catch (error) {
@@ -41,7 +50,7 @@ const Dashboard: React.FC = () => {
     });
 
     return () => unsubscribe(); 
-  }, [navigate, isLoggingOut]);
+  }, [navigate, isLoggingOut,incomesdata]);
 
   
   const handleLogout = async () => {
@@ -63,14 +72,22 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="dash-div">
       <h2
       className="welcome-user">
-        Welcome, {username} 🌷͙֒🎀
+        Welcome!, {username} 
       </h2>
-      <button 
-      className="log-out-button"
-      onClick={handleLogout}>Logout</button>
+      <p>Detailed overview of your finantial situation</p>
+      <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
+      <Sidebar onLogout={handleLogout} />
+      <IncomeExpenseChart />
+      <ProgressCard 
+          title="Your saving goal" 
+          description="New pair of shoes 👠👠" 
+          currentAmount={100000} 
+          goalAmount={200000} 
+        />
+
     </div>
   );
 };

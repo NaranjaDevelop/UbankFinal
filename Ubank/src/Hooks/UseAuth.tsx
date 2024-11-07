@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import emailjs from 'emailjs-com'
+import emailjs from "@emailjs/browser"
 
 
 import { auth, db } from "../Clients/firebase";
@@ -51,9 +51,26 @@ const useAuth = (): UseAuth => {
         username,
         email,
         Userdata: {
-          Incomes: 0,
-          Expenses: 0,
-          Savings: 0,
+          Incomes: [{
+            IncomeName: "",
+            IncomeAmount: 0,
+            IncomeDate: "",
+
+          }],
+          Expenses: [{
+            ExpenseName: "",
+            ExpenseAmount: 0,
+            ExpenseDate: "",
+            ExpenseCategory: "",
+          }],
+          Savings: [{
+            SavingName: "",
+            SavingAmount: 0,
+            SavingGoal: 0,
+            SavingDate: "",
+          }],
+          Premium: false,
+          Finantialplan: "",
         }
         
       });
