@@ -11,11 +11,11 @@ const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-content">
       <Sidebar onLogout={handleLogout} />
-      <div className=''>
-        <section className='text-content'>
+      <section className='info-section'>
+        <div className='text-content'>
         <h2>Welcome!, {username}</h2>
         <p>Detailed overview of your finantial situation</p>
-        </section>
+        </div>
         <div className='body-content'>
           <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
           <IncomeExpenseChart />
@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
               goalAmount={200000} 
             />
           </div>
-        </div>
+        </section>
       
 
     </div>
