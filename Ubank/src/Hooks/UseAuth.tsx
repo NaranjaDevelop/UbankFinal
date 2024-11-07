@@ -119,6 +119,9 @@ const useAuth = (): UseAuth => {
           Incomes: [{
             
           }],
+          Expenses: [{
+            
+          }],
           Userdata: {
             
             Incomes: [{
