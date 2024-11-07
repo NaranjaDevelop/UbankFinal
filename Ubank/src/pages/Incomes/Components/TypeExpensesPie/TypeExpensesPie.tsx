@@ -3,13 +3,13 @@ import './TypeExpenses.css'
 import { PieChart, Pie, Cell} from 'recharts'
 
 
-interface MonthlyBudgetProps {
+interface TypeExpensesprops {
     budgetAmount: number;
     expensesAmount: number;
     minorExpensesAmount: number;
 }
 
-const TypeExpensesWheel = ({ budgetAmount, expensesAmount, minorExpensesAmount }: MonthlyBudgetProps) => {
+const TypeExpensesWheel = ({ budgetAmount, expensesAmount, minorExpensesAmount }: TypeExpensesprops) => {
 
 
     return (

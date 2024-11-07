@@ -11,7 +11,7 @@ import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinore
 import Motivation from "./Components/Advertisement/Motivation";
 import ExpenseForm from "./Components/ExpensesForm/ExpensesForm";
 import Expensescard from "./Components/Expenses/Expenses";
-import TypeExpensesWheel from "./Components/TypeExpenses/TypeExpenses";
+import TypeExpensesWheel from "./Components/TypeExpensesPie/TypeExpensesPie";
 
 
 
@@ -51,12 +51,21 @@ const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
     setIncomes(incomesdata)
     setExpenses(ExpenseData)
 
-
+    MinorExpensesselector(ExpenseData);
     
 }, [incomesdata]);
 
 
-   
+const MinorExpensesselector = (expenses: ExpenseData[]) => {
+
+        
+    const filterbyfood= expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
+    const filterbytransport= expenses.filter((expense) => expense.ExpensesCategory === "Transportation" && expense.ExpensesAmount > 10000);
+    
+    const Minorexpenses = [...filterbyfood,...filterbytransport]
+    setMinorExpenses(Minorexpenses);
+    console.log(Minorexpenses);
+}
 
  useEffect(() => {
      console.log(incomes);
@@ -71,7 +80,7 @@ const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
      setTotalExpenses(getexpensesamount);
      setTotalIncomes(getincomesamount);
      setTotalMinorExpenses(getminorexpensesamount);
-     MinorExpensesselector(expenses); 
+     
      
     }, [incomes,expenses]);
 
@@ -79,16 +88,7 @@ const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
 
 
 
-    const MinorExpensesselector = (expenses: ExpenseData[]) => {
-
-        
-        const filterbyfood= expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
-        const filterbytransport= expenses.filter((expense) => expense.ExpensesCategory === "Transportation" && expense.ExpensesAmount > 10000);
-        
-        const Minorexpenses = [...filterbyfood,...filterbytransport]
-        setMinorExpenses(Minorexpenses);
-        console.log(Minorexpenses);
-    }
+    
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
         console.log("upload");
@@ -200,6 +200,8 @@ const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
             <MonthlyBudget budgetAmount={TotalIncomes} expensesAmount={TotalExpenses} minorExpensesAmount={TotalMinorExpenses}   />
             <div className="Minor-expense-container">
                 <h1>Minor Expenses</h1>
+                <div className="minor-expense-scroll-container">
+
                 {   
                     minorExpenses.length === 0 ? <h3>No minor expenses detected yet</h3> :
                     minorExpenses.map((expense: ExpenseData, index:any) => (
@@ -208,6 +210,7 @@ const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
                  
 
                 }
+                    </div>
                             </div> 
             </div>
             <div className="Thirdrow-container">
