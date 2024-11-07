@@ -1,25 +1,35 @@
 .minor-expense {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f5f5f5; /* Color gris clarito para el contenedor */
+    border-radius: 10px;
+    background-color: #f5f5f5; 
+    width: 590px;
 }
+
+.CircleImage1{
+    width: 41px;
+    height: 41px;
+    max-width: 41px;
+    margin-right: 10px;
+}
+
 
 .minor-expense img {
     width: 41px;
     height: 41px;
     background-color: orange;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-left: 15px;
+    
 }
 
 .minor-expense .details {
     flex-grow: 1;
-    margin-right: 15px;
+
 }
 
 .minor-expense .details h2 {
@@ -38,7 +48,12 @@
 }
 
 .minor-expense .amount {
-    font-weight: bold;
-    font-size: 24.64px; /* Tamaño de fuente para ExpenseAmount */
     text-align: right;
+    font-weight: bold;
+    font-size: 24.64px;
+    text-align: right;
+}
+.Minor-expense-container{
+    display: flex;
+    flex-direction: column;
 }

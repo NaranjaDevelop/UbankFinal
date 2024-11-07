@@ -50,7 +50,14 @@ const useAuth = (): UseAuth => {
       await setDoc(doc(db, "users", result.user.uid), {
         username,
         email,
+        Incomes: [{
+            
+        }],
+        Expenses: [{
+            
+        }],
         Userdata: {
+          
           Incomes: [{
             IncomeName: "",
             IncomeAmount: 0,
@@ -112,12 +119,36 @@ const useAuth = (): UseAuth => {
         await setDoc(userDocRef, {
           username: result.user.displayName,
           email: result.user.email,
+          Incomes: [{
+            
+          }],
+          Expenses: [{
+            
+          }],
           Userdata: {
-            Incomes: 0,
-            Expenses: 0,
-            Savings: 0,
+            
+            Incomes: [{
+              IncomeName: "",
+              IncomeAmount: 0,
+              IncomeDate: "",
+  
+            }],
+            Expenses: [{
+              ExpenseName: "",
+              ExpenseAmount: 0,
+              ExpenseDate: "",
+              ExpenseCategory: "",
+            }],
+            Savings: [{
+              SavingName: "",
+              SavingAmount: 0,
+              SavingGoal: 0,
+              SavingDate: "",
+            }],
+            Premium: false,
+            Finantialplan: "",
           }
-        });
+      });
       }
     } catch (error) {
       console.error("Error al iniciar sesión con Google: ", error);

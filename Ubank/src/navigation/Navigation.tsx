@@ -26,7 +26,4 @@ export const routerform = ([
       path: "*",
       element: <Error />,
     },
-
-    
-    
   ]);

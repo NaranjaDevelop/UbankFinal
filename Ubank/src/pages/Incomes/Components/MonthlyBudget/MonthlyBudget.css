@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 500px;
+    height: 387px;
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
+
 }
 
 .monthly-budget h2 {
@@ -15,16 +15,8 @@
     color: #333;
     margin-bottom: 20px;
 }
-.nose{
-    background-color: beige;
-    padding: 30px;
-}
-.circular-chart {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    margin-bottom: 20px;
-}
+
+
 
 .circle {
     width: 100%;
@@ -53,4 +45,18 @@
     margin: 0;
     font-size: 1rem;
     color: #666;
+}
+
+.DataDown {
+    display: flex;
+    flex-direction: row;
+}
+.blue{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -123px;
+
 }

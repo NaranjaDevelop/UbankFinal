@@ -1,0 +1,65 @@
+/* IncomesExpenses.css */
+.incomes-expenses {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    
+    height: 250px;
+}
+.header-incomesexpenses {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+
+
+.incomes-expenses .header-incomesexpenses span {
+    background-color: #DCE775; /* Fondo verde claro para el ícono */
+    padding: 12px; /* Tamaño ajustado */
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+.not-found {
+    color: #888; 
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+}
+.incomebarchart .recharts-surface{
+    position: relative;
+    margin-left: 20px;
+    top: -20px;
+    transform: rotate(90deg);
+}
+.incomesexpenses-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: -180px;
+    left: 250px;
+}
+
+
+
+.rectangle-incomes{
+    background-color: #8644DB;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+.rectangle-expenses{
+    background-color: #eFd5D2;
+    height: 30px;
+    width: 5px;
+    border-radius: 10px;
+}
+.incomesexpenses-info-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

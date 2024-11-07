@@ -1,5 +1,6 @@
+import './IncomesExpense.css';
 
-import './IncomesExpenses.css';
+import { BarChart, Bar} from 'recharts';
 
 interface IncomesExpensesProps {
     incomeAmount?: number;
@@ -11,24 +12,42 @@ interface IncomesExpensesProps {
 const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
     incomeAmount = 0,
     expenseAmount = 0,
-    incomePercentage = 0,
-    expensePercentage = 0
+
 }) => (
     <div className="incomes-expenses">
-        <div className="header">
+        <div className="header-incomesexpenses">
             <span role="img" aria-label="dollar">💵</span>
             <h2>Incomes vs Expenses</h2>
         </div>
 
-        <div className="bar income-bar">
-            <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
-            <p>Incomes ${incomeAmount.toLocaleString()}</p>
+        <div className="incomebarchart">
+        <BarChart width={150} height={200} 
+        data={[
+            { name: 'Income', Income: incomeAmount },
+            { name: 'Expense', Expense: expenseAmount },
+        ]} >
+        
+          
+            <Bar dataKey={'Income'} fill='#8644DB' />
+            <Bar dataKey={'Expense'} fill='#eFd5D2' />
+        </BarChart>
         </div>
 
-        <div className="bar expense-bar">
-            <div className="bar-fill expense-fill" style={{ width: `${expensePercentage}%` }}></div>
-            <p>Expenses ${expenseAmount.toLocaleString()}</p>
+        <div className="incomesexpenses-info">
+            <div className="incomesexpenses-info-container">
+                
+            <div className="rectangle-incomes" ></div>
+            <p id='incomes-info'>Income: ${incomeAmount}</p>
+            </div>
+
+            <div className="incomesexpenses-info-container">
+
+            <div className="rectangle-expenses" ></div>
+            <p id='expenses-info'>Expense: ${expenseAmount}</p>
+            </div>
         </div>
+
+        
     </div>
 );
 

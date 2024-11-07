@@ -1,23 +1,27 @@
-import './MonthlyBudget.css';
+import './TypeExpenses.css'
 
-import { PieChart, Pie, Cell } from 'recharts'
+import { PieChart, Pie, Cell} from 'recharts'
 
 
-interface MonthlyBudgetProps {
+interface TypeExpensesprops {
     budgetAmount: number;
     expensesAmount: number;
     minorExpensesAmount: number;
-
 }
 
-const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: MonthlyBudgetProps) => {
+const TypeExpensesWheel = ({ budgetAmount, expensesAmount, minorExpensesAmount }: TypeExpensesprops) => {
 
 
     return (
         <div className="monthly-budget">
 
             <div className="IconImage" style={{ display: "flex", flexDirection: "row" }} >
-                <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498" alt="Icon" className="Icon1" height={29} /> <h2>Monthly Budget</h2>
+                <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498" alt="Icon" className="Icon1" height={40} />
+                 <div className="ExpensesText-wheel">
+
+                 <h2>Expenses</h2>
+                 <p>your expenses this month</p>
+                 </div>
             </div>
 
             <div className="circular-chart">
@@ -25,19 +29,16 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
                     <Pie
                         data={[{ name: 'Expenses', value: expensesAmount }, { name: 'Minor Expenses', value: minorExpensesAmount }]}
                         outerRadius={100}
-                        innerRadius={80}
-                        paddingAngle={0}
+                        innerRadius={60}
                         dataKey={"value"}
 
                     >
+                        
                         <Cell fill="#B7C7FF" />
                         <Cell fill="#c58121" />
                     </Pie>
                 </PieChart>
-                <div className="blue">
-                    <h5>Monthly Budget</h5>
-                    <h3>{budgetAmount}$</h3>
-                </div>
+               
 
 
 
@@ -56,4 +57,4 @@ const MonthlyBudget = ({ budgetAmount, expensesAmount, minorExpensesAmount }: Mo
     );
 }
 
-export default MonthlyBudget;
+export default TypeExpensesWheel;
