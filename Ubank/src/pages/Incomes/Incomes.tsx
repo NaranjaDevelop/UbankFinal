@@ -14,6 +14,8 @@ import Expensescard from "./Components/Expenses/Expenses";
 import TypeExpensesWheel from "./Components/TypeExpensesPie/TypeExpensesPie";
 
 
+import UseDashboard from "../../Hooks/DashboardHooks";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 
 interface IncomesProps {
@@ -30,6 +32,8 @@ interface IncomesData {
 
 
 const Incomes = () => {
+    const { handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void>; };
+
     
     const {incomesdata,ExpenseData} = UseContextIncomes();
 
@@ -132,11 +136,13 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
           };
 
 
+        
           const [, ...remainingIncomes] = incomes;
           const [, ...remainingExpenses] = expenses;
       
     return (
         <div>
+            <Sidebar onLogout={handleLogout} />
             <h1>Incomes</h1>
             <div>
                 {isIncomeModalOpen && (
