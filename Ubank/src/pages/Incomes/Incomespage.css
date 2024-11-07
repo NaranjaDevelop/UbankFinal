@@ -8,6 +8,33 @@
     font-size: 15px;
 
 }
+/* 
+.incomes-main-div h1{
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    color: #000000; 
+    margin-left: 346px;
+    margin-top: 28px;
+} */
+
+@font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+/* .incomes-main-div p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    font-size: 16px;
+    color: #333; 
+    margin-left: 346px;
+} */
+
 .Minor-expense-container{
     background-color: #ffffff;
     padding: 20px;
@@ -47,4 +74,8 @@
     flex-direction: column;
     background-color: #ffffff;
     gap: 30px;
+}
+
+.incomes-container h1{
+    
 }
