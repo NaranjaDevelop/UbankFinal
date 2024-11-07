@@ -34,7 +34,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
   return (
     <form className="income-form" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="incomeName">Income Name:</label>
+        <label htmlFor="incomeName">Name</label>
         <input
           type="text"
           id="incomeName"
@@ -42,11 +42,12 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
           value={formData.incomeName}
           onChange={handleChange}
           required
+          placeholder="Enter the name of your income"
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="amount">Amount:</label>
+        <label htmlFor="amount">Amount</label>
         <input
           type="number"
           id="amount"
@@ -58,7 +59,7 @@ const IncomeForm: React.FC<IncomeFormProps> = ({ onSubmit }) => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="date">Date:</label>
+        <label htmlFor="date">Date</label>
         <input
           type="date"
           id="date"
