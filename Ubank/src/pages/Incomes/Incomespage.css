@@ -58,6 +58,10 @@
     font-weight: 600;
     letter-spacing: -0.48px;
     color: #2d2d2d;
+    background-color: #EFF8C0;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
 }
 
 .Secondrow-container{
@@ -91,7 +95,8 @@
 }
 .incomes-container .header2{
     display: flex;
-    margin-top: -3px;
+    margin-top: -4px;
+    margin-bottom: 2px;
     align-items: center;
     gap: 20px;
 
@@ -106,7 +111,7 @@
     line-height: 21.731px; /* 120.729% */
     letter-spacing: -0.72px;
     margin-left: 0%;
-    margin-top: 0%;
+    margin-top: -6px;
 }
 
 .incomes-container .header2 .add-income{
@@ -128,7 +133,7 @@
     line-height: 21px; /* 150% */
     letter-spacing: -0.56px;
     margin-left: 55px;
-    margin-top: -10px;
+    margin-top: -15px;
     margin-bottom: 5px;
 }
 

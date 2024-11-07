@@ -168,8 +168,8 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                             onClick={() => setIsIncomeModalOpen(true)}
                             src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4"
                             alt="add-income"
-                            height={50}
-                            width={50}
+                            height={45}
+                            width={45}
                             />
                         </div>
                         <p>Your incomes this month</p>
