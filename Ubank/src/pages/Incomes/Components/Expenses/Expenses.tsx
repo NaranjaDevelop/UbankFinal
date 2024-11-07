@@ -16,7 +16,7 @@ const Expensescard = ({ExpensesTitle, ExpensesAmount, ExpensesDate, Expensesimg,
       <div id='row-Expensescard'>
         <img src={Expensesimg} alt="" height={39} width={39} />
         <div id='Expensescard-details'>
-
+        <p> {ExpensesType}</p>
         <p id='Expensescard-title'>{ExpensesTitle}</p>
         <h3 id='Expensescard-amount'>{ExpensesAmount} $</h3>
       </div>

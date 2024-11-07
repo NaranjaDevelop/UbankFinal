@@ -1,42 +1,70 @@
 import './TypeExpenses.css';
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 
+const COLORS = ['#0088FE', '#EFF8C0', '#FFBB28', '#8644DB', '#FF4081', '#795548', '#9E9E9E'];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF4081', '#795548', '#9E9E9E'];
+type ExpenseData = {
+    CategoryName: string;
+    CategoryAmount: number;
+};
 
-
-const TypeExpensesWheel = ({ data }: { data: any }) => {
+const TypeExpensesWheel = ({ data }: { data: ExpenseData[] }) => {
     console.log(data);
-    
+
+    const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: any[] }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div
+                    className="custom-tooltip"
+                    style={{
+                        backgroundColor: "#fff",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        border: "1px solid #ccc"
+                    }}
+                >
+                    <p className="label">{`${payload[0].payload.CategoryName}: $${payload[0].value}`}</p>
+                </div>
+            );
+        }
+        return null;
+    };
+
     return (
         <div className="monthly-budget">
             <div className="IconImage" style={{ display: "flex", flexDirection: "row" }}>
-                <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498" alt="Icon" className="Icon1" height={40} />
+                <img
+                    src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FExpensesIcon.png?alt=media&token=7d512b2b-ae50-4ad1-a596-c09ff45f8498"
+                    alt="Icon"
+                    className="Icon1"
+                    height={40}
+                />
                 <div className="ExpensesText-wheel">
                     <h2>Expenses</h2>
-                    <p>your expenses this month</p>
+                    <p>Your expenses this month</p>
                 </div>
             </div>
 
             <div className="circular-chart">
-                <PieChart width={200} height={200}>
+                <PieChart width={220} height={220}>
                     <Pie
                         data={data}
-                        outerRadius={100}
-                        innerRadius={60}
+                        outerRadius={90}
+                        innerRadius={50}
+                        paddingAngle={0}
                         dataKey="CategoryAmount"
                     >
-                        {
-                            data.map((entry: any, index: any) => (
-                                <Cell fill={COLORS[index % COLORS.length]} key={index} /> // Using index as key is okay for simple lists
-                            ))
-                            
-                        }
+                        {data.map((entry, index) => (
+                            <Cell fill={COLORS[index % COLORS.length]} key={`cell-${index}`} />
+                        ))}
                     </Pie>
+                    <Tooltip content={<CustomTooltip />} />
                 </PieChart>
             </div>
         </div>
     );
-}
+};
 
 export default TypeExpensesWheel;
+
+
