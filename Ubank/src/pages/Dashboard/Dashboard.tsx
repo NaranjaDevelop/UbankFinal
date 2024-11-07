@@ -6,7 +6,10 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import './Dashboard.css'
 import { UseContextIncomes } from "../../Hooks/Usecontext";
+import CurrencyConverter from "./Components/CardMoney/CurrencyConverter";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import IncomeExpenseChart from "./Components/IncExpChart/IncomeExpenseChart";
+import ProgressCard from "./Components/SavingsProgress/SavingProgress";
 
 const Dashboard: React.FC = () => {
 
@@ -69,13 +72,23 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <div className="container">
-    <Sidebar onLogout={handleLogout} />
+    <div className="dash-div">
+      <h2
+      className="welcome-user">
+        Welcome!, {username} 
+      </h2>
+      <p>Detailed overview of your finantial situation</p>
+      <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
+      <Sidebar onLogout={handleLogout} />
+      <IncomeExpenseChart />
+      <ProgressCard 
+          title="Your saving goal" 
+          description="New pair of shoes 👠👠" 
+          currentAmount={100000} 
+          goalAmount={200000} 
+        />
 
-    <h2 className="welcome-user">
-      Welcome, {username} 🌷͙֒🎀
-    </h2>
-  </div>
+    </div>
   );
 };
 

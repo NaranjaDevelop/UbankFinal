@@ -1,13 +1,39 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Opcional: para centrar los elementos horizontalmente */
-    gap: 16px; /* Opcional: para dar un espacio entre los elementos */
-  }
-  
-  .welcome-user {
-    font-size: 24px; /* Ajusta el tamaño del texto */
-    color: #333; /* Cambia el color del texto si lo deseas */
-    text-align: center; /* Centra el texto */
-  }
-  
+.dash-div h2 {
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    color: #000000; /* Texto oscuro */
+    margin-left: 346px;
+    margin-top: 28px;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url(./Fonts/LufgaBold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+.dash-div p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    font-size: 16px;
+    color: #333; /* Texto oscuro */
+    margin-left: 346px;
+}
+.log-out-button {
+    background-color: #FF4C4C;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+.log-out-button:hover {
+    background-color: #E43C3C; /* Color más oscuro al pasar el mouse */
+}
