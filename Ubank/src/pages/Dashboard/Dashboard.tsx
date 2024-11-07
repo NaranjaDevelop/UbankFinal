@@ -18,13 +18,15 @@ const Dashboard: React.FC = () => {
         </div>
         <div className='body-content'>
           <CurrencyConverter totalBalance={310000} savings={100000} minorExpenses={30000} />
-          <IncomeExpenseChart />
-          <ProgressCard 
-              title="Your saving goal" 
-              description="New pair of shoes 👠👠" 
-              currentAmount={100000} 
-              goalAmount={200000} 
-            />
+            <div className='dash-progress-charts'>
+              <IncomeExpenseChart />
+              <ProgressCard 
+                  title="Your saving goal" 
+                  description="New pair of shoes 👠👠" 
+                  currentAmount={100000} 
+                  goalAmount={200000} 
+                />
+            </div>
           </div>
         </section>
       
