@@ -28,7 +28,7 @@
     text-align: center;
     margin: 10px 0;
 }
-.recharts-surface{
+.incomebarchart .recharts-surface{
     position: relative;
     margin-left: 20px;
     top: -20px;

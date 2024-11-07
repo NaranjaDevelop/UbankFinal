@@ -35,3 +35,10 @@
     gap: 30px;
     align-items: flex-start;
 }
+
+.expensescards-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    gap: 30px;
+}
