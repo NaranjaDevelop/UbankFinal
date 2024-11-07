@@ -1,6 +1,4 @@
 .sidebar {
-  margin-top: -50px;
-  margin-left: 40px;
   border-radius: 22px;
   background: linear-gradient(184deg, #4E0F5E -83.32%, #010C1E 96.97%);
   width: 257px;
@@ -98,4 +96,39 @@
 
 .sign-out-button:hover .sign-out-icon {
   transform: scale(1.1);
+}
+
+.premium{
+  margin-top: 100px;
+  background-color: #fff;
+  border-radius: 25px;
+  height: 150px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.text-premium{
+  color: #323232;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.text-premium2{
+  color: #010C1E;
+  font-size: 25px;
+}
+
+.text-premium2 span{
+  color: #8644DB;
+}
+
+.button-premium{
+  background-color: #D7F177;
+  border-radius: 100px;
+  border-color: transparent;
+  font-family: Poppins;
+  width: 150px;
+  height: 30px;
+  margin-top: 12px;
+  font-weight: 600;
 }

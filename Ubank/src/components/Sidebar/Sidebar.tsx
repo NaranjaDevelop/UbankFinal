@@ -51,6 +51,11 @@ const Sidebar: React.FC<SidebarProps> = ({ onLogout }) => {
             onClick={onLogout}
           />
         </ul>
+        <div className='premium'>
+          <h1 className='text-premium'>Be Better</h1>
+          <h1 className='text-premium2'>Be <span>Premium</span></h1>
+          <button className='button-premium'>Learn more</button>
+        </div>
       </nav>
 
       
