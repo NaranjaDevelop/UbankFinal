@@ -36,6 +36,7 @@ const [incomes, setIncomes] = useState<IncomesProps[]>([]);
 const [TotalIncomes, setTotalIncomes] = useState<number>(0);
 const [TotalExpenses, setTotalExpenses] = useState<number>(0);
 const [expenses, setExpenses] = useState<ExpenseData[]>([]);
+const [isModalOpen, setIsModalOpen] = useState(false);
  
  
     
@@ -78,18 +79,21 @@ const [expenses, setExpenses] = useState<ExpenseData[]>([]);
     }
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
-        
-            console.log("upload");
-        
-            const newIncomes = [...incomes, {
+        console.log("upload");
+
+        const newIncomes = [
+            ...incomes,
+            {
                 IncomeName: data.incomeName,
                 IncomeAmount: data.amount,
                 IncomeDate: data.date,
-            }]
-            setIncomes(newIncomes);
-            updateUserData({ Incomes: newIncomes });
-            console.log("Datos del formulario:", data); 
-         }
+            },
+        ];
+        setIncomes(newIncomes);
+        updateUserData({ Incomes: newIncomes });
+        console.log("Datos del formulario:", data);
+        setIsModalOpen(false);  // Cerrar el modal después de enviar el formulario
+    };
 
          interface ExpenseData {
             ExpensesName: string;
@@ -121,9 +125,15 @@ const [expenses, setExpenses] = useState<ExpenseData[]>([]);
         <div>
             <h1>Incomes</h1>
             <div>
-                <IncomeForm onSubmit={handleIncomeSubmit}></IncomeForm>
+                {isModalOpen && (
+                    <div className="modal-overlay">
+                        <div className="modal-content">
+                            <button className="close-button" onClick={() => setIsModalOpen(false)}>X</button>
+                            <IncomeForm onSubmit={handleIncomeSubmit} />
+                        </div>
+                    </div>
+                )}
             </div>
-
             <div>
                 <ExpenseForm onSubmit={handleExpenseSubmit}></ExpenseForm>
             </div>
@@ -133,7 +143,7 @@ const [expenses, setExpenses] = useState<ExpenseData[]>([]);
             <div className="incomes-container">
             <h1>Incomes</h1>
             <h3>Your incomes this month</h3>
-            <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={30} width={30}/>
+            <img className="add-income"  onClick={() => setIsModalOpen(true)} src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={30} width={30}/>
             <div className="incomescard-container-scroll">
                 
             
