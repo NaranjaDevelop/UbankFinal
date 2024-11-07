@@ -1,0 +1,11 @@
+#Expensescards{
+    display: flex;
+    flex-direction: row;
+}
+#row-Expensescard{
+    display: flex;
+    flex-direction: row;
+}
+#Expensescard-details{
+    
+}

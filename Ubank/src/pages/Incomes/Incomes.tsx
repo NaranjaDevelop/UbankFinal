@@ -316,6 +316,8 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                } 
                 </div>
             </div>
+            <div className="Expensescontainer-all">
+
                 <h1>Expenses</h1>
                 <h3>Your expenses this month</h3>
                 <img src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FFilter%20Icon.png?alt=media&token=14ff20e3-a9a0-4b8a-9158-7c65918bc496" alt="" height={20} width={20} />
@@ -330,6 +332,7 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                         <Expensescard key={index} ExpensesTitle={expense.ExpensesName} ExpensesAmount={expense.ExpensesAmount} ExpensesDate={expense.ExpensesDate} ExpensesType={expense.ExpensesCategory} Expensesimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FGroup%201000006371.png?alt=media&token=229de619-a0ec-42ce-87fa-1c9d321440b1" />
                     ))  
                 }
+                </div>
                 </div>
                 </div>
             </div>
