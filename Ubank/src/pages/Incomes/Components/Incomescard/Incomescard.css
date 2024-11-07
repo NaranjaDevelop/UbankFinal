@@ -14,24 +14,24 @@
     background-color: #ffffff;
     border-radius: 10px;
     padding: 10px;
-
     width: fit-content;
 }
 
 #incomescard-amount{
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #incomescards{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 250px;
+    width: 284px;
     justify-content: space-between;
     background-color: rgb(245, 245, 245);
     padding: 5px;
     border-radius: 50px;
-    height: fit-content;
+    height: 58px;
+    margin-left: -15px;
 }
 #incomescard-details{
     display: flex;
@@ -40,11 +40,18 @@
 }
 #incomescard-date{
     font-size: 10px;
-    font-weight: lighter;
-    color: #333;
+    font-weight: 100;
+    color: #474647;
     align-self: flex-end;
     margin-right: 20px;
     
+}
+
+#incomescard-date h3{
+    font-size: 12px;
+    font-weight: 500;
+    color: #5f5e5f;
+    align-self: flex-end;;
 }
 #row-incomescard{
     display: flex;
@@ -54,7 +61,15 @@
 }
 
 #incomescard-title{
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
+    color: #000;
+    font-family: Poppins;
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21.731px; /* 181.093% */
+    letter-spacing: -0.48px;
+    margin-left: 0%;
+    margin-bottom: -4px;
+    margin-top: 1.5px;
+
 }
