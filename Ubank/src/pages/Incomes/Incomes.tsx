@@ -30,7 +30,6 @@ interface IncomesData {
     
 }
 
-
 const Incomes = () => {
     const { handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void>; };
 
@@ -75,8 +74,6 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
      console.log(incomes);
      console.log(expenses);
      
-     
-     
      const getincomesamount = remainingIncomes.map((income) => income.IncomeAmount).reduce((acc, curr) => acc + curr, 0);
      const getexpensesamount = remainingExpenses.map((expense) => expense.ExpensesAmount).reduce((acc, curr) => acc + curr, 0);
     const getminorexpensesamount = minorExpenses.map((expense: ExpenseData) => expense.ExpensesAmount).reduce((acc: number, curr: number) => acc + curr, 0);
@@ -88,11 +85,6 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
      
     }, [incomes,expenses]);
 
-
-
-
-
-    
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
         console.log("upload");
@@ -143,7 +135,8 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
     return (
         <div>
             <Sidebar onLogout={handleLogout} />
-            <h1>Incomes</h1>
+            <h1>Incomes and Expenses</h1>
+            <p>Here you can enter your income and expenses to have control over them.</p>
             <div>
                 {isIncomeModalOpen && (
                     <div className="modal-overlay">
@@ -213,8 +206,6 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
                     minorExpenses.map((expense: ExpenseData, index:any) => (
                         <MinorExpense key={index} ExpenseAmount={expense.ExpensesAmount} ExpenseDate={expense.ExpensesDate} ExpenseName={expense.ExpensesName} Expensetype={expense.ExpensesCategory} />
                         ))
-                 
-
                 }
                     </div>
                             </div> 
