@@ -56,31 +56,12 @@ const useAuth = (): UseAuth => {
         Expenses: [{
             
         }],
-        Userdata: {
-          
-          Incomes: [{
-            IncomeName: "",
-            IncomeAmount: 0,
-            IncomeDate: "",
-
-          }],
-          Expenses: [{
-            ExpenseName: "",
-            ExpenseAmount: 0,
-            ExpenseDate: "",
-            ExpenseCategory: "",
-          }],
-          Savings: [{
-            SavingName: "",
-            SavingAmount: 0,
-            SavingGoal: 0,
-            SavingDate: "",
-          }],
+       
           Premium: false,
           Finantialplan: "",
         }
         
-      });
+      );
 
       
     } catch (error) {
@@ -125,29 +106,9 @@ const useAuth = (): UseAuth => {
           Expenses: [{
             
           }],
-          Userdata: {
-            
-            Incomes: [{
-              IncomeName: "",
-              IncomeAmount: 0,
-              IncomeDate: "",
-  
-            }],
-            Expenses: [{
-              ExpenseName: "",
-              ExpenseAmount: 0,
-              ExpenseDate: "",
-              ExpenseCategory: "",
-            }],
-            Savings: [{
-              SavingName: "",
-              SavingAmount: 0,
-              SavingGoal: 0,
-              SavingDate: "",
-            }],
             Premium: false,
             Finantialplan: "",
-          }
+          
       });
       }
     } catch (error) {

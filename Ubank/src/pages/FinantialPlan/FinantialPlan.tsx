@@ -2,14 +2,14 @@ import './FinantialPlan.css';
 import Card from './Components/cards/Card';
 import { Planshooks } from '../../Hooks/Planshooks';
 import { useNavigate } from 'react-router-dom';
-import img1 from  '../../Assets/Group-1000006265.webp';
-import img2 from  '../../Assets/NFT-Marketplace--cryptocurrency-crypto-web 3.0-metaverse-bitcoin-ethereum.webp';
-import img3 from '../../Assets/Graph-Negative--Streamline-Manila.webp';
-import img4 from '../../Assets/Group-1000006394.webp';
-import img5 from '../../Assets/ilustracionesform5.png';
-import img6 from '../../Assets/Payment-With-Card-2--Streamline-Manila.webp';
-import img7 from '../../Assets/ilustracionesform2.png';
-import img8 from '../../Assets/ilustracionesform6.png';
+import img1 from  '../../assets/Group-1000006265.webp';
+import img2 from  '../../assets/NFT-Marketplace--cryptocurrency-crypto-web 3.0-metaverse-bitcoin-ethereum.webp';
+import img3 from '../../assets/Graph-Negative--Streamline-Manila.webp';
+import img4 from '../../assets/Group-1000006394.webp';
+import img5 from '../../assets/ilustracionesform5.png';
+import img6 from '../../assets/Payment-With-Card-2--Streamline-Manila.webp';
+import img7 from '../../assets/ilustracionesform2.png';
+import img8 from '../../assets/ilustracionesform6.png';
 
 
 // Aquí defines un mapeo de descripciones a imágenes
