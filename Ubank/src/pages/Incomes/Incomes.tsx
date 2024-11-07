@@ -75,10 +75,10 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
          }
 
          interface ExpenseData {
-            expenseName: string;
-            amount: number;
-            date: string;
-            category: string;
+            ExpensesName: string;
+            ExpensesAmount: number;
+            ExpensesDate: string;
+            ExpensesCategory: string;
           }
           
          
@@ -86,6 +86,13 @@ const [TotalIncomes, setTotalIncomes] = useState<number>(0);
 
          const handleExpenseSubmit = (data: ExpenseData) => {
             setExpenses((prevExpenses) => [...prevExpenses, data]);
+            const newExpenses = [...expenses, {
+                ExpensesName: data.ExpensesName,
+                ExpensesAmount: data.ExpensesAmount,
+                ExpensesDate: data.ExpensesDate,
+                ExpensesCategory: data.ExpensesCategory,
+            }]
+            updateUserData({ Expenses: newExpenses });
             console.log("Nuevo gasto agregado:", data);
           };
 
