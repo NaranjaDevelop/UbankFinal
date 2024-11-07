@@ -1,7 +1,7 @@
 import './IncomesMinorexpense.css';
 import img1 from "../../../../assets/icon-income.webp"
 
-import { BarChart, Bar, Tooltip} from 'recharts';
+import { BarChart, Bar} from 'recharts';
 
 interface IncomesExpensesProps {
     incomeAmount?: number;

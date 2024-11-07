@@ -1,4 +1,4 @@
-import { getDoc, doc, collection,updateDoc } from "firebase/firestore";
+import { getDoc, doc,updateDoc } from "firebase/firestore";
 import { auth, db } from "../Clients/firebase"; 
 import { onAuthStateChanged } from "firebase/auth";
 
