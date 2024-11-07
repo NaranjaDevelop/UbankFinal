@@ -55,7 +55,7 @@ const TypeExpensesWheel = ({ data }: { data: ExpenseData[] }) => {
                         dataKey="CategoryAmount"
                     >
                         {data.map((entry, index) => (
-                            <Cell fill={COLORS[index % COLORS.length]} key={`cell-${index}`} />
+                            <Cell  fill={COLORS[index % COLORS.length]} key={`cell-${entry}`} />
                         ))}
                     </Pie>
                     <Tooltip content={<CustomTooltip />} />
