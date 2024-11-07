@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 interface ExpenseFormProps {
-  onSubmit: (data: { expenseName: string; amount: number; date: string; category: string }) => void;
+  onSubmit: (data: { ExpensesName: string; ExpensesAmount: number; ExpensesDate: string; ExpensesCategory: string }) => void;
 }
 
 const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
-  const [expenseName, setExpenseName] = useState("");
-  const [amount, setAmount] = useState<number>(0);
-  const [date, setDate] = useState("");
-  const [category, setCategory] = useState("");
+  const [ExpensesName, setExpenseName] = useState("");
+  const [ExpensesAmount, setAmount] = useState<number>(0);
+  const [ExpensesDate, setDate] = useState("");
+  const [ExpensesCategory, setCategory] = useState("");
 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ expenseName, amount, date, category });
+    onSubmit({ ExpensesName, ExpensesAmount, ExpensesDate, ExpensesCategory });
   };
 
   return (
@@ -23,7 +23,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         <input
           type="text"
           id="expenseName"
-          value={expenseName}
+          value={ExpensesName}
           onChange={(e) => setExpenseName(e.target.value)}
           required
         />
@@ -34,7 +34,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         <input
           type="number"
           id="amount"
-          value={amount}
+          value={ExpensesAmount}
           onChange={(e) => setAmount(Number(e.target.value))}
           required
         />
@@ -45,7 +45,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         <input
           type="date"
           id="date"
-          value={date}
+          value={ExpensesDate}
           onChange={(e) => setDate(e.target.value)}
           required
         />
@@ -55,7 +55,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         <label htmlFor="category">Category:</label>
         <select
           id="category"
-          value={category}
+          value={ExpensesCategory}
           onChange={(e) => setCategory(e.target.value)}
           required
         >
