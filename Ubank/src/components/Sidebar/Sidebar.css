@@ -99,3 +99,30 @@
 .sign-out-button:hover .sign-out-icon {
   transform: scale(1.1);
 }
+
+.premium{
+  background-color: #fff;
+  border-radius: 25px;
+  height: 150px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.text-premium{
+  color: #323232;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.text-premium2{
+  color: #010C1E;
+  font-size: 25px;
+}
+
+.text-premium2 span{
+  color: #8644DB;
+}
+
+.button-premium{
+  
+}
