@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ExpensesForm.css"; 
+import "./ExpensesForm.css"
 
 interface ExpenseFormProps {
   onSubmit: (data: { ExpensesName: string; ExpensesAmount: number; ExpensesDate: string; ExpensesCategory: string }) => void;

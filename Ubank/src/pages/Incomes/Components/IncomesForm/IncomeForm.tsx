@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./IncomesForm.css";
+import "./IncomeForm.css"
 
 interface IncomeFormProps {
   onSubmit: (data: IncomeFormData) => void;
