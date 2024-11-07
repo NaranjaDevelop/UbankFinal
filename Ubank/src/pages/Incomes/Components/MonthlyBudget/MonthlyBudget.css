@@ -2,18 +2,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 341px;
     height: 387px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 28px;
+    margin-left: 355px;
 
 }
 
-.monthly-budget h2 {
-    font-size: 1.5rem;
-    color: #333;
+.Iconimage{
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.monthly-budget h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    justify-content: left;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.731px;
+    letter-spacing: -0.72px;
 }
 
 
