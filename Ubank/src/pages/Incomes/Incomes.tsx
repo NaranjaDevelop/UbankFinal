@@ -50,12 +50,21 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     setIncomes(incomesdata)
     setExpenses(ExpenseData)
 
-
+    MinorExpensesselector(ExpenseData);
     
 }, [incomesdata]);
 
 
-   
+const MinorExpensesselector = (expenses: ExpenseData[]) => {
+
+        
+    const filterbyfood= expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
+    const filterbytransport= expenses.filter((expense) => expense.ExpensesCategory === "Transportation" && expense.ExpensesAmount > 10000);
+    
+    const Minorexpenses = [...filterbyfood,...filterbytransport]
+    setMinorExpenses(Minorexpenses);
+    console.log(Minorexpenses);
+}
 
  useEffect(() => {
      console.log(incomes);
@@ -70,7 +79,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
      setTotalExpenses(getexpensesamount);
      setTotalIncomes(getincomesamount);
      setTotalMinorExpenses(getminorexpensesamount);
-     MinorExpensesselector(expenses); 
+     
      
     }, [incomes,expenses]);
 
@@ -78,16 +87,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
 
 
-    const MinorExpensesselector = (expenses: ExpenseData[]) => {
-
-        
-        const filterbyfood= expenses.filter((expense) => expense.ExpensesCategory === "Food" && expense.ExpensesAmount < 4000);
-        const filterbytransport= expenses.filter((expense) => expense.ExpensesCategory === "Transportation" && expense.ExpensesAmount > 10000);
-        
-        const Minorexpenses = [...filterbyfood,...filterbytransport]
-        setMinorExpenses(Minorexpenses);
-        console.log(Minorexpenses);
-    }
+    
 
     const handleIncomeSubmit = (data: { incomeName: string; amount: number; date: string }) => {
         console.log("upload");
