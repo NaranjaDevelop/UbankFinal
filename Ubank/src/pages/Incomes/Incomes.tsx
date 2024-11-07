@@ -11,7 +11,7 @@ import IncomesMinorexpenses from "./Components/IncomesMinorexpense/IncomesMinore
 import Motivation from "./Components/Advertisement/Motivation";
 import ExpenseForm from "./Components/ExpensesForm/ExpensesForm";
 import Expensescard from "./Components/Expenses/Expenses";
-import TypeExpensesWheel from "./Components/TypeExpenses/TypeExpenses";
+import TypeExpensesWheel from "./Components/TypeExpensesPie/TypeExpensesPie";
 
 
 
