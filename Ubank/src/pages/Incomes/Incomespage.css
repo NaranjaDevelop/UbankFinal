@@ -82,7 +82,29 @@
     flex-direction: column;
     background-color: #ffffff;
     gap: 30px;
+    width: fit-content;
 }
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    width: fit-content;
+}
+.categories-scroll-container{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    height: 350px;
+}
+.expensescard-container-scroll{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    height: 300px;
 
 .incomes-container{
     display: flex;
