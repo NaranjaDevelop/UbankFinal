@@ -1,6 +1,7 @@
 import './TypeExpenses.css';
 import { PieChart, Pie, Cell } from 'recharts';
 
+
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF4081', '#795548', '#9E9E9E'];
 
 

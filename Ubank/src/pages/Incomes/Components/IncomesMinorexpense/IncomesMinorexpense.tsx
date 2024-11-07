@@ -29,7 +29,6 @@ const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
         ]} 
         barCategoryGap="90%" margin={{ top: 0, right: 0, left: -20, bottom: 0 }}
         >
-       "
             <Bar dataKey={'Income'} fill='#D7F177' radius={[7, 7, 0, 0]} />
             <Bar dataKey={'Expense'} fill='##FF7008' radius={[7,7, 0, 0]} />
         </BarChart>
