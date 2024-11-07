@@ -1,10 +1,4 @@
-Sidebar{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 30px;
-    margin-top: 30px;
-}
+
 .addbutton{
     background-color: #8644DB ;
     width: 20px;

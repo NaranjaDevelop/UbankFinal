@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { UseContextIncomes } from "../../Hooks/Usecontext";
-import { getUserData, updateUserData } from "../../Services/Userdata";
+import {  updateUserData } from "../../Services/Userdata";
 import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
 import MonthlyBudget from "./Components/MonthlyBudget/MonthlyBudget";
@@ -24,11 +24,7 @@ interface IncomesProps {
     IncomeDate: string;
 }
 
-interface IncomesData {
-    
-        Incomes: IncomesProps[]
-    
-}
+
 
 
 const Incomes = () => {
@@ -217,12 +213,12 @@ const MinorExpensesselector = (expenses: ExpenseData[]) => {
         <div className="incomes-main-div">
             <h1 className="main-title">Incomes and Expenses</h1>
             <p className="main-subtitle">Here you can enter your income and expenses to have control over them.</p>
-
-
-
-
-
             <Sidebar onLogout={handleLogout} />
+
+
+
+
+
             
             <div>
                 {isIncomeModalOpen && (
