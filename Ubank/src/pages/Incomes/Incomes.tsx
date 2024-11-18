@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { UseContextIncomes } from "../../Hooks/Usecontext";
-import {  updateUserData } from "../../Services/Userdata";
 import './Incomespage.css'
 import Incomescard from "./Components/Incomescard/Incomescard";
 import MinorExpense from "./Components/MinorExpense/MinorExpense";
