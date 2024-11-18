@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import { routerform } from "./Navigation";
 import Authrouters from "./AuthNavegation";
@@ -6,7 +7,7 @@ import Incomes from "../pages/Incomes/Incomes";
 import SavingsGoals from "../pages/Savings/Savings";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 
     {
       path: "Incomes",
