@@ -9,15 +9,6 @@ interface IncomeExpenseChartProps {
   datachart: {monthYear: string, incomes: number, minorexpenses: number}[]
 }
 
-const data = [
-  { month: 'March', incomes: 12000, expenses: 8000 },
-  { month: 'April', incomes: 15000, expenses: 10000 },
-  { month: 'May', incomes: 25000, expenses: 5000 },
-  { month: 'June', incomes: 16000, expenses: 7000 },
-  { month: 'July', incomes: 14000, expenses: 9000 },
-  { month: 'August', incomes: 18000, expenses: 12000 },
-  { month: 'September', incomes: 21000, expenses: 11000 },
-];
 
 const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
   title = "Comparing of Incomes and Minor Expenses",
@@ -44,7 +35,7 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
             </span>
           )} />
           <Bar dataKey="incomes" fill="#8644DB" name="Incomes" radius={[5, 5, 0, 0]}/>
-          <Bar dataKey="expenses" fill="#F4A261" name="Minor expenses" radius={[5, 5, 0, 0]}/>
+          <Bar dataKey="minorexpenses" fill="#F4A261" name="Minor expenses" radius={[5, 5, 0, 0]}/>
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -11,12 +11,14 @@ import savingsIconHover from '../../assets/wallet-b.webp';
 import signOutIcon from '../../assets/signout-w.webp';
 import signOutIconHover from '../../assets/signout-b.webp';
 import logo from '../../assets/UBank-logo-g.webp';
+import { useNavigate } from 'react-router-dom';
 
 interface SidebarProps {
   onLogout: () => void; 
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ onLogout }) => {
+  const navigate = useNavigate();
   return (
     <div className="sidebar">
       <div className="sidebar-logo">
@@ -54,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onLogout }) => {
         <div className='premium'>
           <h1 className='text-premium'>Be Better</h1>
           <h1 className='text-premium2'>Be <span>Premium</span></h1>
-          <button className='button-premium'>Learn more</button>
+          <button className='button-premium' onClick={() => navigate('/Form')} >Learn more</button>
         </div>
       </nav>
 

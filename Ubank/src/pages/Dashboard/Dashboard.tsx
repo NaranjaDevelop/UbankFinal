@@ -9,7 +9,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import { useEffect } from 'react';
 
 const Dashboard: React.FC = () => {
-  const { incomes, expenses,minorExpenses ,TotalIncomes, TotalMinorExpenses} = UseIncomes()
+  const { incomes,minorExpenses ,TotalIncomes, TotalMinorExpenses} = UseIncomes()
   const { username, handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void> };
 
   const getMonthlyIncomes = () => {
