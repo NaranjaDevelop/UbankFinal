@@ -5,15 +5,16 @@
     font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f5f5f5; /* Color gris clarito para el contenedor */
+    border-radius: 10px;
+    background-color: #f5f5f5; 
+    width: 590px;
 }
 
 .CircleImage1{
     width: 41px;
     height: 41px;
     max-width: 41px;
+    margin-right: 10px;
 }
 
 
@@ -28,7 +29,7 @@
 
 .minor-expense .details {
     flex-grow: 1;
-    margin-left: 250px;
+
 }
 
 .minor-expense .details h2 {
@@ -49,7 +50,10 @@
 .minor-expense .amount {
     text-align: right;
     font-weight: bold;
-    margin-right: 400px;
-    font-size: 24.64px; /* Tamaño de fuente para ExpenseAmount */
+    font-size: 24.64px;
     text-align: right;
+}
+.Minor-expense-container{
+    display: flex;
+    flex-direction: column;
 }

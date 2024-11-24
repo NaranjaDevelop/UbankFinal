@@ -1,42 +1,54 @@
 import './IncomesMinorexpense.css';
 
-interface IncomesMinorexpensesProps {
+import { BarChart, Bar, Tooltip} from 'recharts';
+
+interface IncomesExpensesProps {
     incomeAmount?: number;
-    minorExpenseAmount?: number;
+    minorexpense?: number;
     incomePercentage?: number;
-    minorExpensePercentage?: number;
+    expensePercentage?: number;
 }
 
-const IncomesMinorexpenses: React.FC<IncomesMinorexpensesProps> = ({
+const IncomesExpenses: React.FC<IncomesExpensesProps> = ({
     incomeAmount = 0,
-    minorExpenseAmount = 0,
-    incomePercentage = 0,
-    minorExpensePercentage = 0
+    minorexpense = 0,
+
 }) => (
-    <div className="incomes-minorexpenses">
-        <div className="header">
+    <div className="incomes-expenses">
+        <div className="header-incomesexpenses">
             <span role="img" aria-label="dollar">💵</span>
-            <h2>Incomes vs Minor Expenses</h2>
+            <h2>Incomes vs Minor expenses</h2>
         </div>
 
-        {incomeAmount === 0 ? (
-            <p className="not-found">Incomes not found</p>
-        ) : (
-            <div className="bar income-bar">
-                <div className="bar-fill income-fill" style={{ width: `${incomePercentage}%` }}></div>
-                <p>Incomes ${incomeAmount.toLocaleString()}</p>
-            </div>
-        )}
+        <div className="incomebarchart">
+        <BarChart width={150} height={200} 
+        data={[
+            { name: 'Income', Income: incomeAmount },
+            { name: 'Expense', Expense: minorexpense },
+        ]} >
+        
+          
+            <Bar dataKey={'Income'} fill='#8644DB' />
+            <Bar dataKey={'Expense'} fill='#eFd5D2' />
+        </BarChart>
+        </div>
 
-        {minorExpenseAmount === 0 ? (
-            <p className="not-found">Minor expenses not found</p>
-        ) : (
-            <div className="bar minor-expense-bar">
-                <div className="bar-fill minor-expense-fill" style={{ width: `${minorExpensePercentage}%` }}></div>
-                <p>Minor Expenses ${minorExpenseAmount.toLocaleString()}</p>
+        <div className="incomesexpenses-info">
+            <div className="incomesexpenses-info-container">
+                
+            <div className="rectangle-incomes" ></div>
+            <p id='incomes-info'>Income: ${incomeAmount}</p>
             </div>
-        )}
+
+            <div className="incomesexpenses-info-container">
+
+            <div className="rectangle-expenses" ></div>
+            <p id='expenses-info'>Minor Expense: ${minorexpense}</p>
+            </div>
+        </div>
+
+        
     </div>
 );
 
-export default IncomesMinorexpenses;
+export default IncomesExpenses;
