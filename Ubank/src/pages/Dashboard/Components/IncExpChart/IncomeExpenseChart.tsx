@@ -6,6 +6,7 @@ import img1 from "../../../../assets/digramadebarras.webp"
 interface IncomeExpenseChartProps {
   title?: string;
   subtitle?: string;
+  datachart: {monthYear: string, incomes: number, minorexpenses: number}[]
 }
 
 const data = [
@@ -20,7 +21,8 @@ const data = [
 
 const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
   title = "Comparing of Incomes and Minor Expenses",
-  subtitle = "You can see a comparison of your incomes and minor expenses over the months"
+  subtitle = "You can see a comparison of your incomes and minor expenses over the months",
+  datachart
 }) => {
   return (
     <div className="chart-container">
@@ -30,7 +32,7 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
       </div>
       <p>{subtitle}</p>
       <ResponsiveContainer width="100%" height={240}>
-        <BarChart data={data} margin={{ top: 30, right: 30, left: 20, bottom: -18 }} barSize={16}>
+        <BarChart data={datachart} margin={{ top: 30, right: 30, left: 20, bottom: -18 }} barSize={16}>
           <XAxis dataKey="month" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }}/>
           <Tooltip />
