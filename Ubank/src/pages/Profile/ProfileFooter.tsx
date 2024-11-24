@@ -1,7 +1,13 @@
 import React from 'react';
+import './ProfileFooter.css';
 
-const ProfileFooter: React.FC = () => {
-  return <div>Footer Placeholder</div>;
+const ProfileFooter = () => {
+  return (
+    <div className="footerContainer">
+      <button className="cancelButton">Cancel</button>
+      <button className="saveButton">Save</button>
+    </div>
+  );
 };
 
 export default ProfileFooter;
