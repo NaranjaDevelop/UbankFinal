@@ -1,0 +1,21 @@
+.cancelButton, .saveButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .saveButton {
+    background-color: #8644DB;
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background-color: #6f36b3;
+  }
