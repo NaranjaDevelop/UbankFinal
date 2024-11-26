@@ -202,3 +202,12 @@
     
     gap: 500px;
 }
+.incomes-main-div{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+.header-container {
+    position: absolute;
+    top: 10px;
+}

@@ -24,7 +24,7 @@ const IncomeExpenseChart: React.FC<IncomeExpenseChartProps> = ({
       <p>{subtitle}</p>
       <ResponsiveContainer width="100%" height={240}>
         <BarChart data={datachart} margin={{ top: 30, right: 30, left: 20, bottom: -18 }} barSize={16}>
-          <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+          <XAxis dataKey="monthYear" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }}/>
           <Tooltip />
           <Legend 

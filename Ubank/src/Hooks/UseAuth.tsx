@@ -56,6 +56,9 @@ const useAuth = (): UseAuth => {
         Expenses: [{
             
         }],
+        Savings:[{
+
+        }],
        
           Premium: false,
           Finantialplan: "",
@@ -106,6 +109,8 @@ const useAuth = (): UseAuth => {
           Expenses: [{
             
           }],
+          Savings:[{
+            }],
             Premium: false,
             Finantialplan: "",
           

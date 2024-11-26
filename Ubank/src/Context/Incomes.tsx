@@ -3,8 +3,11 @@ import { getUserData } from "../Services/Userdata";
 
 export const IncomesContext = createContext({
     incomesdata: [],
-    ExpenseData: []
-    
+    ExpenseData: [],
+    savingsdata: [],
+    SavingIndex: 0,
+    setSavingIndex: (index: number) => {},
+    counterindex: () => {},
 });
 
 
@@ -12,7 +15,8 @@ export const IncomesContext = createContext({
 export const IncomesProvider = ({ children }: { children: any }) => {
     const [incomesdata, setIncomes] = useState([]);
     const [ExpenseData, setExpense] = useState([]);
-    
+    const [savingsdata, setSavings] = useState([]);
+    const [SavingIndex, setSavingIndex] = useState(0);
 
     useEffect(() => {
         const userData = async () => {
@@ -20,6 +24,8 @@ export const IncomesProvider = ({ children }: { children: any }) => {
                 const data = await getUserData() as any;
                 setIncomes(data.Incomes);
                 setExpense(data.Expenses);
+                setSavings(data.Savings);
+                console.log(data.Savings);
                 console.log(data.Incomes);
                 console.log(data.Expenses);
                 
@@ -31,9 +37,18 @@ export const IncomesProvider = ({ children }: { children: any }) => {
         
     }, []);
 
+    const counterindex = () => {
+            setSavingIndex(SavingIndex + 1);
+        };
+
     const value = {
         incomesdata,
-        ExpenseData
+        ExpenseData,
+        savingsdata,
+        SavingIndex,
+        counterindex,
+        setSavingIndex
+
         };
 
     return <IncomesContext.Provider value={value}>{children}</IncomesContext.Provider>;

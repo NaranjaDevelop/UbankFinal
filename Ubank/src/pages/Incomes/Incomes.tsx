@@ -41,9 +41,12 @@ const Incomes = () => {
 
     return (
         <div className="incomes-main-div">
+            <Sidebar onLogout={handleLogout} />
+            <div className="header-container">
+
             <h1 className="main-title">Incomes and Expenses</h1>
             <p className="main-subtitle">Here you can enter your income and expenses to have control over them.</p>
-            <Sidebar onLogout={handleLogout} />
+            </div>
             <div>
                 {isIncomeModalOpen && (
                     <div className="modal-overlay">

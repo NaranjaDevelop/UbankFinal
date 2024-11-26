@@ -6,54 +6,78 @@ import ProgressCard from "./Components/SavingsProgress/SavingProgress";
 import UseDashboard from '../../Hooks/DashboardHooks';
 import { UseIncomes } from '../../Hooks/Useincomes';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+interface DatachartType {
+    monthYear: string;
+    incomes: number;
+    minorexpenses: number;
+}
 
 const Dashboard: React.FC = () => {
   const { incomes,minorExpenses ,TotalIncomes, TotalMinorExpenses} = UseIncomes()
   const { username, handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void> };
+  const [datachart, setdatachart] = useState<DatachartType[]>([])
 
-  const getMonthlyIncomes = () => {
-    const monthlyTotals:  { [key: string]: number  } = {};
+const getMonthlyIncomes = () => {
+    const monthlyTotals: { [key: string]: number } = {};
     const minorExpenseTotals: { [key: string]: number } = {};
 
+    // Calculate monthly income totals
     incomes.forEach(income => {
         const date = new Date(income.IncomeDate);
         const month = date.getMonth();
         const year = date.getFullYear();
-        const monthYear = `${year}-${month}`;
-
+        const monthYear = `${year}-${month}`; // Ensure this format matches expectations
 
         if (!monthlyTotals[monthYear]) {
             monthlyTotals[monthYear] = 0;
         }
 
-        monthlyTotals[monthYear] += income.IncomeAmount
-      
+        monthlyTotals[monthYear] += income.IncomeAmount;
+    });
+console.log(minorExpenses);
+
+    // Calculate minor expense totals
+    minorExpenses.forEach(expense  => {
+        const date = new Date(expense.ExpensesDate);
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        const monthYear = `${year}-${month}`; // Match format used in monthlyTotals
+
+        if (!minorExpenseTotals[monthYear]) {
+            minorExpenseTotals[monthYear] = 0;
+        }
+
+        // Accumulate the expense amount
+        minorExpenseTotals[monthYear] += expense.ExpensesAmount;
+        console.log(minorExpenseTotals[monthYear]);
+        
     });
 
-    minorExpenses.forEach((expense: { ExpenseDate: string | number | Date; ExpenseAmount: number; }) => {
-      const date = new Date(expense.ExpenseDate);
-      const month = date.getMonth();
-      const year = date.getFullYear();
-      const monthYear = `${year}-${month}`;
-
-      if (!minorExpenseTotals[monthYear]) {
-          minorExpenseTotals[monthYear] = 0;
-      }
-
-      minorExpenseTotals[monthYear] += expense.ExpenseAmount;
-  });
-
-    return Object.entries(monthlyTotals).map(([key, value]) => ({
+    // Set the data chart with totals
+    setdatachart(Object.entries(monthlyTotals).map(([key, value]) => ({
         monthYear: key,
         incomes: value,
-        minorexpenses: minorExpenseTotals[key] 
-    }));
+        minorexpenses: minorExpenseTotals[key] || 0 
+    }
+  
+  )));
+
+    console.log('Data to be set in chart:', Object.entries(monthlyTotals).map(([key, value]) => ({
+      monthYear: key,
+      incomes: value,
+      minorexpenses: minorExpenseTotals 
+  })));
+
 }
+
 
   useEffect(() => {
     console.log(getMonthlyIncomes());
     console.log(minorExpenses);
+    console.log(datachart);
+    
     
   }, [incomes,minorExpenses])
       
@@ -68,7 +92,7 @@ const Dashboard: React.FC = () => {
         <div className='body-content'>
           <CurrencyConverter totalBalance={TotalIncomes} savings={100000} minorExpenses={TotalMinorExpenses} />
             <div className='dash-progress-charts'>
-              <IncomeExpenseChart datachart={getMonthlyIncomes()}/>
+              <IncomeExpenseChart datachart={datachart.slice(1)}/>
               <ProgressCard 
                   title="Your saving goal" 
                   description="New pair of shoes 👠👠" 
