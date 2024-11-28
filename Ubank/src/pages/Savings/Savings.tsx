@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+
 import Sidebar from '../../components/Sidebar/Sidebar';
 import './Savings.css'
 
@@ -6,7 +6,7 @@ import UseDashboard from '../../Hooks/DashboardHooks';
 
 
 import UseSavings from '../../Hooks/Usesavings';
-import { IncomesContext } from '../../Context/Incomes';
+
 
 const SavingsGoals: React.FC = () => {
   

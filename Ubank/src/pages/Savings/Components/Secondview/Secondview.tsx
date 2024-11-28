@@ -23,7 +23,7 @@ interface ISecondviewProps {
 }
 
 
-const Secontview = ({Handlenext,cancel}: ISecondviewProps) => {
+const Secontview = ({Handlenext, cancel}: ISecondviewProps) => {
     return (
     <div className="secondview">
         <div className="secondview-header">
@@ -51,7 +51,7 @@ const Secontview = ({Handlenext,cancel}: ISecondviewProps) => {
                 ))}
             </div>
             <div className="secondview-buttons">
-                <button className="button-cancel">Cancel</button>
+                <button className="button-cancel" onClick={cancel}>Cancel</button>
                 <button className="button-continue" onClick={Handlenext}>Continue</button>
             </div>
        

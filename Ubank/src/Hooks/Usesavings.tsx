@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { updateUserData } from "../Services/Userdata";
-import { useFetcher, useNavigate } from "react-router-dom";
+
 import Firstview from "../pages/Savings/Components/Firstview/Firstview";
 import Secontview from "../pages/Savings/Components/Secondview/Secondview";
 import FormSavings from "../pages/Savings/Components/FormSavings/FormsSavings";

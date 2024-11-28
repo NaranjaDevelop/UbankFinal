@@ -6,9 +6,11 @@ export const IncomesContext = createContext({
     ExpenseData: [],
     savingsdata: [],
     SavingIndex: 0,
-    setSavingIndex: (index: number) => {},
+    setSavingIndex: (index: number) => {console.log(index);
+    },
     counterindex: () => {},
 });
+
 
 
 

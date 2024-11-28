@@ -1,13 +1,21 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import UseDashboard from "../../Hooks/DashboardHooks";
-import UseSavings from "../../Hooks/Usesavings";
+
 import SavingDetailed from "./Components/Saving/SavingDetailed";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { IncomesContext } from "../../Context/Incomes";
 
 
-
+interface SavingData {
+  goalName: string;
+  savingFrequency: string;
+  goalAmount: number;
+  saved: [{
+    amount: number;
+    date: string;
+  }];
+}
 
 const SavingsDetail = () => {
    
@@ -19,6 +27,7 @@ const SavingsDetail = () => {
     const param = useLocation().pathname.split('/')[2]
     const paraid = parseInt(param)
 
+    const savingsdata1: SavingData = savingsdata[paraid+1]
     
     const {handleLogout} = UseDashboard() as { username: string; handleLogout: () => Promise<void>; };
     
@@ -31,7 +40,7 @@ const SavingsDetail = () => {
       
       </section>
       <div>
-        <SavingDetailed savingtitle={savingsdata[paraid+1].goalName} savedtotal={2} savingFrequency={savingsdata[paraid+1].savingFrequency} savingamount={savingsdata[paraid+1].goalAmount} savingsdone={savingsdata[paraid+1].saved} />
+        <SavingDetailed savingtitle={savingsdata1.goalName} savedtotal={2} savingFrequency={savingsdata1.savingFrequency} savingamount={savingsdata1.goalAmount} savingsdone={savingsdata1.saved} />
       </div>
     </div>
     </>

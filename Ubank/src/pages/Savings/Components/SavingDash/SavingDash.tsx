@@ -1,7 +1,3 @@
-import { useFetcher, useNavigate } from "react-router-dom";
-import { IncomesContext } from "../../../../Context/Incomes";
-import { UseContextIncomes } from "../../../../Hooks/Usecontext";
-import { UseIncomes } from "../../../../Hooks/Useincomes";
 import UseSavings from "../../../../Hooks/Usesavings";
 import CategoriesCards from "../../../Incomes/Components/Categoriescards/CategoriesCards";
 import Savingsgraph from "./Components/Chartsaving/Chartsaving";
@@ -9,6 +5,7 @@ import SavingCard from "./Components/Savingcard/SavingCard";
 import { useEffect } from "react";
 
 import './savingdash.css'
+import { useNavigate } from "react-router-dom";
 const Category = [{
     CategoryName: "Rent or Housing",
     CategoryAmount: 0,
