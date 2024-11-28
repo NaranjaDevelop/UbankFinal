@@ -20,8 +20,7 @@ const sampleData = [
   { name: 'Food', value: 200000, color: '#D7F177' },
   { name: 'Transportation', value: 150000, color: '#87CBB9' },
   { name: 'Entertainment', value: 100000, color: '#8B65D3' },
-  { name: 'Rent', value: 250000, color: '#97A6D3' },
-  { name: 'Minor expenses', value: 50000, color: '#FFA559' },
+  { name: 'Rent', value: 250000, color: '#FFA559' },
 ];
 const Dashboard: React.FC = () => {
   const { incomes,minorExpenses ,TotalIncomes, TotalMinorExpenses} = UseIncomes()
