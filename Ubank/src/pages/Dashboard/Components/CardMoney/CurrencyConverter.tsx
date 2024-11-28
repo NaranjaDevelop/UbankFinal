@@ -47,19 +47,15 @@ const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ totalBalance, sav
           style={{ backgroundColor: '#ffffff', color: 'black'}}
           className="savings"
         />
-      </div>
-
-      {/* Este div estará fuera del .currency-converter, y en su propia línea */}
-      <div className="minor-expenses-container">
         <BalanceCard
-          imageSrc={img1}
-          title="Minor Expenses"
-          amount={convertCurrency(minorExpenses, currencies.minorExpenses)}
-          currency={currencies.minorExpenses}
-          onCurrencyChange={(currency) => handleCurrencyChange('minorExpenses', currency)}
-          style={{ backgroundColor: '#FFEEDD', color: '#FF5C00', width: '410px'}}
-          className="minor-expenses"
-        />
+                  imageSrc={img1}
+                  title="Minor Expenses"
+                  amount={convertCurrency(minorExpenses, currencies.minorExpenses)}
+                  currency={currencies.minorExpenses}
+                  onCurrencyChange={(currency) => handleCurrencyChange('minorExpenses', currency)}
+                  style={{ backgroundColor: '#FFEEDD', color: '#FF5C00', width: '410px'}}
+                  className="minor-expenses"
+                />
       </div>
     </>
   );
