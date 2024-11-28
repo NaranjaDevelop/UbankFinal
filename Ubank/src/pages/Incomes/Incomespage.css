@@ -118,7 +118,7 @@
 .expensescard-container-scroll{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     overflow-y: scroll;
     height: 300px;
     scrollbar-color: #7C4DFF #ffffff;
