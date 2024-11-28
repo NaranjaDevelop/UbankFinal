@@ -69,6 +69,15 @@ const handlescreens = () => {
     
   }
 
+  useEffect(() => {
+    const showsavingsdash = () => {
+      if(savings.length > 1){
+        setSavingIndex(3);
+      }
+    }
+    showsavingsdash();
+  }, [savings]);
+
 
 
   
