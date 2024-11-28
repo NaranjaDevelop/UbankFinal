@@ -1,3 +1,14 @@
+.incomes-main-container {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
+
 
 .addbutton{
     background-color: #8644DB ;
