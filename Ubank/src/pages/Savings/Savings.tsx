@@ -12,7 +12,7 @@ const SavingsGoals: React.FC = () => {
   
   const context = useContext(IncomesContext)
   
-  const {handlescreens,goalName, goalAmount, savingFrequency, amountPerFrequency, category} = UseSavings() 
+  const {handlescreens} = UseSavings() 
 
   
 

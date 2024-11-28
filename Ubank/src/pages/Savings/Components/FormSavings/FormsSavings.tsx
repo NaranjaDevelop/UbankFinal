@@ -10,7 +10,7 @@ const FormSavings = () => {
     setCategory,
     setGoalAmount,
     setSavingFrequency,
-    setAmountPerFrequency,
+
   } = UseSavings();
 
   return (
@@ -63,7 +63,7 @@ const FormSavings = () => {
             type="number"
             placeholder="Enter the total amount you want to save"
             className="input-field-specific"
-            onChange={(e) => setGoalAmount(e.target.value)}
+            onChange={(e) => setGoalAmount(parseFloat(e.target.value))}
           />
         </div>
         <div className="input-group-specific">
