@@ -26,35 +26,42 @@ const CurrencyConverter: React.FC<CurrencyConverterProps> = ({ totalBalance, sav
   };
 
   return (
-    <div className="currency-converter">
-      <BalanceCard
-        imageSrc={img2}
-        title="Total Balance"
-        amount={convertCurrency(totalBalance, currencies.totalBalance)}
-        currency={currencies.totalBalance}
-        onCurrencyChange={(currency) => handleCurrencyChange('totalBalance', currency)}
-        style={{ backgroundColor: '#ffffff', color: 'black'}}
-        className='total-balance'
-      />
-      <BalanceCard
-        imageSrc={img3}
-        title="Savings"
-        amount={convertCurrency(savings, currencies.savings)}
-        currency={currencies.savings}
-        onCurrencyChange={(currency) => handleCurrencyChange('savings', currency)}
-        style={{ backgroundColor: '#ffffff', color: 'black'}}
-        className='savings'
-      />
-      <BalanceCard
-        imageSrc={img1}
-        title="Minor Expenses"
-        amount={convertCurrency(minorExpenses, currencies.minorExpenses)}
-        currency={currencies.minorExpenses}
-        onCurrencyChange={(currency) => handleCurrencyChange('minorExpenses', currency)}
-        style={{ backgroundColor: '#FFEEDD', color: '#FF5C00', width: '410px'}}
-        className='minor-expenses'
-      />
-    </div>
+    <>
+      {/* Primer div para el balance total y savings */}
+      <div className="currency-converter">
+        <BalanceCard
+          imageSrc={img2}
+          title="Total Balance"
+          amount={convertCurrency(totalBalance, currencies.totalBalance)}
+          currency={currencies.totalBalance}
+          onCurrencyChange={(currency) => handleCurrencyChange('totalBalance', currency)}
+          style={{ backgroundColor: '#ffffff', color: 'black'}}
+          className="total-balance"
+        />
+        <BalanceCard
+          imageSrc={img3}
+          title="Savings"
+          amount={convertCurrency(savings, currencies.savings)}
+          currency={currencies.savings}
+          onCurrencyChange={(currency) => handleCurrencyChange('savings', currency)}
+          style={{ backgroundColor: '#ffffff', color: 'black'}}
+          className="savings"
+        />
+      </div>
+
+      {/* Este div estará fuera del .currency-converter, y en su propia línea */}
+      <div className="minor-expenses-container">
+        <BalanceCard
+          imageSrc={img1}
+          title="Minor Expenses"
+          amount={convertCurrency(minorExpenses, currencies.minorExpenses)}
+          currency={currencies.minorExpenses}
+          onCurrencyChange={(currency) => handleCurrencyChange('minorExpenses', currency)}
+          style={{ backgroundColor: '#FFEEDD', color: '#FF5C00', width: '410px'}}
+          className="minor-expenses"
+        />
+      </div>
+    </>
   );
 };
 
