@@ -2,6 +2,7 @@
     background-color: white;
     width: 150vh;
     border-radius: 50px;
+    padding-bottom: 40px;
 }
 
 .container-graphic-and-categories{
@@ -20,4 +21,16 @@
 
 .tittle-categories-scroll{
     font-size: 20px;
+}
+
+.container-text-and-buttontoadd{
+    display: flex;
+    gap: 340px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.text-small-remember{
+    width: 570px;
 }

@@ -129,6 +129,15 @@ const SavingDash = () => {
                         </div>
                         </div>
                     </div>
+                    <div className="container-text-and-buttontoadd">
+                    <div>
+                    <h1>Your goals</h1>
+                    <p className="text-small-remember">Remember to add all your savings contributions to this category to track your progress and stay motivated.</p>
+                    </div>
+                    <div>
+                    <img className="add-expenses" src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FAddbutton.png?alt=media&token=54634ae9-a33a-4abe-8827-f698b40714c4" alt="" height={50} width={50} />
+                    </div>
+                    </div>
                     <div className="savings-cards">
                         {
                             savings.slice(1).map((saving, index) => (
