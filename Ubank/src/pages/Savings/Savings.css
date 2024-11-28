@@ -14,10 +14,6 @@
     
 
 }
-  
-
-
-
 
   .content {
     flex: 1;
@@ -39,4 +35,9 @@
     font-size: 16px;
     color: #333;
     
+  }
+
+  .screens-container{
+    margin-top: 180px;
+    margin-left: -70px;
   }

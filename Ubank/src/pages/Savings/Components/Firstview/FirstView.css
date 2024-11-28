@@ -1,0 +1,21 @@
+.firstview-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.create-goal-button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #8644DB;
+    border-radius: 25px;
+    border-color: transparent;
+    color: white;
+    width: 400px;
+    height: 40px;
+}
+
+.img-savings-firstview{
+    width: 200px;
+}
