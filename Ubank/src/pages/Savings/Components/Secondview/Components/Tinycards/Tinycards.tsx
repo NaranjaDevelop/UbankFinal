@@ -8,8 +8,8 @@ interface TinycardsProps {
 const Tinycards = ({title, img}: TinycardsProps) => {
     return (
     <div className="tinycards">
-        <h2>{title}</h2>
         <img src={img} alt={`${title} icon`} />
+        <h2>{title}</h2>
     </div>
     )
 
