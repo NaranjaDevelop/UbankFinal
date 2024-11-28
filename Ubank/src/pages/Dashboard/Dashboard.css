@@ -13,10 +13,14 @@
     margin-bottom: 30px;
 }
 .body-content {
+    display: flex;
+    flex-direction: column;
+    width: 1135px;
     margin-top: 20px; 
     margin-bottom: 20px; 
     margin-left: 0; 
     margin-right: 0; 
+    
 }
 
 .dash-progress-charts{
