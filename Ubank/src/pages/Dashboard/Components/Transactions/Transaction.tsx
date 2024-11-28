@@ -1,34 +1,58 @@
 import React from 'react';
 import './Transaction.css';
-import TransactionItem from '../Transactions/TransactionItem';
+import TransactionItem from './TransactionItem';
+import img1 from "../../../../assets/icon-income.webp";
 
-interface Transaction {
-  id: string; 
-  title: string; 
-  date: string; 
-  amount: number; // Monto (positivo = ingreso, negativo = egreso)
-  icon: string; 
-}
+const TransactionList: React.FC = () => {
+  // Data quemada directamente dentro del componente para pruebas
+  const dummyTransactions: { title: string; date: string; amount: number; type: 'income' | 'expense' }[] = [
+    {
+      title: 'Part-time Job',
+      date: 'Wednesday 12 August 2024',
+      amount: 342000,
+      type: 'income',
+    },
+    {
+      title: 'Carulla Market',
+      date: 'Wednesday 20 August 2024',
+      amount: -342000,
+      type: 'expense',
+    },
+    {
+      title: 'Monthly Allowance',
+      date: 'Wednesday 20 August 2024',
+      amount: 342000,
+      type: 'income',
+    },
+    {
+        title: 'Monthly Allowance',
+        date: 'Wednesday 20 August 2024',
+        amount: 342000,
+        type: 'income',
+      }
+  ];
 
-interface TransactionListProps {
-  transactions: Transaction[]; 
-}
+  if (dummyTransactions.length === 0) {
+    return <p className="empty-message">You have no transactions yet. Start by adding incomes or expenses.</p>;
+  }
 
-const TransactionList: React.FC<TransactionListProps> = ({ transactions }) => {
   return (
     <div className="transaction-list">
-      <div className="header">
-        <img src="ruta-del-icono-principal" alt="Icon" />
+      <div className="transaction-header">
+        <div className="icon" style={{ backgroundColor: '#D7F177' }}>
+          <img src={img1} alt="transactions" width={17} />
+        </div>
         <h2>Your last movements</h2>
       </div>
-      <div className="transactions-container">
-        {transactions.map((transaction) => (
+      
+      <div className="transaction-list-scroll">
+        {dummyTransactions.map((transaction, index) => (
           <TransactionItem
-            key={transaction.id}
+            key={index}
             title={transaction.title}
             date={transaction.date}
             amount={transaction.amount}
-            icon={transaction.icon}
+            type={transaction.type}
           />
         ))}
       </div>
@@ -37,3 +61,5 @@ const TransactionList: React.FC<TransactionListProps> = ({ transactions }) => {
 };
 
 export default TransactionList;
+
+

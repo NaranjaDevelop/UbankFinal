@@ -7,6 +7,7 @@ import UseDashboard from '../../Hooks/DashboardHooks';
 import { UseIncomes } from '../../Hooks/Useincomes';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
+import TransactionList from './Components/Transactions/Transaction';
 
 interface DatachartType {
     monthYear: string;
@@ -101,7 +102,7 @@ console.log(minorExpenses);
                 />
             </div>
             <div className='last-dash-container'>
-              
+              <TransactionList></TransactionList>
             </div>
           </div>
         </section>

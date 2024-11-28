@@ -5,23 +5,26 @@ interface TransactionItemProps {
   title: string;
   date: string;
   amount: number;
-  icon: string;
+  type: 'income' | 'expense';
 }
 
-const TransactionItem: React.FC<TransactionItemProps> = ({ title, date, amount, icon }) => {
-  const isExpense = amount < 0; // Determina si es egreso
-
+const TransactionItem: React.FC<TransactionItemProps> = ({ title, date, amount, type }) => {
   return (
-    <div className="transaction-item">
-      <div className="transaction-info">
-        <img src={icon} alt="Transaction Icon" className="transaction-icon" />
-        <div className="transaction-details">
-          <h3>{title}</h3>
-          <p>{date}</p>
-        </div>
+    <div className={`transaction-item ${type}`}>
+      <div className='info-left'>
+        <div className="icon">
+        {/* Aquí podría añadir un ícono, si es necesario */}
       </div>
-      <div className={`transaction-amount ${isExpense ? 'expense' : 'income'}`}>
-        {isExpense ? '-' : '+'}${Math.abs(amount).toLocaleString()}
+      <div className="details">
+        <h4>{title}</h4>
+        <p>{date}</p>
+      </div>
+      </div>
+      <div 
+        className="amount" 
+        style={{ color: type === 'expense' ? 'red' : 'black' }} // Cambia el color según el tipo expense o income
+      >
+        {type === 'expense' ? '-' : '+'}${Math.abs(amount).toLocaleString()}
       </div>
     </div>
   );

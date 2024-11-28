@@ -1,0 +1,13 @@
+.transaction-item{
+    display: flex;
+    gap: 400px;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.transaction-item p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+}
