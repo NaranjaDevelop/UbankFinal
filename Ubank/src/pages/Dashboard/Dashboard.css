@@ -6,8 +6,8 @@
 }
 
 .dashboard-content{
-    margin-top: 30px;
-    margin-left: 40px;
+    margin-top: 15px;
+    margin-left: 15px;
     display: flex;
     align-items: flex-start;
 }
@@ -20,7 +20,7 @@
 .info-section{
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 300px;
 }
 
 

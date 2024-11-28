@@ -71,7 +71,10 @@ CategoryImg:"https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com
 const SavingDash = () => {
 
     const {savings} = UseSavings()
+
     console.log(savings);
+
+    
     
     return (
         <div>
@@ -91,12 +94,21 @@ const SavingDash = () => {
             <div>
             <Savingsgraph/>
             <div>
+                <h3>Categories</h3>
                 {
-                    savings.slice(1).map ((saving, index) => (
-                        <SavingCard key={index} Categoryimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FRenta.png?alt=media&token=86a9bd6b-fcd8-4205-b848-91c29a276dfc" SavingTitle={saving.goalName}  />
+                    Category.map((category, index) => (
+                        <CategoriesCards key={index} TypeImg={category.CategoryImg} TypeExpenses={category.CategoryName} TypeAmount={category.CategoryAmount} />
                     ))
                 }
-                {/* Categoryimg, SavingTitle, Savingtimeleft, Savingmin, Savingmax, Percentagesaved */}
+            </div>
+            <div>
+                {
+                    savings.slice(1).map ((saving, index) => (
+
+                        <SavingCard key={index} Categoryimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FRenta.png?alt=media&token=86a9bd6b-fcd8-4205-b848-91c29a276dfc" SavingTitle={saving.goalName} savingFrequency={saving.category} Savingmax={saving.goalAmount} Percentagesaved={1}  />
+                    ))
+                }
+                
             </div>
             </div>
         </div>

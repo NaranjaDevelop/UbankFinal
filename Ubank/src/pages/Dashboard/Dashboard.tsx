@@ -86,8 +86,8 @@ console.log(minorExpenses);
       <Sidebar className="sidebar" onLogout={handleLogout} />
       <section className='info-section'>
         <div className='text-content'>
-        <h2>Welcome!, {username}</h2>
-        <p>Detailed overview of your finantial situation</p>
+          <h2>Welcome!, {username}</h2>
+          <p>Detailed overview of your finantial situation</p>
         </div>
         <div className='body-content'>
           <CurrencyConverter totalBalance={TotalIncomes} savings={100000} minorExpenses={TotalMinorExpenses} />

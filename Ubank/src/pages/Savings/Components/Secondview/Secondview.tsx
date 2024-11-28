@@ -19,10 +19,11 @@ const TinycardsData = [  {
 ]
 interface ISecondviewProps {
     Handlenext: () => void;
+    cancel: () => void;
 }
 
 
-const Secontview = ({Handlenext}: ISecondviewProps) => {
+const Secontview = ({Handlenext,cancel}: ISecondviewProps) => {
     return (
     <div className="secondview">
         <div className="secondview-header">

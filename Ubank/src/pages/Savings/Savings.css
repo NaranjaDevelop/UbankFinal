@@ -6,13 +6,11 @@
 }  
 
 .savings-goals-container {
-    margin-top: 30px;
-    margin-left: 40px;
+    margin-top: 15px;
+    margin-left: 15px;
     display: flex;
     align-items: flex-start;
-
     
-
 }
 
   .content {

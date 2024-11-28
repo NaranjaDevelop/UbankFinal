@@ -2,10 +2,12 @@ import React from 'react';
 import img from '../../../../assets/form_logo.png';
 import '../FormHeader/Header.css';
 
-const Header: React.FC = () => {
+const Header = ({goback}: any) => {
+
+    
     return (
     <header>
-        <img className= "header" src={img} alt="Ubank" />
+        <img className= "header" src={img} alt="Ubank" onClick={goback} />
     </header>
     );
 };
