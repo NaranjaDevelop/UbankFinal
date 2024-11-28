@@ -2,6 +2,7 @@
     width: 692px;
     background-color: #fff;
     border-radius: 28px;
+    height: 272px;
 }
 
 .transaction-header h2{
@@ -34,7 +35,7 @@
 }
 
 .transaction-list-scroll {
-    max-height: 272px;  /* Limita la altura máxima para que aparezca la barra de desplazamiento */
+    max-height: 205px;  /* Limita la altura máxima para que aparezca la barra de desplazamiento */
     overflow-y: auto;   /* Barra de desplazamiento vertical */
     padding-right: 10px; /* Para evitar que la barra de desplazamiento se superponga al contenido */
     margin-top: 10px;    /* Añadir espacio entre la cabecera y las transacciones */

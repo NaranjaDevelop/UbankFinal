@@ -12,3 +12,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#category {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-expenses-category {
+    display: flex;
+    flex-direction: column;
+}

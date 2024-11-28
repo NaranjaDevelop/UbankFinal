@@ -51,7 +51,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onSubmit }) => {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-expenses-category">
         <label htmlFor="category">Category:</label>
         <select
           id="category"

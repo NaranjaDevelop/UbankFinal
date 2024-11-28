@@ -8,13 +8,20 @@ import { UseIncomes } from '../../Hooks/Useincomes';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import TransactionList from './Components/Transactions/Transaction';
+import StatisticsCard from './Components/Statistics/StatisticsCard';
 
 interface DatachartType {
     monthYear: string;
     incomes: number;
     minorexpenses: number;
 }
-
+// data quemada para prueba de la gráfica circular
+const sampleData = [
+  { name: 'Food', value: 200000, color: '#D7F177' },
+  { name: 'Transportation', value: 150000, color: '#87CBB9' },
+  { name: 'Entertainment', value: 100000, color: '#8B65D3' },
+  { name: 'Rent', value: 250000, color: '#FFA559' },
+];
 const Dashboard: React.FC = () => {
   const { incomes,minorExpenses ,TotalIncomes, TotalMinorExpenses} = UseIncomes()
   const { username, handleLogout } = UseDashboard() as { username: string; handleLogout: () => Promise<void> };
@@ -103,6 +110,11 @@ console.log(minorExpenses);
             </div>
             <div className='last-dash-container'>
               <TransactionList></TransactionList>
+              <StatisticsCard 
+                title="Statistics" 
+                data={sampleData} 
+                totalAmount={700000} 
+                />
             </div>
           </div>
         </section>
