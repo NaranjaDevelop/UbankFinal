@@ -100,6 +100,9 @@ console.log(minorExpenses);
                   goalAmount={200000} 
                 />
             </div>
+            <div className='last-dash-container'>
+              
+            </div>
           </div>
         </section>
       
