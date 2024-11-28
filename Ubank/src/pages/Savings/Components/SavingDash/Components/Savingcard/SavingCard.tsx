@@ -34,7 +34,7 @@ const SavingCard = ({
           ></div>
         </div>
         <div className="saving-card-minmax">
-          <p className="saving-card-min">$20.000</p>
+          <p className="saving-card-min">$0</p>
           <p className="saving-card-max">${Savingmax.toLocaleString()}</p>
         </div>
       </div>
