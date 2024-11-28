@@ -4,7 +4,7 @@ import Savingsgraph from "./Components/Chartsaving/Chartsaving";
 import SavingCard from "./Components/Savingcard/SavingCard";
 import { useEffect } from "react";
 
-import './savingdash.css'
+import './Savingdash.css'
 import { useNavigate } from "react-router-dom";
 const Category = [{
     CategoryName: "Rent or Housing",
