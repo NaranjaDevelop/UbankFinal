@@ -1,7 +1,12 @@
 #Expensescards{
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
     gap: 150px;
+    background-color: #F7F7F3;
+    padding: 15px;
+    border-radius: 15px;
     
 }
 #row-Expensescard{

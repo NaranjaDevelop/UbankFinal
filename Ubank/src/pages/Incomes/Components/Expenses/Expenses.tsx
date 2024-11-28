@@ -18,11 +18,11 @@ const Expensescard = ({ExpensesTitle, ExpensesAmount, ExpensesDate, Expensesimg,
         <div id='Expensescard-details'>
         <p> {ExpensesType}</p>
         <p id='Expensescard-title'>{ExpensesTitle}</p>
-        <h3 id='Expensescard-amount'>{ExpensesAmount} $</h3>
+        <h3>{ExpensesDate}</h3>
       </div>
         </div>
         <div id='Expensescard-date'>
-            <h3>{ExpensesDate}</h3>
+          <h3 id='Expensescard-amount'>{ExpensesAmount} $</h3>   
         </div>
     </div>
     </>
