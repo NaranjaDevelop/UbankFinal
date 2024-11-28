@@ -49,7 +49,8 @@
 .Firstrow-container{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 23px;
     align-items: flex-start;
  
 
@@ -72,12 +73,11 @@
 }
 
 .Secondrow-container{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 23px;
+    margin-bottom: 23px;
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    align-items: flex-start;
+    justify-content: space-between;
 }
 .minor-expense-scroll-container{
     overflow-y: scroll;
@@ -90,8 +90,6 @@
     flex-direction: column;
     background-color: #ffffff;
     gap: 30px;
-    width: 993px;
-
     border-radius: 20px;
     padding: 20px;
 
@@ -136,10 +134,12 @@
 }
 .incomes-container .header2{
     display: flex;
+    justify-content: space-between;
     margin-top: -4px;
     margin-bottom: 2px;
     align-items: center;
-    gap: 20px;
+    
+
 
 }
 
