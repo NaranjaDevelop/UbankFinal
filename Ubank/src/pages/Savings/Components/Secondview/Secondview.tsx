@@ -1,18 +1,21 @@
 import Tinycards from "./Components/Tinycards/Tinycards";
 import './Secondview.css';
 
-const TinycardsData = [{
-    title: "Set you goal",
+const TinycardsData = [  {
+    first_part: "Set your",
+    second_part: "goal",
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fverified.png?alt=media&token=3f802069-5e83-441b-ab1e-76f9e8f0ab9a"
-},
-{
-    title: "Plan your contribution",  
+  },
+  {
+    first_part: "Plan your",
+    second_part: "contribution",
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fsupport-dollar.png?alt=media&token=37dd0f14-bd58-4b9b-ae59-d2ca8e744cf6"
-},
-{
-    title: "Watch your progress",
+  },
+  {
+    first_part: "Watch your",
+    second_part: "progress",
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fcalendar.png?alt=media&token=b7e3d316-c20f-4271-9ccf-682a83bdf154"
-},
+  },
 ]
 interface ISecondviewProps {
     Handlenext: () => void;
@@ -37,11 +40,14 @@ const Secontview = ({Handlenext}: ISecondviewProps) => {
             </div>
         </div>
             <div className="secondview-cards">
-                {
-                    TinycardsData.map((item, index) => {
-                        return <Tinycards key={index} title={item.title} img={item.img} />
-                    })
-                }
+                    {TinycardsData.map((item, index) => (
+                    <Tinycards
+                    key={index}
+                    first_part={item.first_part}
+                    second_part={item.second_part}
+                    img={item.img}
+                    />
+                ))}
             </div>
             <div className="secondview-buttons">
                 <button className="button-cancel">Cancel</button>

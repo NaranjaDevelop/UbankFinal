@@ -1,18 +1,19 @@
 import './Tinycards.css';
 
+
 interface TinycardsProps {
-    title: string;
+    first_part: string;
+    second_part: string;
     img: string;
-}
-
-const Tinycards = ({title, img}: TinycardsProps) => {
+  }
+  
+  const Tinycards = ({ first_part, second_part, img }: TinycardsProps) => {
     return (
-    <div className="tinycards">
-        <img src={img} alt={`${title} icon`} />
-        <h2>{title}</h2>
-    </div>
-    )
-
-}
+      <div className="tinycards">
+        <img src={img} alt={`${first_part} icon`} />
+        <h2>{first_part} <span className="highlighted">{second_part}</span></h2>
+      </div>
+    );
+  };
 
 export default Tinycards;

@@ -1,7 +1,7 @@
 .tinycards {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;  
     justify-content: center;
     background-color: #ffffff; 
     border-radius: 12px; 
@@ -26,9 +26,21 @@
     text-align: left;
 }
 
+
+.tinycards .first-part {
+    font-weight: 400; 
+}
+
+
+.tinycards .highlighted {
+    color: #8644DB; 
+    font-weight: 600; 
+}
+
 .tinycards img {
     width: 40px; 
     height: 40px;
     object-fit: contain; 
     margin-bottom: 8px; 
 }
+
