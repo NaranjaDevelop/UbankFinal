@@ -7,6 +7,7 @@ import UseDashboard from '../../Hooks/DashboardHooks';
 import { UseIncomes } from '../../Hooks/Useincomes';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
+import TransactionList from './Components/Transactions/Transaction';
 
 interface DatachartType {
     monthYear: string;
@@ -92,8 +93,8 @@ console.log(minorExpenses);
         <div className='body-content'>
           <CurrencyConverter totalBalance={TotalIncomes} savings={100000} minorExpenses={TotalMinorExpenses} />
             <div className='dash-progress-charts'>
-              <IncomeExpenseChart datachart={datachart.slice(1)}/>
-              <ProgressCard 
+            <IncomeExpenseChart datachart={datachart.slice(1)}/>  
+            <ProgressCard 
                   title="Your saving goal" 
                   description="New pair of shoes 👠👠" 
                   currentAmount={100000} 
@@ -101,7 +102,7 @@ console.log(minorExpenses);
                 />
             </div>
             <div className='last-dash-container'>
-              
+              <TransactionList></TransactionList>
             </div>
           </div>
         </section>

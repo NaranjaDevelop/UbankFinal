@@ -15,12 +15,18 @@
 .dash-progress-charts{
     display: flex;
     gap: 23px;
+    margin-bottom: 20px;
 }
 
 .info-section{
     display: flex;
     flex-direction: column;
     margin-left: 300px;
+}
+
+.last-dash-container{
+    display: flex;
+    gap: 23px;
 }
 
 

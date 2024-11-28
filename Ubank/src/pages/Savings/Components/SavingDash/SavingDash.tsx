@@ -6,7 +6,6 @@ import CategoriesCards from "../../../Incomes/Components/Categoriescards/Categor
 import Savingsgraph from "./Components/Chartsaving/Chartsaving";
 import SavingCard from "./Components/Savingcard/SavingCard";
 
-
 const Category = [{
 CategoryName: "Rent or Housing",
 CategoryAmount: 0,
