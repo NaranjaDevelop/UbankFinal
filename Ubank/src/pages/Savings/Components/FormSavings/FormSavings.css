@@ -1,6 +1,7 @@
 .form-savings-specific-container {
     margin: 0 auto;
     padding: 20px;
+    margin-top: 50px;
   }
   
   .section-title-specific {
@@ -32,11 +33,11 @@
   
   .input-field-specific,
   .select-field-specific {
-    width: 100%;
+    width: 400px;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 50px;
     outline: none;
     transition: border-color 0.3s;
   }
@@ -53,31 +54,40 @@
     margin-top: 20px;
   }
   
-  .cancel-button-specific,
-  .create-button-specific {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
   .cancel-button-specific {
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    
   }
   
   .cancel-button-specific:hover {
-    background-color: #e0e0e0;
+    background-color: #dcdcdc;
+    color: #333;
   }
   
-  .create-button-specific {
-    background-color: #8b5cf6;
-    color: #fff;
+  .create-button-specific{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #8644DB;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
   }
   
   .create-button-specific:hover {
-    background-color: #6d41d9;
+    background-color: #702BBE;
   }
