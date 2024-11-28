@@ -46,3 +46,19 @@
     line-height: 21px; /* 150% */;
     margin-left: 55px;
 }
+
+@media (max-width: 430px) {
+    .chart-container {
+        padding: 15px; /* Reducir el padding en dispositivos pequeños */
+        width: 90%; /* Usar el 90% del ancho disponible */
+    }
+
+    .chart-header h2 {
+        font-size: 16px; /* Ajustar tamaño del título */
+    }
+
+    .chart-container p {
+        font-size: 12px; /* Reducir el tamaño del texto descriptivo */
+        line-height: 18px;
+    }
+}

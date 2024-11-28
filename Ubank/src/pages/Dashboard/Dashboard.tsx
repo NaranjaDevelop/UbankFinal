@@ -92,13 +92,14 @@ console.log(minorExpenses);
         <div className='body-content'>
           <CurrencyConverter totalBalance={TotalIncomes} savings={100000} minorExpenses={TotalMinorExpenses} />
             <div className='dash-progress-charts'>
-              <IncomeExpenseChart datachart={datachart.slice(1)}/>
-              <ProgressCard 
+            <ProgressCard 
                   title="Your saving goal" 
                   description="New pair of shoes 👠👠" 
                   currentAmount={100000} 
                   goalAmount={200000} 
                 />
+              <IncomeExpenseChart datachart={datachart.slice(1)}/>
+              
             </div>
           </div>
         </section>
