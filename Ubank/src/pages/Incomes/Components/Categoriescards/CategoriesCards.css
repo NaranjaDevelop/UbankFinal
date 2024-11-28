@@ -2,6 +2,10 @@
 
 .categories-cards{
     display: flex;
+    align-items: center;
     gap: 10px;
     width: 300px;
+    background-color: #F7F7F3;
+    padding: 10px;
+    border-radius: 49px;
 }

@@ -111,7 +111,7 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap:40px;
+    gap:15px;
     height: 350px;
     scrollbar-color: #7C4DFF #ffffff;
 }
