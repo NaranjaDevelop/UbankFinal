@@ -59,11 +59,11 @@ const SignUp: React.FC = () => {
           Grow your money with <span className="ubank">UBank!</span> 🚀
         </h2>
         <div>
-          <img className="illustration" src="./src/assets/Pig.webp" alt="Illustration" />
+          <img className="illustration" src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/FormImgs%2Filustracionesform.png?alt=media&token=a4f5b32b-a2f9-4418-a7aa-e70240f6a08c" alt="Illustration" />
         </div>
       </div>
       <div className="right-panel">
-      <img className="desktop-logo" src="./src/assets/UBank-LogoCompleto.webp" alt="" />
+      
         <h2>
           Create <span className="highlight">Account</span>
         </h2>

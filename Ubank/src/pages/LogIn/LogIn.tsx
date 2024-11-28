@@ -57,11 +57,11 @@ const LogIn: React.FC = () => {
           It's time to take control of <span className="ubank">your finances!</span>💰
         </h2>
         <div>
-          <img className="illustration" src="./src/assets/Nice.webp" alt="Illustration" />
+          <img className="illustration" src="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/FormImgs%2Filustracionesform2.png?alt=media&token=c8a4a8a2-d948-4b5a-ab78-fac4d3032298" alt="Illustration" />
         </div>
       </div>
       <div className="right-panel">
-        <img className="desktop-logo" src="./src/assets/UBank-LogoCompleto.webp" alt="" />
+        
         <h2>
           Welcome <span className="highlight">back!</span>
         </h2>
