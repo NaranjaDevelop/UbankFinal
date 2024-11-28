@@ -14,7 +14,7 @@ interface SavingCardProps {
 const SavingCard = ({Categoryimg, SavingTitle,savingFrequency, Savingmax, Percentagesaved} : SavingCardProps) => {
 
     
-   
+    
     
     return (
         <div className="saving-card" >

@@ -82,6 +82,8 @@ const SavingDash = () => {
 
                 <img src="" alt="" />
             </div>
+
+
             <div>
                 <h1>Goals</h1>
                 <p>Your goals</p>
@@ -109,7 +111,7 @@ const SavingDash = () => {
                     ))
                 }
                 
-            </div>
+                </div>
             </div>
         </div>
     )

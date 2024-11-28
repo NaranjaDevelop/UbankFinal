@@ -42,7 +42,7 @@ const Incomes = () => {
         setIsExpenseModalOpen,
         handleLogout, } = UseIncomes()
 
- 
+    
 
     return (
         <div className="incomes-main-container">
@@ -103,7 +103,11 @@ const Incomes = () => {
                         <div className="Bargraph-container">
 
                             <div>
+                                {
+                                    
+
                                 <IncomesExpenses incomeAmount={TotalIncomes} expenseAmount={TotalExpenses} />
+                                }
                             </div>
                             <div>
 
@@ -154,8 +158,8 @@ const Incomes = () => {
                                 <div className="containerheader-expenses">
                                     <div>
 
-                                        <h1>Expenses</h1>
-                                        <h3>Your expenses this month</h3>
+                                        <h1>Your expenses by category</h1>
+                                
                                     </div>
                                     <div className="Addexpenses-container">
 
