@@ -94,7 +94,7 @@ const SavingDash = () => {
                         </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="savings-cards">
                         {
                             savings.slice(1).map((saving, index) => (
 
