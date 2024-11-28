@@ -20,15 +20,14 @@ const SavingsGoals: React.FC = () => {
 
   return (
     <div className='savings-goals-container'>
-      
         <Sidebar onLogout={handleLogout} />
-        
       <section className='info-section'>
-        <h1>Savings</h1>
+        <h1 className="main-title">Savings</h1>
+      
+        <div className='savingsScreens-container'>
+          {handlescreens()}
+        </div>
       </section>
-      <div className='savingsScreens-container'>
-        {handlescreens()}
-      </div>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 .sidebar {
+  position: fixed;
   border-radius: 22px;
   background: linear-gradient(184deg, #4E0F5E -83.32%, #010C1E 96.97%);
   width: 257px;
-  height: 785px;
+  height: 700px;
   flex-shrink: 0;
   padding: 20px;
   color: #fff; 
