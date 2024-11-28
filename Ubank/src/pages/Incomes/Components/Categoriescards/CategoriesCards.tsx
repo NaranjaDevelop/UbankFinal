@@ -12,6 +12,7 @@ const CategoriesCards = ({TypeExpenses, TypeAmount, TypeImg}: CategoriesCardsPro
 
 
     return (
+        
         <div className="categories-cards">
                  <img src={TypeImg} alt="card-img" className='cardType-img' height={40} />
             <div className="Typeexpensecard">

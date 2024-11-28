@@ -36,18 +36,7 @@ const Savingsgraph = () => {
                 </div>
                 
 
-                <div className="labels">
-                    <div className="label1">
-                        <h4>category</h4>
-                        <h3>{1}</h3>
-                    </div>
-                    <div className="label2">
-                        <div className="square"></div>
-                        <h4>category</h4>
-                        <h3>{1}</h3>
-                    </div>
-
-                </div>
+                
 
             </div>
         </div>
