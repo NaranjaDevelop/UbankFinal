@@ -23,4 +23,6 @@
 
 .tittle-firstView{
     src: url(./Fonts/LufgaBold.ttf);
+    width: 300px;
+    line-height: 1.5;
 }
