@@ -123,71 +123,7 @@
     scrollbar-color: #7C4DFF #ffffff;
 }
 
-.incomes-container{
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 28px;
-    width: 341px;
-    height: 407px;
-    scrollbar-color: #7C4DFF #ffffff;
-}
-.incomes-container .header2{
-    display: flex;
-    justify-content: space-between;
-    margin-top: -4px;
-    margin-bottom: 2px;
-    align-items: center;
-    
 
-
-}
-
-.incomes-container .header2 h1{
-    color: #000;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 21.731px; /* 120.729% */
-    letter-spacing: -0.72px;
-    margin-left: 0%;
-    margin-top: -6px;
-}
-
-.incomes-container .header2 .add-income{
-  margin-left: 106px;
-}
-
-.incomes-container .header2 .add-income:hover{
-    cursor: pointer;
-    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: translateY(-2px); /* Mueve el elemento hacia arriba 5px */
-}
-
-
-.incomes-container p{
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 21px; /* 150% */
-    letter-spacing: -0.56px;
-    margin-left: 55px;
-    margin-top: -15px;
-    margin-bottom: 5px;
-}
-
-.incomes-container .header2 .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
-    border-radius: 50%;
-}
 
 .Expensescontainer-all{
     display: flex;
@@ -203,8 +139,8 @@
 .containerheader-expenses{
     display: flex;
     flex-direction: row;
-    
-    gap: 500px;
+    justify-content: space-between;
+    padding: 10px;
 }
 .incomes-main-div{
     margin-top: 30px;
