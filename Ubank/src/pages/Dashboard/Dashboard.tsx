@@ -83,7 +83,7 @@ console.log(minorExpenses);
       
   return (
     <div className="dashboard-content">
-      <Sidebar onLogout={handleLogout} />
+      <Sidebar className="sidebar" onLogout={handleLogout} />
       <section className='info-section'>
         <div className='text-content'>
           <h2 className="main-title">Welcome!, {username}</h2>
@@ -99,6 +99,9 @@ console.log(minorExpenses);
                   currentAmount={100000} 
                   goalAmount={200000} 
                 />
+            </div>
+            <div className='last-dash-container'>
+              
             </div>
           </div>
         </section>
