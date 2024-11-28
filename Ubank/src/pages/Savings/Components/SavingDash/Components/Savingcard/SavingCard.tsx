@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 
 
 
@@ -8,16 +9,16 @@ interface SavingCardProps {
     savingFrequency: string
     Savingmax: number
     Percentagesaved: number 
+    Gotodetail: (id:any) => void
 }
 
 
-const SavingCard = ({Categoryimg, SavingTitle,savingFrequency, Savingmax, Percentagesaved} : SavingCardProps) => {
+const SavingCard = ({Categoryimg, SavingTitle,savingFrequency, Savingmax, Percentagesaved,Gotodetail} : SavingCardProps) => {
 
     
     
-    
     return (
-        <div className="saving-card" >
+        <div className="saving-card" onClick={Gotodetail}>
             <div className="saving-card-header">
             <img src={Categoryimg} alt="" />
             <h3>{SavingTitle}</h3>

@@ -8,6 +8,7 @@ import { IncomesContext } from "../Context/Incomes";
 import SavingDash from "../pages/Savings/Components/SavingDash/SavingDash";
 
 interface SavingsArray {
+    id: number,
     goalName: string,
     category: string,
     goalAmount: number,
@@ -69,14 +70,7 @@ const handlescreens = () => {
     
   }
 
-  useEffect(() => {
-    const showsavingsdash = () => {
-      if(savings.length > 1){
-        setSavingIndex(3);
-      }
-    }
-    showsavingsdash();
-  }, [savings]);
+  
 
 
 
@@ -85,16 +79,17 @@ const handlescreens = () => {
     console.log(goalName, category, goalAmount, savingFrequency, amountPerFrequency);
     
     const data: SavingsArray = {
-
-        goalName : goalName,
-        category: category || "Rent or Housing",
-        goalAmount: goalAmount,
-        savingFrequency: savingFrequency || "Monthly",
-        amountPerFrequency: amountPerFrequency,
-        saved: [{
-            amount: 0,
-            date: ""
-        }]
+      id: savings.length,
+      goalName: goalName,
+      category: category || "Rent or Housing",
+      goalAmount: goalAmount,
+      savingFrequency: savingFrequency || "Monthly",
+      amountPerFrequency: amountPerFrequency,
+      saved: [{
+        amount: 0,
+        date: ""
+      }],
+    
     }
 
    

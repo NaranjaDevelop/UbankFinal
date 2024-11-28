@@ -10,7 +10,7 @@ const FormSavings = () => {
     setCategory,
     setGoalAmount,
     setSavingFrequency,
-
+    setSavingIndex
   } = UseSavings();
 
   return (
@@ -89,6 +89,7 @@ const FormSavings = () => {
           className="cancel-button-specific"
           onClick={() => {
             console.log("Cancel clicked");
+            setSavingIndex(3)
           }}
         >
           Cancel

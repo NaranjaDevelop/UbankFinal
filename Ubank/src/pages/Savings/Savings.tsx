@@ -4,13 +4,13 @@ import './Savings.css'
 
 import UseDashboard from '../../Hooks/DashboardHooks';
 
-import Savingside from './Components/Savingside/Savingside';
+
 import UseSavings from '../../Hooks/Usesavings';
 import { IncomesContext } from '../../Context/Incomes';
 
 const SavingsGoals: React.FC = () => {
   
-  const context = useContext(IncomesContext)
+  
   
   const {handlescreens} = UseSavings() 
 

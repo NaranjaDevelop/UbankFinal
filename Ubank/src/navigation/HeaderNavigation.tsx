@@ -4,6 +4,7 @@ import { routerform } from "./Navigation";
 import Authrouters from "./AuthNavegation";
 import Incomes from "../pages/Incomes/Incomes";
 import SavingsGoals from "../pages/Savings/Savings";
+import SavingsDetail from "../pages/SavingsDetail/SavingsDetail";
 
 
 const router = createHashRouter([
@@ -35,6 +36,11 @@ const router = createHashRouter([
     {
       path: "savings-goals",
       element: <SavingsGoals />,
+    },
+
+    {
+        path: "SavingsDetail/:id",
+        element: <SavingsDetail />
     },
     ...routerform,
     ...Authrouters,
