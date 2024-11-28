@@ -1,10 +1,11 @@
 import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import './StatisticsCard.css';
+import img1 from "../../../../assets/estadisticas-icon.webp";
 
 interface StatisticsCardProps {
   title: string;
-  data: { name: string; value: number; color: string }[]; // Datos con nombre, valor y color
+  data: { name: string; value: number; color: string }[]; // Datos con nombre, valor y color, esta data esta en la dashboard,tsx quemadad
   totalAmount: number;
 }
 
@@ -13,7 +14,7 @@ const StatisticsCard: React.FC<StatisticsCardProps> = ({ title, data, totalAmoun
     <div className="statistics-card">
       <div className="statistics-header">
         <div className="icon" style={{ backgroundColor: '#D7F177' }}>
-          <img src="" alt="statistics" width={20} />
+          <img src={img1} alt="statistics" width={20} />
         </div>
         <h2>{title}</h2>
         <select className="statistics-select">
@@ -21,6 +22,11 @@ const StatisticsCard: React.FC<StatisticsCardProps> = ({ title, data, totalAmoun
           <option value="incomes">Incomes</option>
         </select>
       </div>
+
+      <p className="statistics-description" >
+        You can see a detailed summary of your incomes, expenses and minor expenses with categories.
+      </p>
+
       <div className="statistics-chart">
         <ResponsiveContainer width="100%" height={250}>
           <PieChart>
@@ -60,13 +66,17 @@ const StatisticsCard: React.FC<StatisticsCardProps> = ({ title, data, totalAmoun
       </div>
 
       <div className="statistics-legend">
-        {data.map((entry, index) => (
-          <div key={index} className="legend-item">
-            <span className="legend-color" style={{ backgroundColor: entry.color }}></span>
-            {entry.name}
-          </div>
-        ))}
-      </div>
+  {data.map((entry, index) => (
+    <div key={index} className="legend-item">
+      {/* Circulito de color */}
+      <span
+        className="legend-color"
+        style={{ backgroundColor: entry.color }} // Cambia dinámicamente el color basado en el dato
+      ></span>
+      {entry.name}
+    </div>
+  ))}
+</div>
     </div>
   );
 };
