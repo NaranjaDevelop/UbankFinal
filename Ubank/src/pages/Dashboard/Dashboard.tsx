@@ -28,7 +28,7 @@ const getMonthlyIncomes = () => {
         const date = new Date(income.IncomeDate);
         const month = date.getMonth();
         const year = date.getFullYear();
-        const monthYear = `${year}-${month}`; // Ensure this format matches expectations
+        const monthYear = `${year}-${month}`; 
 
         if (!monthlyTotals[monthYear]) {
             monthlyTotals[monthYear] = 0;
