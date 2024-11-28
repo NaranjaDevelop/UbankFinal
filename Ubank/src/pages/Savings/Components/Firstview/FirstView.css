@@ -10,12 +10,14 @@
   
   .title-firstview {
     font-family: 'Lufga', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #2D2D2D;
-    margin-bottom: 10px;
-    line-height: 1; 
-    width: 240px; 
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    font-weight: semibold;
+    line-height: 1.08;
+    color: #333;
+    margin-bottom: 8px;
+    width: 241px;
   }
   
   .highlight {
