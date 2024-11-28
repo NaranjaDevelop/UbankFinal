@@ -11,12 +11,12 @@ import CheckboxAnswerOption from './Components/Checkbox/Checkbox';
 
 
 const Form: React.FC = () => {
-  const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer, selectedAnswer } = useForm();
+  const { generalIndex, questionIndex, questions, optionss, handleNext, handlePrevious, handleselectedAnswer, selectedAnswer, goback } = useForm();
 
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false}/>
-      <Header />
+      <Header goback={goback}  />
       <Question 
         currentNumber={"Question " + (generalIndex + 0)}
         text={questions.length > 0 ? questions[questionIndex].text : ""}

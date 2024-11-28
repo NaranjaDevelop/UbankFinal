@@ -1,3 +1,14 @@
+.incomes-main-container {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
+
 
 .addbutton{
     background-color: #8644DB ;
@@ -16,8 +27,6 @@
     letter-spacing: -.0625rem;
     font-size: 30px;
     color: #000000; 
-    margin-left: 346px;
-    margin-top: 28px;
 } 
 
 @font-face {

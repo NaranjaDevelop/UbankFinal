@@ -12,7 +12,7 @@ const SavingsGoals: React.FC = () => {
   
   const context = useContext(IncomesContext)
   
-  const {handlescreens,goalName, goalAmount, savingFrequency, amountPerFrequency, category} = UseSavings() 
+  const {handlescreens} = UseSavings() 
 
   
 
@@ -22,11 +22,12 @@ const SavingsGoals: React.FC = () => {
     <div className='savings-goals-container'>
         <Sidebar onLogout={handleLogout} />
       <section className='info-section'>
-        <h1>Savings</h1>
+        <h1 className="main-title">Savings</h1>
+      
+        <div className='savingsScreens-container'>
+          {handlescreens()}
+        </div>
       </section>
-      <div className='savingsScreens-container'>
-        {handlescreens()}
-      </div>
     </div>
   );
 };
