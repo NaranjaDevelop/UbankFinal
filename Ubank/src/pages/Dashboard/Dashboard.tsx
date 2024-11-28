@@ -83,7 +83,7 @@ console.log(minorExpenses);
       
   return (
     <div className="dashboard-content">
-      <Sidebar onLogout={handleLogout} />
+      <Sidebar className="sidebar" onLogout={handleLogout} />
       <section className='info-section'>
         <div className='text-content'>
         <h2>Welcome!, {username}</h2>
