@@ -27,7 +27,7 @@ export const useForm = () => {
     }, []);
 
     const optionss = questions.length > 0 ? questions[questionIndex].options : [];
-    const goback = navigate("/Dashboard")
+    
     const handleNext = () => {
       if (questionIndex === 11 || questionIndex === 10) {
           navigate("/plan", { state: { optionvalue } });
@@ -62,7 +62,12 @@ export const useForm = () => {
           setSelectedAnswer(null);
       }
   };
-  
+  const goback =() =>{
+      console.log("goback");
+      
+    navigate("/Dashboard")
+} 
+    
 
     const handlePrevious = () => {
         setGeneralIndex(0);

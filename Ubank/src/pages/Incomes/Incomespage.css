@@ -56,8 +56,7 @@
     flex-direction: row;
     gap: 30px;
     align-items: flex-start;
-    margin-left: 354px;
-    margin-top: -700px;
+ 
 
 }
 .Bargraph-container{
@@ -97,7 +96,7 @@
     background-color: #ffffff;
     gap: 30px;
     width: 993px;
-    margin-left: 334px;
+
     border-radius: 20px;
     padding: 20px;
 

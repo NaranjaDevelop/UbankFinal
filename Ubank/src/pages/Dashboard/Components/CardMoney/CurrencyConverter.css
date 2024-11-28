@@ -23,23 +23,30 @@
 }
 
 @media (max-width: 430px) {
-    .sidebar {
-        display: none;
-    }
-
     .currency-converter {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 20px; 
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+    
+      .currency-converter .total-balance,
+      .currency-converter .savings {
+        width: 100%; /* En pantallas pequeñas, que ocupen el 100% de ancho */
+      }
+    
+      .minor-expenses-container {
+        width: 100%; /* Asegúrate que este div ocupe el 100% del ancho */
+        margin-top: 20px; /* Espaciado adicional */
+      }
+    
+      .minor-expenses {
+        width: 100%; /* Hace que el card de Minor Expenses ocupe todo el ancho */
+        margin-top: 20px;
+      }
+    
+      .minor-expenses select {
+        width: 100%; /* Asegúrate que el dropdown ocupe el 100% de la pantalla */
+        font-size: 10px;
+        margin-left: 0;
+      }
     }
-
-    .minor-expenses select {
-        display: none; /* Esto lo oculta completamente */
-    }
-
-    .balance-card {
-        width: 100%; 
-        height: auto; 
-        border-radius: 12px; 
-    }
-}
