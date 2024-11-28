@@ -49,7 +49,7 @@ select{
 }
 
 .balance-card{
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 28px;
     padding: 20px;
     height: 136px;
@@ -63,4 +63,34 @@ select{
     align-content: center;
     margin-top: 1px;
     
+}
+
+
+
+@media (max-width: 430px) {
+    .balance-card {
+        width: 100%; 
+        height: auto; 
+        border-radius: 12px; 
+    }
+
+    .header h3 {
+        font-size: 12px; 
+        line-height: 16px;
+    }
+
+    .amount h1 {
+        font-size: 18px; 
+        margin-top: 10px;
+    }
+
+    select {
+        font-size: 10px; 
+    }
+
+    .dropdown-div {
+        margin-left: 0;
+        justify-content: space-between;
+        gap: 10px;
+    }
 }
