@@ -83,15 +83,6 @@ const FormSavings = () => {
             <option value="Yearly">Yearly</option>
           </select>
         </div>
-        <div className="input-group-specific">
-          <h3 className="input-label-specific">Your [Frequency] Contribution</h3>
-          <input
-            type="number"
-            placeholder="Enter your [Frequency] Contribution"
-            className="input-field-specific"
-            onChange={(e) => setAmountPerFrequency(e.target.value)}
-          />
-        </div>
       </div>
 
       {/* Botones de acción */}

@@ -1,0 +1,83 @@
+.form-savings-specific-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section-title-specific {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .highlight-specific {
+    color: #8b5cf6;
+  }
+  
+  .goal-details-specific,
+  .savings-plan-specific {
+    margin-bottom: 30px;
+  }
+  
+  .input-group-specific {
+    margin-bottom: 20px;
+  }
+  
+  .input-label-specific {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .input-field-specific,
+  .select-field-specific {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field-specific:focus,
+  .select-field-specific:focus {
+    border-color: #8b5cf6; 
+  }
+  
+  .form-savings-buttons-specific {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .cancel-button-specific,
+  .create-button-specific {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .cancel-button-specific {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .cancel-button-specific:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .create-button-specific {
+    background-color: #8b5cf6;
+    color: #fff;
+  }
+  
+  .create-button-specific:hover {
+    background-color: #6d41d9;
+  }
