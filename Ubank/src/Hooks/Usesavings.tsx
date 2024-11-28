@@ -18,6 +18,8 @@ interface SavingsArray {
 
 const UseSavings = () => {
 
+
+
     const context = useContext(IncomesContext);
 
     
@@ -53,7 +55,7 @@ const handlescreens = () => {
     }else if(Savingindex === 2){
       return <FormSavings />
     }else if(Savingindex === 3){
-      return <SavingDash saved={0} />
+      return <SavingDash />
 
     }
     
@@ -87,7 +89,7 @@ const handlescreens = () => {
     
     
 }
-return {
+return {savings,
      handlescreens, 
     goalName, setGoalName,
     category, setCategory,

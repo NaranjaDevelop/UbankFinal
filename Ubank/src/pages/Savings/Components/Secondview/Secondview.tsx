@@ -1,15 +1,15 @@
 import Tinycards from "./Components/Tinycards/Tinycards";
 
 const TinycardsData = [{
-    title: "Title 1",
+    title: "Set you goal",
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fverified.png?alt=media&token=3f802069-5e83-441b-ab1e-76f9e8f0ab9a"
 },
 {
-    title: "Title 2",  
+    title: "Plan your contribution",  
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fsupport-dollar.png?alt=media&token=37dd0f14-bd58-4b9b-ae59-d2ca8e744cf6"
 },
 {
-    title: "Title 3",
+    title: "Watch your progress",
     img: "https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2Fcalendar.png?alt=media&token=b7e3d316-c20f-4271-9ccf-682a83bdf154"
 },
 ]
@@ -34,7 +34,7 @@ const Secontview = ({Handlenext}: ISecondviewProps) => {
                     })
                 }
             </div>
-            <div>
+            <div className="seccondview-buttons">
                 <button>Cancel</button>
                 <button onClick={Handlenext}>Continue</button>
             </div>

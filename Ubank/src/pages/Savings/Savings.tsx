@@ -28,12 +28,9 @@ const SavingsGoals: React.FC = () => {
 
       }
       <section className='info-section'>
-      <div className='text-content'>
-        <h2>Savings Goals</h2>
-        <p >Manage your savings goals here.</p>
-      </div>
+        <h1>Savings</h1>
       </section>
-      <div className='screens-container'>
+      <div className='savingsScreens-container'>
         {handlescreens()}
       </div>
     </div>

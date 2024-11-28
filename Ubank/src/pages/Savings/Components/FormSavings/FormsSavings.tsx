@@ -11,9 +11,9 @@ const FormSavings = () => {
     
                return (
 
-        <div>
+        <div className="FormSavings-container">
 
-            <div>
+            <div className="goaldetail-container">
 
             <h1>Goal Details</h1>
             <h3>Goal Name</h3>
@@ -34,7 +34,7 @@ const FormSavings = () => {
             </select>
 
             </div>
-            <div>
+            <div className="Savingsplan-container">
                 <h1>Savings Plan</h1>
                 <h3>Goal Amount</h3>
                 <input type="number" placeholder="Enter your monthly contribution" onChange={(e) => setGoalAmount(e.target.value)} />
@@ -47,7 +47,7 @@ const FormSavings = () => {
                 <h3>Amount per frequency</h3>
                 <input type="number" placeholder="Enter your amount per frequency" onChange={(e) => setAmountPerFrequency(e.target.value)} />
             </div>
-            <div>
+            <div className="FormSavings-buttons">
             <button>Cancel</button>
             <button onClick={() => Savingadd()}>Create Goal</button>
             </div>

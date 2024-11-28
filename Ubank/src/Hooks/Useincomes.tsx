@@ -110,11 +110,11 @@ console.log(incomesdata);
 
 setIncomes(incomesdata)
 setExpenses(ExpenseData)
-categoriesexpensesadd(ExpenseData);
+
 setCategoriesData(categoriesexpensesadd(ExpenseData));
 MinorExpensesselector(ExpenseData);
 
-}, [incomesdata]);
+}, [incomesdata,ExpenseData]);
 
 
 const MinorExpensesselector = (expenses: ExpenseData[]) => {

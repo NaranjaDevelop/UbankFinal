@@ -20,7 +20,10 @@ import { UseIncomes } from "../../Hooks/Useincomes";
 
 
 
+
 const Incomes = () => {
+
+    
 
     const { handleExpenseSubmit, 
         remainingExpenses,
@@ -38,6 +41,8 @@ const Incomes = () => {
         isExpenseModalOpen,
         setIsExpenseModalOpen,
         handleLogout, } = UseIncomes()
+
+ 
 
     return (
         <div className="incomes-main-div">
@@ -129,8 +134,12 @@ const Incomes = () => {
                 <div className="expensescards-container">
 
                     <div className="categories-container">
+                        
+                            <TypeExpensesWheel data={CategoriesData} />   
+                        
 
-                        <TypeExpensesWheel data={CategoriesData} />
+
+                        
                         <div className="categories-scroll-container">
 
                             {

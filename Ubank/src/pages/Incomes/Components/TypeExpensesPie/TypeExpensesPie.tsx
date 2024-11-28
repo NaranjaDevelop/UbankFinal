@@ -1,7 +1,7 @@
 import './TypeExpenses.css';
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 
-const COLORS = ['#0088FE', '#EFF8C0', '#FFBB28', '#8644DB', '#FF4081', '#795548', '#9E9E9E'];
+const COLORS = ['#B7C7FF', '#EFF8C0', '#FFBB28', '#8644DB', '#FF4081', '#795548', '#9E9E9E', '#FFCC99'];
 
 type ExpenseData = {
     CategoryName: string;
