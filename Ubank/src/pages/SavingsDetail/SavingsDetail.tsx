@@ -18,8 +18,7 @@ const SavingsDetail = () => {
   
     const param = useLocation().pathname.split('/')[2]
     const paraid = parseInt(param)
-    const sumallsaved = savingsdata[paraid+1].saved.reduce((acc, curr) => acc + curr, 0)
-    console.log(sumallsaved);
+
     
     const {handleLogout} = UseDashboard() as { username: string; handleLogout: () => Promise<void>; };
     
