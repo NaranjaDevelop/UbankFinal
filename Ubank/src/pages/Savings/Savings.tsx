@@ -20,13 +20,7 @@ const SavingsGoals: React.FC = () => {
 
   return (
     <div className='savings-goals-container'>
-      {context.SavingIndex < 2 ?(
-        <Sidebar onLogout={handleLogout} />)
-        : (
-          <Savingside Goalname={goalName} GoalCategory={category} AmountToSave={goalAmount} Frequency={savingFrequency} Contribution={amountPerFrequency}></Savingside>
-        ) 
-
-      }
+        <Sidebar onLogout={handleLogout} />
       <section className='info-section'>
         <h1>Savings</h1>
       </section>
