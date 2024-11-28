@@ -1,22 +1,26 @@
 import "./SavingCard.css";
 
 interface SavingCardProps {
+  id: number;
   Categoryimg: string;
   SavingTitle: string;
   savingFrequency: string;
   Savingmax: number;
   Percentagesaved: number;
+  GotoDetail: (id: number) => void;
 }
 
 const SavingCard = ({
+  id,
   Categoryimg,
   SavingTitle,
   savingFrequency,
   Savingmax,
   Percentagesaved,
+  GotoDetail,
 }: SavingCardProps) => {
   return (
-    <div className="saving-card-container">
+    <div className="saving-card-container" onClick={() => GotoDetail(id)}>
       <div className="saving-card-left">
         <img src={Categoryimg} alt={SavingTitle} className="saving-card-icon" />
         <div className="saving-card-info">

@@ -98,7 +98,7 @@ const SavingDash = () => {
         return (
         savings.slice(1).map ((saving, index) => (
 
-            <SavingCard key={index} Gotodetail={()=>Gotodetail(index)} Categoryimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FRenta.png?alt=media&token=86a9bd6b-fcd8-4205-b848-91c29a276dfc" SavingTitle={saving.goalName} savingFrequency={saving.category} Savingmax={saving.goalAmount} Percentagesaved={1}  />
+            <SavingCard key={index} id={index} GotoDetail={()=>Gotodetail(index)} Categoryimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FRenta.png?alt=media&token=86a9bd6b-fcd8-4205-b848-91c29a276dfc" SavingTitle={saving.goalName} savingFrequency={saving.category} Savingmax={saving.goalAmount} Percentagesaved={1}  />
         )))
     }
     useEffect(() => {
@@ -131,10 +131,7 @@ const SavingDash = () => {
                     </div>
                     <div className="savings-cards">
                         {
-                            savings.slice(1).map((saving, index) => (
-
-                                <SavingCard key={index} Categoryimg="https://firebasestorage.googleapis.com/v0/b/ubank-6f760.appspot.com/o/Images%2FRenta.png?alt=media&token=86a9bd6b-fcd8-4205-b848-91c29a276dfc" SavingTitle={saving.goalName} savingFrequency={saving.category} Savingmax={saving.goalAmount} Percentagesaved={1} />
-                            ))
+                            savingcards()
                         }
 
                     </div>

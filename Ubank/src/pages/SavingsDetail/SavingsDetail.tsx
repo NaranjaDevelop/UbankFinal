@@ -18,7 +18,9 @@ const SavingsDetail = () => {
   
     const param = useLocation().pathname.split('/')[2]
     const paraid = parseInt(param)
-
+    const sumallsaved = savingsdata[paraid+1].saved.reduce((acc, curr) => acc + curr, 0)
+    console.log(sumallsaved);
+    
     const {handleLogout} = UseDashboard() as { username: string; handleLogout: () => Promise<void>; };
     
   return (
@@ -30,7 +32,7 @@ const SavingsDetail = () => {
       
       </section>
       <div>
-        <SavingDetailed savingtitle="" savedtotal={2} savingFrequency="" savingamount={2} savingdate="" savingsdone={[{amount:2, date:"2022-02-02"}]} />
+        <SavingDetailed savingtitle={savingsdata[paraid+1].goalName} savedtotal={2} savingFrequency={savingsdata[paraid+1].savingFrequency} savingamount={savingsdata[paraid+1].goalAmount} savingsdone={savingsdata[paraid+1].saved} />
       </div>
     </div>
     </>
