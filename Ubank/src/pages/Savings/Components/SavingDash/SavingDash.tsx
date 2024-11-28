@@ -94,6 +94,14 @@ const SavingDash = () => {
             <div>
             <Savingsgraph/>
             <div>
+                <h3>Categories</h3>
+                {
+                    Category.map((category, index) => (
+                        <CategoriesCards key={index} TypeImg={category.CategoryImg} TypeExpenses={category.CategoryName} TypeAmount={category.CategoryAmount} />
+                    ))
+                }
+            </div>
+            <div>
                 {
                     savings.slice(1).map ((saving, index) => (
 
