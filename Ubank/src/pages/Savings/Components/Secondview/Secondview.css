@@ -1,0 +1,96 @@
+/* General layout */
+.secondview {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .secondview-header{
+    display: flex;
+    flex-direction: row;
+  }
+ 
+  .secondview-header h1 {
+    font-family: 'Lufga', sans-serif;
+    font-weight: 500;
+    letter-spacing: -.0625rem;
+    font-size: 30px;
+    font-weight: semibold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .Secondview-highlight {
+    color: #7b61ff;
+  }
+  
+  .secondview-header h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  .secondview-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 352px;
+    
+  }
+
+  .secondview-image img {
+    width: 214px; /* Tamaño de la imagen */
+    height: auto;
+    margin-bottom: 24px;
+  }
+  
+
+ .secondview-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 16px; 
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  
+  /* Buttons */
+  .secondview-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+  
+  .secondview-buttons .button-cancel {
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .secondview-buttons .button-cancel:hover {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .secondview-buttons .button-continue {
+    background-color: #7b61ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .secondview-buttons .button-continue:hover {
+    background-color: #6948d4;
+  }
+  
