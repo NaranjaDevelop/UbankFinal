@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { updateUserData } from "../Services/Userdata";
-import { useFetcher } from "react-router-dom";
+import { useFetcher, useNavigate } from "react-router-dom";
 import Firstview from "../pages/Savings/Components/Firstview/Firstview";
 import Secontview from "../pages/Savings/Components/Secondview/Secondview";
 import FormSavings from "../pages/Savings/Components/FormSavings/FormsSavings";
@@ -10,13 +10,21 @@ import SavingDash from "../pages/Savings/Components/SavingDash/SavingDash";
 interface SavingsArray {
     goalName: string,
     category: string,
-    goalAmount: string,
+    goalAmount: number,
     savingFrequency: string,
-    amountPerFrequency: string
+    amountPerFrequency: string,
+    saved: [{
+        amount: number,
+        date: string
+    }]
 }
 
 
 const UseSavings = () => {
+
+  const Cancel = () => {
+    setSavingIndex(0);
+  }
 
 
 
@@ -37,7 +45,7 @@ useEffect(() => {
 
 const [goalName, setGoalName] = useState('');
 const [category, setCategory] = useState('');
-const [goalAmount, setGoalAmount] = useState('');
+const [goalAmount, setGoalAmount] = useState(0);
 const [savingFrequency, setSavingFrequency] = useState('');
 const [amountPerFrequency, setAmountPerFrequency] = useState(''); 
 
@@ -51,7 +59,7 @@ const handlescreens = () => {
     if(Savingindex === 0){
       return <Firstview handlenext={() => context.counterindex()}/>
     }else if(Savingindex === 1){
-      return <Secontview Handlenext={() => context.counterindex()} />
+      return <Secontview Handlenext={() => context.counterindex()} cancel={Cancel} />
     }else if(Savingindex === 2){
       return <FormSavings />
     }else if(Savingindex === 3){
@@ -73,14 +81,18 @@ const handlescreens = () => {
         category: category || "Rent or Housing",
         goalAmount: goalAmount,
         savingFrequency: savingFrequency || "Monthly",
-        amountPerFrequency: amountPerFrequency
+        amountPerFrequency: amountPerFrequency,
+        saved: [{
+            amount: 0,
+            date: ""
+        }]
     }
 
    
     setSavings(prevSavings => {
         const updatedSavings = [...prevSavings, data];
       
-        updateUserData({ Savings: updatedSavings });
+        updateUserData({ Savings: updatedSavings, });
         context.counterindex()
         return updatedSavings;
 
@@ -96,7 +108,7 @@ return {savings,
     goalAmount, setGoalAmount,
     savingFrequency, setSavingFrequency,
     amountPerFrequency, setAmountPerFrequency,
-    Savingadd,setSavingIndex}
+    Savingadd,setSavingIndex,Cancel}
 
 }
 

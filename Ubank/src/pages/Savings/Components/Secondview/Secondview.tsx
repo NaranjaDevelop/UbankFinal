@@ -15,10 +15,11 @@ const TinycardsData = [{
 ]
 interface ISecondviewProps {
     Handlenext: () => void;
+    cancel: () => void;
 }
 
 
-const Secontview = ({Handlenext}: ISecondviewProps) => {
+const Secontview = ({Handlenext,cancel}: ISecondviewProps) => {
     return (
     <div>
         <div className="Secondview-header">
@@ -35,7 +36,7 @@ const Secontview = ({Handlenext}: ISecondviewProps) => {
                 }
             </div>
             <div className="seccondview-buttons">
-                <button>Cancel</button>
+                <button onClick={cancel}>Cancel</button>
                 <button onClick={Handlenext}>Continue</button>
             </div>
         </div>

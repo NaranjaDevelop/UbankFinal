@@ -7,7 +7,7 @@ import Savingside from "../Savingside/Savingside";
 
 const FormSavings = () => {
     
-   const {Savingadd,setGoalName,setCategory,setGoalAmount,setSavingFrequency,setAmountPerFrequency} = UseSavings();
+   const {Savingadd,setGoalName,setCategory,setGoalAmount,setSavingFrequency,Cancel} = UseSavings();
     
                return (
 
@@ -37,18 +37,17 @@ const FormSavings = () => {
             <div className="Savingsplan-container">
                 <h1>Savings Plan</h1>
                 <h3>Goal Amount</h3>
-                <input type="number" placeholder="Enter your monthly contribution" onChange={(e) => setGoalAmount(e.target.value)} />
+                <input type="number" placeholder="Enter your monthly contribution" onChange={(e) => setGoalAmount(parseFloat(e.target.value))} />
                 <h3>Saving Frequency</h3>
                 <select name="Frequency" onChange={(e) => setSavingFrequency(e.target.value)}>
                     <option value="Monthly">Monthly</option>
                     <option value="Quarterly">Quarterly</option>
                     <option value="Yearly">Yearly</option>
                 </select>
-                <h3>Amount per frequency</h3>
-                <input type="number" placeholder="Enter your amount per frequency" onChange={(e) => setAmountPerFrequency(e.target.value)} />
+                
             </div>
             <div className="FormSavings-buttons">
-            <button>Cancel</button>
+            <button onClick={() => Cancel()}>Cancel</button>
             <button onClick={() => Savingadd()}>Create Goal</button>
             </div>
 
