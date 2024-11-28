@@ -1,5 +1,7 @@
 import React from 'react';
 import './TransactionItem.css';
+import img1 from "../../../../assets/transacciones-icon.webp";
+
 
 interface TransactionItemProps {
   title: string;
@@ -12,13 +14,15 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ title, date, amount, 
   return (
     <div className={`transaction-item ${type}`}>
       <div className='info-left'>
-        <div className="icon">
-        {/* Aquí podría añadir un ícono, si es necesario */}
+        <div className='content-flex'>
+<div className="icon">
+          <img src={img1} style={{ backgroundColor: '#EFF8C0' }}  width={17} alt="" />
       </div>
       <div className="details">
         <h4>{title}</h4>
         <p>{date}</p>
       </div>
+        </div>
       </div>
       <div 
         className="amount" 
