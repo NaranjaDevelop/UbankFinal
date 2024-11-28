@@ -3,8 +3,6 @@ import { updateUserData } from "../../../../Services/Userdata";
 import UseSavings from "../../../../Hooks/Usesavings";
 import Savingside from "../Savingside/Savingside";
 
-
-
 const FormSavings = () => {
     
    const {Savingadd,setGoalName,setCategory,setGoalAmount,setSavingFrequency,setAmountPerFrequency} = UseSavings();
