@@ -11,3 +11,13 @@
     margin-right: 100px;
     padding-top: 50px;
 }
+
+.tittle-and-scrollcategories{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tittle-categories-scroll{
+    font-size: 20px;
+}

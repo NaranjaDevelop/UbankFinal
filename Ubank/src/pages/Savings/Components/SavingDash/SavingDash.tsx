@@ -83,13 +83,15 @@ const SavingDash = () => {
                         <div className="container-categories-categoriesscroll">
 
                         </div>
-                        <h3>Categories</h3>
+                        <div className="tittle-and-scrollcategories">
+                        <h3 className="tittle-categories-scroll">Category</h3>
                         <div className="categories-scroll-container">
                         {
                             Category.map((category, index) => (
                                 <CategoriesCards key={index} TypeImg={category.CategoryImg} TypeExpenses={category.CategoryName} TypeAmount={category.CategoryAmount} />
                             ))
                         }
+                        </div>
                         </div>
                     </div>
                     <div>
