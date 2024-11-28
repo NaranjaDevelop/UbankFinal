@@ -1,0 +1,13 @@
+.Container-savingdash{
+    background-color: white;
+    width: 150vh;
+    border-radius: 50px;
+}
+
+.container-graphic-and-categories{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+}
