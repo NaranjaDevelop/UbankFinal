@@ -15,7 +15,6 @@ const FormSavings = () => {
 
   return (
     <div className="form-savings-specific-container">
-      {/* Sección de detalles del objetivo */}
       <div className="goal-details-specific">
         <h1 className="section-title-specific">
           Goal <span className="highlight-specific">Details</span>
@@ -54,7 +53,6 @@ const FormSavings = () => {
         </div>
       </div>
 
-      {/* Sección del plan de ahorros */}
       <div className="savings-plan-specific">
         <h1 className="section-title-specific">
           Savings <span className="highlight-specific">Plan</span>
@@ -85,7 +83,6 @@ const FormSavings = () => {
         </div>
       </div>
 
-      {/* Botones de acción */}
       <div className="form-savings-buttons-specific">
         <button
           type="button"
